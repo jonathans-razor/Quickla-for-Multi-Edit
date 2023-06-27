@@ -5,8 +5,9 @@ CMAC C-style macro programming language. Multi-Edit is a commercial text editor 
 Windows. The main features of the suite are:
 
 1. quick access to links, folders, files and applications,
+2. searching,
 2. list management and
-3. miscellaneous utilities.
+3. miscellaneous tools.
 
 All the macros run from within Multi-Edit running on Windows 10 and older versions.
 
