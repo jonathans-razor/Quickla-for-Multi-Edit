@@ -1079,7 +1079,7 @@ str fp = "Search google using a definition search.";
 
 // skw: define
 
-@search_google_main(2, 0, '');
+@search_google_main(2, 7, '');
 
 @say(fp);
 }

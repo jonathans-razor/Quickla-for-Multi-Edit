@@ -1960,7 +1960,7 @@ switch(sc)
     reserved_word_definition = @trim_last_character(reserved_word_definition);
     break;
   case "clp": // Current line - path only.
-    // (!rw, !rv) Reserved Words
+    // (!rw) Reserved Words
     reserved_word_definition = @get_line;
     reserved_word_definition = get_path(reserved_word_definition);
     break;

@@ -192,7 +192,6 @@ else if(find_text(@subbullet, 1, _regexp))
 {
   rv = 'subbullet';
 }
-//qjq
 else if(find_text(@rubric, 1, _regexp))
 {
   rv = 'rubric';
@@ -4172,6 +4171,7 @@ switch(sc_digits_only)
     @bol;
     @paste;
     fp += 'mor';
+    @find_previous_bullet;
     break;
   case '4':
     if(@find_next_big_segment)
@@ -9638,8 +9638,8 @@ if(search_criterion_was_found)
 }
 else
 {
-  so = 'Search criterion NOT found, so go to now playing task list.';
-  @go_to_first_bullet_at_lc('rfnptl');
+  so = 'Search criterion NOT found, so go to personal task list.';
+  @go_to_first_bullet_at_lc('t');
 }
 
 /* Use Case(s)
@@ -10718,7 +10718,8 @@ str fp = 'Add text CBF error message.';
 
 eol;
 cr;
-text('echo');
+
+text('echo. & echo');
 text(' Error Level: %errorlevel%');
 text(' - q');
 text('jq - ');
@@ -11576,6 +11577,7 @@ void
 @convert_line_to_dashes
 {
 str fp = 'Replace text spaces and underscores with dashes.';
+// skw: spaces_to_dashes
 
 str Current_Line;
 Current_Line = get_line;

@@ -2096,7 +2096,7 @@ switch(@first_3_characters(@lower(get_environment("computername"))))
     return(10);
     break;
   default:
-    return(16);
+    return(15);
 }
 }
 
@@ -2624,7 +2624,6 @@ if(@is_bullet)
 
 if(@is_big_segment)
 {
-//qjq
   @look_up_rubric_information;
   return();
 }
@@ -3812,7 +3811,7 @@ str sj = @hc_subject;
 
 if(@first_character(lc) == 'z')
 {
-  sj = @left(sj, 4) + '**';
+  sj = @left(sj, 4) + '*';
 }
 
 @say(fp + ' (' + sj + ')');
