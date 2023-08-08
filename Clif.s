@@ -3603,51 +3603,25 @@ switch(lc) //qcq
     @add_bullet_below;
     @add_text_blank_url;
     break;
-  case 'cpam':
-    @add_bullet_below;
-    @add_text_date;
-    text(': ');
-    @paste;
-    @add_text_lc_and_individuate_it('xc');
-    break;
-  // Add bullet then date. ****
   case 'diar':
-  case 'droo':
-  case 'pa':
     @add_bullet_below;
     @add_text_date;
     text(': ');
     break;
-  // Unique ****
-  case 'edit':
+  case 'nopc':
     @add_bullet_below;
-    cr;
-    @add_text_multiedit;
-    break;
-  case 'ers':
-    @add_bullet_below;
+    text('+ ');
     @add_text_date;
-    @paste_without_wrapping;
+    @add_subbullet_below;
     break;
-  // Bare boones ****
-  case 'bm': // (!2msho)
-  case 'fast':
-  case 'walo':
+  case 'rzr':
     @add_bullet_below;
-    @add_text_date;
-    text('  ');
+    text('rzr ');
     break;
-  case 'mcc':
-  case 'prou':
   case 'shon': // (!2msho)
     @add_bullet_below;
     @add_text_date;
     @paste_with_wikipedia_format;
-    break;
-  case 'j':
-  case 'rzr':
-    @add_bullet_below;
-    text('rzr ');
     break;
   default:
     if(@is_code_word_line)

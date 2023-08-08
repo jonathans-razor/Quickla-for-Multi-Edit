@@ -1433,7 +1433,7 @@ int is_bullet_Type_File = @is_bullet_File;
 
 if(!is_bullet_Type_File)
 {
-  error_Message = 'This macro only works on bullet type files.';
+  error_Message = 'This macro only works on bullet type files. - Aug-8-2023_2_21_PM';
 }
 return(is_bullet_Type_File);
 }

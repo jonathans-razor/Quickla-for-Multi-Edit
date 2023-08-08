@@ -805,7 +805,6 @@ number_of_replacements +=
 
 // I am not implementing this because the 3 special character here can represent multiple 
 // different characters.
-//�
 //number_of_replacements += 
 //@replace_string_in_file_int('�', char(233));
 

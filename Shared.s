@@ -145,7 +145,7 @@ switch(@filename_extension)
   case "bat":
     break;
   default:
-    @say('This macro only works on bullet type files.');
+    @say('This macro only works on bullet type files. - Aug-8-2023_2_20_PM');
     return(0);
 }
 return(1);
@@ -2458,7 +2458,7 @@ while(Countdown <= 155)
   else if((key1 == 32) && (countdown == 2)) // space bar "trick"
   {
     // (!sptr) (skw space bar trick)
-    return('rfcwl');
+    return('rfsguads');
   }
   // If you make a mistake and want to start over, hit the F1 key.
   else if (key1 == 186) // You hit the ";" key again, so reset the string.
