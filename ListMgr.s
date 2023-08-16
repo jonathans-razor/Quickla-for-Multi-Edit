@@ -7870,7 +7870,7 @@ str fp = "Prepare small segment for external pasting.";
 //;;
 
 void
-@@prepare_small_segment_for_pstn
+@@prepare_small_segment_for_pstn()
 {
 @header;
 @prepare_small_segment_for_expst;
@@ -10703,6 +10703,38 @@ date_time = @replace(date_time, ':', '_');
 date_time = @replace(date_time, ' ', '_');
 
 text(date_time);
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@add_text_asterisks()
+{
+str fp = 'Add text asterisks.';
+
+goto_col(80);
+text('***');
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@delete_text_asterisks()
+{
+str fp = 'Delete text asterisks.';
+
+goto_col(80);
+del_char;
+del_char;
+del_char;
 
 @say(fp);
 }

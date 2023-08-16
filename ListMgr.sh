@@ -120,6 +120,7 @@ prototype ListMgr
   void @paste_without_wrapping();
   str  @peek_ahead();
   str  @peek_ahead_2();
+  void @@prepare_small_segment_for_pstn();
   void @put_cursor_somewhere_useful();
   str  @query_next_br();
   str  @query_next_bsr();

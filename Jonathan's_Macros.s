@@ -6996,7 +6996,7 @@ rs = '$$:';
 //;
 
 void
-@prepare_message_to_phone_file
+@prepare_message_to_phone_file()
 {
 str fp = "Prepare message to phone file.";
 
@@ -7017,6 +7017,23 @@ str fp = "Prepare message to phone file.";
 @delete_carriage_returns;
 
 @footer;
+@say(fp);
+}
+
+
+
+//;
+
+void
+@format_and_prepare_message_to_p
+{
+str fp = "Format and prepare message to phone.";
+
+// lu: Aug-15-2023
+
+@@prepare_small_segment_for_pstn;
+@prepare_message_to_phone_file;
+
 @say(fp);
 }
 
