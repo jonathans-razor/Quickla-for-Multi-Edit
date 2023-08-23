@@ -10751,10 +10751,12 @@ str fp = 'Add text CBF error message.';
 eol;
 cr;
 
-text('echo. & echo');
-text(' Error Level: %errorlevel%');
+text('echo. & echo ');
+text('* Error Level: %errorlevel%');
 text(' - q');
 text('jq - ');
+text('cbf- : %cbf-% - ');
+
 @add_text_date_time_no_spaces;
 
 @say(fp);
