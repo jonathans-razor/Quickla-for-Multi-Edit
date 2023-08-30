@@ -316,7 +316,7 @@ if(@seek_next(sc, sO))
   pop_mark;
   if((@current_line_number == initial_line_number))
   {
-    sO = 'This is the ONLY occurrence in all open files.';
+    sO = 'This is the ONLY occurrence for this search configuration in all open files. Aug-30-2023';
     return(2);
   }
   else

@@ -10716,8 +10716,8 @@ void
 {
 str fp = 'Add text asterisks.';
 
-goto_col(80);
-text('***');
+goto_col(55);
+text('*');
 
 @say(fp);
 }
@@ -10731,9 +10731,7 @@ void
 {
 str fp = 'Delete text asterisks.';
 
-goto_col(80);
-del_char;
-del_char;
+goto_col(55);
 del_char;
 
 @say(fp);
