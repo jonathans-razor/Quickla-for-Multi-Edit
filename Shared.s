@@ -3807,7 +3807,6 @@ str Command_Line = '';
 */
 
 // Assign the default browser here. (!sebr, !bro, !brows, !debr, !defa)
-//qq abc
 int default_browser = 7;
 
 if(browser_number == 0)
