@@ -1570,8 +1570,6 @@ while(!at_eol)
 text(weekday);
 text(' (!');
 text(lower(@left(weekday, 2)));
-text(', !');
-text(lower(@left(weekday, 3)));
 text(')');
 
 @find_lc('rfnow');
