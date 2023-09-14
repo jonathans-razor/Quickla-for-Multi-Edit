@@ -372,8 +372,8 @@ str so;
 
 if(sc == '')
 {
-  rm("@open_file_with_writability /FN=" + Get_Environment('savannah') +
-    "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
+  rm("@open_file_with_writability /FN=" + Get_Environment('dropbox') +
+    "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
   eof;
 }
 else
@@ -8050,6 +8050,24 @@ str complete_search_criterion = @hc_subject + ' ' + remote_x_subject;
 
 @footer;
 @say(fp + ' (' + complete_search_criterion + ')');
+}
+
+
+
+//;
+
+void
+@search_google_with_wost(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "Search Google with wost.";
+// lu: Sep-14-2023
+
+// lu: Mar-5-2018
+@search_google_main(0, 0, @get_wost + ' ' + @lower(sc));
+
+//qq-1
+
+@say(fp);
 }
 
 
