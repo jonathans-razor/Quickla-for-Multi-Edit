@@ -3608,6 +3608,13 @@ switch(lc) //qcq
     @add_text_date;
     text(': ');
     break;
+  case 'h':
+  case 'hi':
+  case 'shon': // (!2msho)
+    @add_bullet_below;
+    @add_text_date;
+    @paste_with_wikipedia_format;
+    break;
   case 'nopc':
     @add_bullet_below;
     text('+ ');
@@ -3617,11 +3624,6 @@ switch(lc) //qcq
   case 'rzr':
     @add_bullet_below;
     text('rzr ');
-    break;
-  case 'shon': // (!2msho)
-    @add_bullet_below;
-    @add_text_date;
-    @paste_with_wikipedia_format;
     break;
   default:
     if(@is_code_word_line)

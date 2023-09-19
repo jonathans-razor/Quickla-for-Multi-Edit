@@ -8065,8 +8065,6 @@ str fp = "Search Google with wost.";
 // lu: Mar-5-2018
 @search_google_main(0, 0, @get_wost + ' ' + @lower(sc));
 
-//qq-1
-
 @say(fp);
 }
 

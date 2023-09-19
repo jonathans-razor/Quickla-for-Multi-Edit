@@ -934,7 +934,7 @@ number_of_replacements +=
   @replace_string_in_file_int(@special_character(replacement_description, rs, char(171)), rs);
 
 number_of_replacements += 
-  @replace_string_in_file_int(@special_character(replacement_description, rs, char(183)), ' ');
+  @replace_string_in_file_int(@special_character(replacement_description, rs, char(183)), '');
 
 number_of_replacements += 
   @replace_string_in_file_int(@special_character(replacement_description, rs, char(187)), rs);
