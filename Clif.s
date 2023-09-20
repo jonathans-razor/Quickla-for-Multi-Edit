@@ -3610,7 +3610,18 @@ switch(lc) //qcq
     break;
   case 'h':
   case 'hi':
-  case 'shon': // (!2msho)
+    @find_next_bullet;
+    @hc_bullet;
+    @paste;
+    @hc_subject;
+    @delete;
+    @add_text_date;
+    down;
+    down;
+    @eol;
+    left;
+    break;
+  case 'shon': // (!shon)
     @add_bullet_below;
     @add_text_date;
     @paste_with_wikipedia_format;
