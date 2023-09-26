@@ -2672,7 +2672,7 @@ if(@text_is_selected)
 {
   delete_block;
 }
-if((@previous_character != ' ') and (@previous_character != ':') and (@previous_character != ';')and (@previous_character != '_'))
+if((@previous_character != ' ') and (@previous_character != ':') and (@previous_character != ';') and (@previous_character != '_') and (@current_column != 1))
 {
   text(' ');
 }
