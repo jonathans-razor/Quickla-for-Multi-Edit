@@ -1280,13 +1280,13 @@ else
 
 if(sort_by == 1)
 {
-  sc += '&sp=CAI%253D';
+  sc += '&sp=CAI';
   fp += ' and sort by upload date';
 }
 
 if(sort_by == 2)
 {
-  sc += '&sp=CAM%253D';
+  sc += '&sp=CAM';
   fp += ' and sort by view count';
 }
 
@@ -1303,6 +1303,35 @@ WITH Quotes (27 Hits)
 you're soaking in it
 WITHOUT Quotes (1,130 Hits)
 
+:+ YouTube Filters
+
+::https://www.youtube.com/results?search_query=%22chatgpt%22&sp=CAM%253D
+
+::chatgpt
+
+::https://www.youtube.com/results?search_query=%22chatgpt%22&sp=CAM%253D
+
+::Rating:
+https://www.youtube.com/results?search_query=chatgpt&sp=CAE
+
+::View Count:
+https://www.youtube.com/results?search_query=chatgpt&sp=CAM
+
+::This month, Rating:
+https://www.youtube.com/results?search_query=chatgpt&sp=CAESAggE
+
+::CAE: Rating
+
+::CAM: View Count
+
+::SaggE: This month
+
+::This month, View count:
+https://www.youtube.com/results?search_query=chatgpt&sp=CAMSAggE
+
+::No Filters:
+https://www.youtube.com/results?search_query=chatgpt
+
 */
 
 make_message(@trim_period(fp) + ' for "' + Pretty_sc + '".');
@@ -1316,7 +1345,7 @@ void
 @search_youtube_by_views
 {
 str fp = 'Search YouTube exactly using Firefox. Sort by views.';
-@search_youtube(true, 2);
+@search_youtube(false, 2);
 }
 
 

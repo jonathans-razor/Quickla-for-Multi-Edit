@@ -4979,52 +4979,52 @@ int is_found = 0;
 str url;
 
 url = @get_remote_oj_using_klc('rfscne', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('ftl', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfcnn', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('dawi', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('fcnp', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('rffox', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfght', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfnyt', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfquil', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('quma', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfreas', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('reut', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('revo', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfwash', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('wired', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfwsj', is_found);
-@surf(url, 1);
+@surf(url, 0);
 
 @footer;
 @say(fp);
