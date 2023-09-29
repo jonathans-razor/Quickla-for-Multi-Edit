@@ -5427,7 +5427,7 @@ up;
 
 @delete_block;
 
-@seek('creation date');
+@seek('lu');
 
 @eol;
 @add_text_date;
