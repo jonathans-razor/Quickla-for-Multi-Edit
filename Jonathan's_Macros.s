@@ -7004,7 +7004,7 @@ str fp = "Prepare message to phone file.";
 
 @save_location;
 
-@open_file(get_environment('dropbox') + '\savannah\reach out\message to phone.mtp');
+@open_file(get_environment('dropbox') + '\savannah\reach out\message to phone.txt');
 
 @delete_all;
 
