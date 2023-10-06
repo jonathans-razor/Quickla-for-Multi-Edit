@@ -3613,7 +3613,7 @@ switch(lc) //qcq
     @find_next_bullet;
     @hc_bullet;
     @paste;
-    @hc_subject;
+    @hc_object;
     @delete;
     @add_text_date;
     down;
