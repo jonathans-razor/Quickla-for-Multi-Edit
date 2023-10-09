@@ -3609,12 +3609,15 @@ switch(lc) //qcq
     text(': ');
     break;
   case 'h':
-  case 'hi':
+    @find_lc('rffjtemplate');
     @find_next_bullet;
     @hc_bullet;
+    @find_lc('h');
+    @find_next_bullet;
+    goto_col(1);
     @paste;
-    @hc_object;
-    @delete;
+    @find_previous_bullet;
+    @eol;
     @add_text_date;
     down;
     down;
