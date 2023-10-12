@@ -3609,8 +3609,6 @@ switch(lc) //qcq
     text(': ');
     break;
   case 'h':
-    // skw turn off highlight
-    block_off;
     @find_lc('rffjtemplate');
     @find_next_bullet;
     @hc_bullet;
