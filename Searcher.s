@@ -2311,6 +2311,18 @@ str fp = "Search Google with an appended word.";
 //;
 
 void
+@search_google_with_prependage(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "Search Google with an prepended word.";
+// lu: Oct-16-2023
+@search_google_main(0, 0, @lower(sc) + @get_sj);
+}
+
+
+
+//;
+
+void
 @search_google_with_appended_dfw
 {
 str fp = "Search Google with appended words.";

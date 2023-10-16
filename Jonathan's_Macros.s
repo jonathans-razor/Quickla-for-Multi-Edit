@@ -8079,16 +8079,31 @@ str fp = "Search YouTube exactly using Firefox with wost.";
 
 str URL = 'http://www.youtube.com/results?search_query=';
 
-str sc = 'leetcode+' + @get_wost;
+str right_sc = @get_wost;
 
 fp = @trim_period(fp);
 
-sc = '%22' + char(34) + sc + char(34) + '%22';
+sc = '%22' + char(34) + sc + '+' + right_sc + char(34) + '%22';
 
 URL += sc;
 URL += '&search_type=&aq=f';
 
 @surf(url, 2);
+}
+
+
+
+//;
+
+void
+@search_google_with_prepen_wost(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "Search Google exactly with wost.";
+// lu: Oct-16-2023
+
+@search_google_main(0, 0, @lower(sc) + @get_wost);
+
+@say(fp + ' (' + sc + ')');
 }
 
 
