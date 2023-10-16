@@ -2283,7 +2283,7 @@ else
 }
 
 set_global_str('cmac_return_value', sc);
-@say(fp + "(" + sc + ")");
+@say(fp + " (" + sc + ")");
 return(sc);
 }
 

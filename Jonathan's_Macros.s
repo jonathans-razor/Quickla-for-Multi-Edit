@@ -8062,10 +8062,33 @@ void
 str fp = "Search Google with wost.";
 // lu: Sep-14-2023
 
-// lu: Mar-5-2018
 @search_google_main(0, 0, @get_wost + ' ' + @lower(sc));
 
 @say(fp);
+}
+
+
+
+//;
+
+void
+@search_youtube_with_prepen_wost(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "Search YouTube exactly using Firefox with wost.";
+// lu: Oct-16-2023
+
+str URL = 'http://www.youtube.com/results?search_query=';
+
+str sc = 'leetcode+' + @get_wost;
+
+fp = @trim_period(fp);
+
+sc = '%22' + char(34) + sc + char(34) + '%22';
+
+URL += sc;
+URL += '&search_type=&aq=f';
+
+@surf(url, 2);
 }
 
 

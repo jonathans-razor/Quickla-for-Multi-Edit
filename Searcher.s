@@ -1264,6 +1264,7 @@ str URL = 'http://www.youtube.com/results?search_query=';
 str sc = @get_subject_or_selected_text;
 
 str Pretty_sc = sc;
+
 sc = @commute_character(sc, ' ', '+');
 
 fp = @trim_period(fp);
