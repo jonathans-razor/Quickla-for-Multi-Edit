@@ -8072,7 +8072,7 @@ str fp = "Search Google with wost.";
 //;
 
 void
-@search_youtube_with_prepen_wost(str sc = parse_str('/1=', mparm_str))
+@search_youtube_with_prepen(str sc = parse_str('/1=', mparm_str))
 {
 str fp = "Search YouTube exactly using Firefox with wost.";
 // lu: Oct-16-2023
@@ -8083,12 +8083,13 @@ str right_sc = @get_wost;
 
 fp = @trim_period(fp);
 
-sc = '%22' + char(34) + sc + '+' + right_sc + char(34) + '%22';
+sc = '%22' + char(34) + @lower(sc) + '+' + right_sc + char(34) + '%22';
 
 URL += sc;
 URL += '&search_type=&aq=f';
 
 @surf(url, 2);
+@say(fp + ' (' + sc + ')');
 }
 
 

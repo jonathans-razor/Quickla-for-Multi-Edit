@@ -2299,7 +2299,7 @@ https://github.com/search?utf8=%E2%9C%93&q=RichardCampbell&type=Users&ref=search
 //;
 
 void
-@search_google_with_appendage(str sc = parse_str('/1=', mparm_str))
+@search_google_with_appendag(str sc = parse_str('/1=', mparm_str))
 {
 str fp = "Search Google with an appended word.";
 // lu: Mar-5-2018
