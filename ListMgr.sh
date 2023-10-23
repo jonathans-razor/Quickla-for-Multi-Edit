@@ -23,6 +23,7 @@ prototype ListMgr
   str  @bobsr();
   str  @boca();
   void @bor();
+  void @control_shift_key_plus_pbh();
   void @convert_line_to_lower_case();
   str  @convert_line_to_proper_case();
   void @convert_line_to_spaces();

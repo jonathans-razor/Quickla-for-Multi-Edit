@@ -8109,4 +8109,33 @@ str fp = "Search Google exactly with wost.";
 
 
 
+//;
+
+void
+@add_autotext_block_2_at_job_hi
+{
+str fp = "Add job history autotext for h2.";
+
+// lu: Oct-23-2023
+
+@header;
+@find_lc('rfax-Oct-23-2023');
+@control_shift_key_plus_pbh;
+@find_lc('h');
+@add_bullet_below;
+@add_text_date;
+@eol;
+cr;
+cr;
+@paste;
+eol;
+cr;
+@footer;
+
+
+@say(fp);
+}
+
+
+
 //; (!efjo, !efjm)

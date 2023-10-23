@@ -8473,7 +8473,7 @@ if(Context == 0)
 //;;
 
 void
-@control_shift_key_plus_pbh
+@control_shift_key_plus_pbh()
 {
 str fp = 'Ctrl+Shift key plus contextually aware highcopy.';
 
