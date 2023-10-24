@@ -858,6 +858,7 @@ text(@subrubric_text);
 void
 @add_subrubric_below(str lc = parse_str('/1=', mparm_str))
 {
+
 str fp = 'Add subrubric below.';
 
 if(lc == 'bf')
