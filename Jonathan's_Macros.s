@@ -3793,6 +3793,11 @@ str fp = "Load clipboard with remote subject.";
 
 @save_location;
 
+if (lc == '')
+{
+  lc = '2zruen';
+}
+
 if(!@find_lc_known(fp, lc))
 {
   @restore_location;
