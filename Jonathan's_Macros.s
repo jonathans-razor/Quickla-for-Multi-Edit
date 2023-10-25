@@ -8121,7 +8121,7 @@ void
 {
 str fp = "Add job history autotext for h2.";
 
-// lu: Oct-23-2023
+// lu: Oct-24-2023
 
 @header;
 @find_lc('rfax-Oct-23-2023');
