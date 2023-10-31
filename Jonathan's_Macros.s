@@ -515,7 +515,7 @@ str fp = 'Add CMAC stub for standard macros.';
 str so;
 @header;
 
-rm("@open_file_with_writability /FN=" + Get_Environment('savannah') +
+rm("@open_file_with_writability /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
 
 eof;
@@ -573,7 +573,7 @@ str fp = 'Add CMAC stub for searching.';
 str so;
 @header;
 
-rm("@open_file_with_writability /FN=" + Get_Environment('savannah') +
+rm("@open_file_with_writability /FN=" + Get_Environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
 
 @eof;
@@ -1059,12 +1059,12 @@ if(!((@is_s_file) or (@is_bullet_file) or (@is_batch_file) or (@is_jenkinsfile))
 
 if(@is_s_file)
 {
-  @open_file(get_environment('savannah') + 
+  @open_file(get_environment('dropbox') + 
     "\\cmac\\Quickla-for-Multi-Edit\\\cmac code graveyard.s");
 }
 else if(@is_bullet_file)
 {
-  @open_file(get_environment('savannah') + 
+  @open_file(get_environment('dropbox') + 
     "\\miscellany\\historical rubrics.asc");
 }
 else if(@is_batch_file)
@@ -1121,9 +1121,9 @@ str fp = "Compile Joma.";
 // Needs that highlight_bullet integration trick.
 
 int Initial_Window = @current_window;
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') 
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') 
   + "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
-rm("Compile /F=" + Get_Environment('savannah') +
+rm("Compile /F=" + get_environment('dropbox') +
    "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s /C=C:\\Program Files\\Multi-Edit 2008\\CmacWin.exe");
 
 @load_my_macros_into_memory_1;
@@ -4316,12 +4316,12 @@ void
 {
 str fp = 'Create new file in the work documents folder.';
 
-str full_filename[128] = get_environment('savannah') + '\java\' + filename;
+str full_filename[128] = get_environment('dropbox') + '\java\' + filename;
 
 if(file_exists(full_filename))
 {
   filename = filename + '_' + @get_formatted_date_as_fct_name;
-  full_filename = get_environment('savannah') + '\java\' + filename;
+  full_filename = get_environment('dropbox') + '\java\' + filename;
 }
 
 int handle;
@@ -8138,6 +8138,31 @@ cr;
 @footer;
 
 
+@say(fp);
+}
+
+
+
+//;
+
+void
+@find_rubrics_with_2_blank_lines
+{
+str fp = "Find rubrics with 2 blank lines instead of 3.";
+
+// lu: Oct-31-2023
+
+str rs;
+str sc;
+
+@header;
+sc = '.+$$$^;';
+@eol;
+
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+
+@footer;
+@say(found_str);
 @say(fp);
 }
 

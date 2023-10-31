@@ -221,20 +221,20 @@ switch(lower(get_extension(name_of_file)))
     return();
     break;
   case 'sqlx':
-    Command_Line = 'c:\windows\system32\cmd.exe /k ' + Get_Environment('savannah') +
+    Command_Line = 'c:\windows\system32\cmd.exe /k ' + get_environment('dropbox') +
                    '\belfry\run_tsql_2.bat ';
     Argument = char(34) + Name_of_File + char(34);
     break;
   default:
     int Initial_Window = @current_window;
-    rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') 
+    rm("@open_file_parameter_way /FN=" + get_environment('dropbox') 
       + "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
-    rm("Compile /F=" + Get_Environment('savannah') +
+    rm("Compile /F=" + get_environment('dropbox') +
       "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s /C=C:\\Program " + 
       "Files\\Multi-Edit 2008\\CmacWin.exe");
-    rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') 
+    rm("@open_file_parameter_way /FN=" + get_environment('dropbox') 
       + "\\cmac\\Quickla-for-Multi-Edit\\\ListMgr.s");
-    rm("Compile /F=" + Get_Environment('savannah') +
+    rm("Compile /F=" + get_environment('dropbox') +
        "\\cmac\\Quickla-for-Multi-Edit\\\ListMgr.s /C=C:\\Program Files\\Multi-Edit 2008\\CmacWin.exe");
     switch_window(Initial_Window);
     @say(fp + ' Compile.');

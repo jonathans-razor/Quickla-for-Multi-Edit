@@ -2908,7 +2908,7 @@ void
 {
 str fp = 'Create new file in the work documents folder.';
 
-str full_filename[128] = get_environment('savannah') + '\work documents\' + filename;
+str full_filename[128] = get_environment('dropbox') + '\work documents\' + filename;
 
 if(file_exists(full_filename))
 {

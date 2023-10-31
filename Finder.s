@@ -1881,31 +1881,31 @@ void
 {
 str fp = "Open CMAC files.";
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Aliases.s");
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Shared.s");
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Regexes.s");
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Finder.s");
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Format.s");
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\ListMgr.s");
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Searcher.s");
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Clif.s");
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
 
 @say(fp);
@@ -2046,7 +2046,7 @@ str so;
 
 @save_location;
 
-rm("@open_file_parameter_way /FN=" + Get_Environment('savannah') +
+rm("@open_file_parameter_way /FN=" + get_environment('dropbox') +
   "\\Transact_SQL\\Project X Analysis Installation.sql");
 
 tof;
