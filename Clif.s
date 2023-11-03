@@ -228,14 +228,14 @@ switch(lower(get_extension(name_of_file)))
   default:
     int Initial_Window = @current_window;
     rm("@open_file_parameter_way /FN=" + get_environment('dropbox') 
-      + "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
+      + "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
     rm("Compile /F=" + get_environment('dropbox') +
-      "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s /C=C:\\Program " + 
+      "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s /C=C:\\Program " + 
       "Files\\Multi-Edit 2008\\CmacWin.exe");
     rm("@open_file_parameter_way /FN=" + get_environment('dropbox') 
-      + "\\cmac\\Quickla-for-Multi-Edit\\\ListMgr.s");
+      + "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\ListMgr.s");
     rm("Compile /F=" + get_environment('dropbox') +
-       "\\cmac\\Quickla-for-Multi-Edit\\\ListMgr.s /C=C:\\Program Files\\Multi-Edit 2008\\CmacWin.exe");
+       "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\ListMgr.s /C=C:\\Program Files\\Multi-Edit 2008\\CmacWin.exe");
     switch_window(Initial_Window);
     @say(fp + ' Compile.');
     return();

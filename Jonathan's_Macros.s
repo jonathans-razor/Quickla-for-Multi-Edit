@@ -516,7 +516,7 @@ str so;
 @header;
 
 rm("@open_file_with_writability /FN=" + get_environment('dropbox') +
-  "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
+  "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
 
 eof;
 push_undo;
@@ -574,7 +574,7 @@ str so;
 @header;
 
 rm("@open_file_with_writability /FN=" + Get_Environment('dropbox') +
-  "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
+  "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
 
 @eof;
 @bol;
@@ -1060,7 +1060,7 @@ if(!((@is_s_file) or (@is_bullet_file) or (@is_batch_file) or (@is_jenkinsfile))
 if(@is_s_file)
 {
   @open_file(get_environment('dropbox') + 
-    "\\cmac\\Quickla-for-Multi-Edit\\\cmac code graveyard.s");
+    "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\cmac code graveyard.s");
 }
 else if(@is_bullet_file)
 {
@@ -1122,9 +1122,9 @@ str fp = "Compile Joma.";
 
 int Initial_Window = @current_window;
 rm("@open_file_parameter_way /FN=" + get_environment('dropbox') 
-  + "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
+  + "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
 rm("Compile /F=" + get_environment('dropbox') +
-   "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s /C=C:\\Program Files\\Multi-Edit 2008\\CmacWin.exe");
+   "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s /C=C:\\Program Files\\Multi-Edit 2008\\CmacWin.exe");
 
 @load_my_macros_into_memory_1;
 
@@ -4972,7 +4972,7 @@ up;
 //;
 
 void
-@read_some_headlines
+@read_headlines
 {
 str fp = "Pass a url to a browser.";
 
@@ -4982,6 +4982,9 @@ str fp = "Pass a url to a browser.";
 
 int is_found = 0;
 str url;
+
+url = @get_remote_oj_using_klc('revo', is_found);
+@surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfscne', is_found);
 @surf(url, 0);
@@ -5017,9 +5020,6 @@ url = @get_remote_oj_using_klc('rfreas', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('reut', is_found);
-@surf(url, 0);
-
-url = @get_remote_oj_using_klc('revo', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfwash', is_found);
