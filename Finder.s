@@ -799,6 +799,7 @@ void
 str fp = 'Find launch codes with word under cursor.';
 
 // fcd: Aug-21-2015
+// skw find lc using subject
 
 @header;
 @save_location;
