@@ -8195,7 +8195,6 @@ down;
 down;
 down;
 eol;
-//qq-1
 @footer;
 
 @say(fp);
