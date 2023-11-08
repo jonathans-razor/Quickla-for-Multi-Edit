@@ -29,6 +29,7 @@ prototype ListMgr
   void @convert_line_to_spaces();
   void @convert_line_to_underscores();
   void @copy_and_paste_bullet();
+  void @copy_and_paste_pb();
   void @copy_and_paste_rubric();
   void @copy_and_paste_subbullet();
   int  @count_bullets();
@@ -62,7 +63,6 @@ prototype ListMgr
   void @find_from_lc_known(str lc);
   int  @find_next_big_segment();
   str  @find_next_bobs();
-  // (!rfsp)
   str  @find_next_bsr();
   str  @find_next_content_area();
   int  @find_next_rubric();
@@ -85,6 +85,7 @@ prototype ListMgr
   void @hc_perimeter_button();
   void @hc_rubric();
   void @hc_small_segment();
+  // (!rfsp)
   void @hc_small_segment_con_inc();
   void @hc_small_segment_content_dinc();
   str  @hc_subject();
@@ -113,6 +114,8 @@ prototype ListMgr
   void @move_bullet_to_eor_alone();
   str  @move_bullet_to_lc_alone(str lc);
   str  @move_bullet_to_lc_wme(str lc);
+  void @move_down();
+  void @move_up();
   void @paste_after();
   void @paste_after_with_subbullet();
   void @paste_before_with_subbullet();

@@ -8168,4 +8168,39 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 
 
 
+//;
+
+void
+@rtm
+{
+str fp = "Add function for Python testing.";
+
+// lu: Nov-8-2023
+
+@header;
+@find_lc('efle');
+@find_bor_or_previous_rubric;
+@move_up;
+@move_up;
+@find_next_rubric;
+@copy_and_paste_pb;
+@move_down;
+down;
+eol;
+@add_text_date;
+down;
+down;
+down;
+down;
+down;
+down;
+eol;
+//qq-1
+@footer;
+
+@say(fp);
+}
+
+
+
 //; (!efjo, !efjm)
