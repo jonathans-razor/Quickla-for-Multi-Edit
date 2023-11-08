@@ -9442,6 +9442,7 @@ if(rows_to_move_down > 0)
   while(rows_to_move_down > 0)
   {
     down;
+    @bol;
     rows_to_move_down--;
   }
 }
