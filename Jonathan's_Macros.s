@@ -5400,6 +5400,7 @@ int original_line_number = @current_line_number;
 @move_dog_park_to_eof;
 
 str sc = '!' + 'rfaf';
+
 int is_found = @seek_in_all_files_2_arguments(sc, fp);
 
 @hc_small_segment_content_dinc();
@@ -5433,10 +5434,11 @@ up;
 @delete_block;
 
 @seek('lu');
-
-@eol;
+eol;
+cr;
 @add_text_date;
 
+up;
 up;
 up;
 up;
