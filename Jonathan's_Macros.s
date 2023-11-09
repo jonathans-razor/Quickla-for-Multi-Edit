@@ -8148,6 +8148,43 @@ cr;
 //;
 
 void
+@add_autotext_block_3_at_job_hi
+{
+str fp = "Add job history autotext for h3.";
+
+// lu: Oct-24-2023
+
+@header;
+@find_lc('rfax-Nov-9-2023');
+@control_shift_key_plus_pbh;
+@find_lc('h');
+@add_bullet_below;
+@add_text_date;
+@eol;
+cr;
+cr;
+@paste;
+del_line;
+up;
+up;
+up;
+up;
+up;
+up;
+up;
+eol;
+left;
+@footer;
+
+
+@say(fp);
+}
+
+
+
+//;
+
+void
 @find_rubrics_with_2_blank_lines
 {
 str fp = "Find rubrics with 2 blank lines instead of 3.";
