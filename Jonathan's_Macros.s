@@ -8207,9 +8207,9 @@ eol;
 //;
 
 void
-@rtm
+@find_echo_with_blank_lines
 {
-str fp = "x";
+str fp = "Find echo with ";
 
 // lu: Nov-9-2023
 
@@ -8221,10 +8221,6 @@ sc = 'echo.$$$';
 @eol;
 
 int is_found = @seek_in_all_files_2_arguments(sc, fp);
-return();
-rs = '\0';
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
 
 @footer;
 @say(found_str);
