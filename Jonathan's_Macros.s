@@ -8173,7 +8173,7 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-@rtm
+@add_function_for_python_testing
 {
 str fp = "Add function for Python testing.";
 
@@ -8199,6 +8199,35 @@ down;
 eol;
 @footer;
 
+@say(fp);
+}
+
+
+
+//;
+
+void
+@rtm
+{
+str fp = "x";
+
+// lu: Nov-9-2023
+
+str rs;
+str sc;
+
+@header;
+sc = 'echo.$$$';
+@eol;
+
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+return();
+rs = '\0';
+@replace_next_occurrence_only(sc, rs);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+
+@footer;
+@say(found_str);
 @say(fp);
 }
 
