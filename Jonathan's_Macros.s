@@ -8266,4 +8266,36 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 
 
 
+//;
+
+void
+@add_autotext_block_4_at_job_hi
+{
+str fp = "Add job history autotext for h4.";
+
+// lu: Nov-10-2023
+
+@header;
+@find_lc('axh4');
+@control_shift_key_plus_pbh;
+@find_lc('h');
+@add_bullet_below;
+@add_text_date;
+@eol;
+cr;
+cr;
+@paste;
+del_line;
+eol;
+cr;
+cr;
+up;
+@footer;
+
+
+@say(fp);
+}
+
+
+
 //; (!efjo, !efjm)
