@@ -8298,4 +8298,34 @@ up;
 
 
 
+//;
+
+void
+@convert_large_rubric_separators
+{
+str fp = "Convert large rubric separators in i.bat to smaller separators.";
+
+// lu: Nov-10-2023
+
+str rs;
+str sc;
+
+@header;
+sc = '$:_';
+rs = '$$:';
+@eol;
+
+@replace_next_occurrence_only(sc, rs);
+return();
+@seek(sc);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
 //; (!efjo, !efjm)
