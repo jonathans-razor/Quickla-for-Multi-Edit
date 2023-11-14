@@ -5693,6 +5693,7 @@ void
 @add_batch_file_stub_router(str starting_position = parse_str('/1=', mparm_str))
 {
 str fp = "Add batch file stub router.";
+// lu: Nov-14-2023
 // lu: Nov-2-2018
 @header;
 switch(starting_position)
@@ -5700,9 +5701,10 @@ switch(starting_position)
   case 'e':
     @eof;
     break;
-  case '':
+  case '.':
     break;
   default:
+    starting_position = 'n';
     if(!@find_lc(starting_position))
     {
       @say(fp + ' Starting position lc not found.');
