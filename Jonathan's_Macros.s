@@ -8119,72 +8119,6 @@ str fp = "Search Google exactly with wost.";
 //;
 
 void
-@add_autotext_block_2_at_job_hi
-{
-str fp = "Add job history autotext for h2.";
-
-// lu: Oct-24-2023
-
-@header;
-@find_lc('rfax-Oct-23-2023');
-@control_shift_key_plus_pbh;
-@find_lc('h');
-@add_bullet_below;
-@add_text_date;
-@eol;
-cr;
-cr;
-@paste;
-eol;
-cr;
-@footer;
-
-
-@say(fp);
-}
-
-
-
-//;
-
-void
-@add_autotext_block_3_at_job_hi
-{
-str fp = "Add job history autotext for h3.";
-
-// lu: Oct-24-2023
-
-@header;
-@find_lc('rfax-Nov-9-2023');
-@control_shift_key_plus_pbh;
-@find_lc('h');
-@add_bullet_below;
-@add_text_date;
-@eol;
-cr;
-cr;
-@paste;
-del_line;
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-eol;
-left;
-@footer;
-
-
-@say(fp);
-}
-
-
-
-//;
-
-void
 @find_rubrics_with_2_blank_lines
 {
 str fp = "Find rubrics with 2 blank lines instead of 3.";
@@ -8261,38 +8195,6 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 
 @footer;
 @say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@add_autotext_block_4_at_job_hi
-{
-str fp = "Add job history autotext for h4.";
-
-// lu: Nov-10-2023
-
-@header;
-@find_lc('axh4');
-@control_shift_key_plus_pbh;
-@find_lc('h');
-@add_bullet_below;
-@add_text_date;
-@eol;
-cr;
-cr;
-@paste;
-del_line;
-eol;
-cr;
-cr;
-up;
-@footer;
-
-
 @say(fp);
 }
 

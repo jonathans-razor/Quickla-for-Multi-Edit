@@ -2943,6 +2943,137 @@ left;
 
 
 
+//;+ Job Search History Series (skw h series)
+
+
+
+//;;
+
+void
+@add_autotext_block_1_at_job_hi()
+{
+str fp = "Add job history autotext for h1.";
+
+// lu: Nov-14-2023
+
+@header;
+@find_lc('rffjtemplate');
+@find_next_bullet;
+@hc_bullet;
+@find_lc('h');
+@find_next_bullet;
+goto_col(1);
+@paste;
+@find_previous_bullet;
+@eol;
+@add_text_date;
+down;
+down;
+@eol;
+left;
+
+@footer;
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@add_autotext_block_2_at_job_hi
+{
+str fp = "Add job history autotext for h2. (applied at)";
+
+// lu: Oct-24-2023
+
+@header;
+@find_lc('axh2');
+@control_shift_key_plus_pbh;
+@find_lc('h');
+@add_bullet_below;
+@add_text_date;
+@eol;
+cr;
+cr;
+@paste;
+eol;
+cr;
+@footer;
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@add_autotext_block_3_at_job_hi
+{
+str fp = "Add job history autotext for h3. (reaching out)";
+
+// lu: Oct-24-2023
+
+@header;
+@find_lc('rfax-Nov-9-2023');
+@control_shift_key_plus_pbh;
+@find_lc('h');
+@add_bullet_below;
+@add_text_date;
+@eol;
+cr;
+cr;
+@paste;
+del_line;
+up;
+up;
+up;
+up;
+up;
+up;
+up;
+eol;
+left;
+@footer;
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@add_autotext_block_4_at_job_hi
+{
+str fp = "Add job history autotext for h4. (Otta)";
+
+// lu: Nov-10-2023
+
+@header;
+@find_lc('axh4');
+@control_shift_key_plus_pbh;
+@find_lc('h');
+@add_bullet_below;
+@add_text_date;
+@eol;
+cr;
+cr;
+@paste;
+del_line;
+eol;
+cr;
+cr;
+up;
+@footer;
+
+@say(fp);
+}
+
+
+
 //;+ Run Clifs
 
 
@@ -3609,20 +3740,7 @@ switch(lc) //qcq
     text(': ');
     break;
   case 'h':
-    @find_lc('rffjtemplate');
-    @find_next_bullet;
-    @hc_bullet;
-    @find_lc('h');
-    @find_next_bullet;
-    goto_col(1);
-    @paste;
-    @find_previous_bullet;
-    @eol;
-    @add_text_date;
-    down;
-    down;
-    @eol;
-    left;
+    @add_autotext_block_1_at_job_hi;
     break;
   case 'shon': // (!shon)
     @add_bullet_below;
