@@ -10387,6 +10387,18 @@ str fp = 'Add text alternate spelling.';
 //;;
 
 void
+@add_text_used_in_a_sentence
+{
+str fp = 'Add text used in a sentence.';
+eol;
+text(' (used in a sentence)');
+}
+
+
+
+//;;
+
+void
 @add_text_parameter
 {
 str fp = 'Add text parameter.';
