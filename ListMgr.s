@@ -10733,7 +10733,7 @@ void
 str fp = 'Add text asterisks.';
 
 goto_col(55);
-text('*');
+text('`');
 
 @say(fp);
 }
