@@ -5703,9 +5703,13 @@ switch(starting_position)
     @eof;
     break;
   case '.':
+//qq
     break;
   default:
-    starting_position = 'n';
+    if (starting_position == '')
+    {
+      starting_position = 'n';
+    }
     if(!@find_lc(starting_position))
     {
       @say(fp + ' Starting position lc not found.');
@@ -5715,6 +5719,7 @@ switch(starting_position)
 }
 @add_cbf_template;
 @footer;
+@say(fp + " Added at (" + starting_position + ")");
 }
 
 
