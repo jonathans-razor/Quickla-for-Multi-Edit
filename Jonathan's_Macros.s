@@ -5703,7 +5703,6 @@ switch(starting_position)
     @eof;
     break;
   case '.':
-//qq
     break;
   default:
     if (starting_position == '')
