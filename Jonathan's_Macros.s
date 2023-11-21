@@ -4481,7 +4481,7 @@ str fp = 'Add text new CMAC Macro List entry.';
 
 @header;
 
-str lc = "rfc0";
+str lc = "rfcm";
 if(!@find_lc_known(fp, lc))
 {
   return();
