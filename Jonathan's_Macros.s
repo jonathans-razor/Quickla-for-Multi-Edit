@@ -8194,10 +8194,9 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-//qq
-@prepare_message_to_phone_file()
+@paste_clipboard_to_mtp()
 {
-str fp = "Prepare message to phone file.";
+str fp = "Paste clipboard text to message to phone file.";
 
 // lu: Mar-8-2018
 
@@ -8224,14 +8223,14 @@ str fp = "Prepare message to phone file.";
 //;
 
 void
-@format_and_prepare_message_to_p
+@paste_current_ss_to_mtp
 {
-str fp = "Format and prepare message to phone.";
+str fp = "Paste current small segment to message to phone.";
 
 // lu: Aug-15-2023
 
 @@prepare_small_segment_for_pstn;
-@prepare_message_to_phone_file;
+@paste_clipboard_to_mtp;
 
 @say(fp);
 }
