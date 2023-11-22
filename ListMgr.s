@@ -7833,54 +7833,6 @@ rm('CenterLn');
 
 
 
-//;; (skw export, purposes)
-
-void
-@prepare_small_segment_for_expst()
-{
-str fp = "Prepare small segment for external pasting.";
-
-// fcd: May-15-2015
-
-// lu: Mar-8-2018
-
-@save_location;
-
-@hc_small_segment_con_inc;
-
-@create_timestamped_file;
-
-@paste;
-
-@bof;
-
-@delete_carriage_returns;
-
-@select_all;
-
-@copy;
-
-@close_and_save_file_wo_prompt;
-
-@restore_location;
-
-@say(fp);
-}
-
-
-
-//;;
-
-void
-@@prepare_small_segment_for_pstn()
-{
-@header;
-@prepare_small_segment_for_expst;
-@footer;
-}
-
-
-
 //;;
 
 void
@@ -13039,7 +12991,7 @@ text('><    ><    ><    ><    ><    Separator:');
 
 
 
-//;
+//;;
 
 void
 @add_text_debug_for_cbf
@@ -13054,6 +13006,54 @@ text(' cbf' + 'q');
 @bol;
 
 @say(fp);
+}
+
+
+
+//;+  (skw export, purposes)
+
+void
+@prepare_small_segment_for_expst()
+{
+str fp = "Prepare small segment for external pasting.";
+
+// fcd: May-15-2015
+
+// lu: Mar-8-2018
+
+@save_location;
+
+@hc_small_segment_con_inc;
+
+@create_timestamped_file;
+
+@paste;
+
+@bof;
+
+@delete_carriage_returns;
+
+@select_all;
+
+@copy;
+
+@close_and_save_file_wo_prompt;
+
+@restore_location;
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@@prepare_small_segment_for_pstn()
+{
+@header;
+@prepare_small_segment_for_expst;
+@footer;
 }
 
 

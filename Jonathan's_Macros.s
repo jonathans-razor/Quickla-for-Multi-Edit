@@ -7008,52 +7008,6 @@ rs = '$$:';
 //;
 
 void
-@prepare_message_to_phone_file()
-{
-str fp = "Prepare message to phone file.";
-
-// lu: Mar-8-2018
-
-@header;
-
-@save_location;
-
-@open_file(get_environment('dropbox') + '\savannah\reach out\message to phone.txt');
-
-@delete_all;
-
-@paste;
-
-@bof;
-
-@delete_carriage_returns;
-
-@footer;
-@say(fp);
-}
-
-
-
-//;
-
-void
-@format_and_prepare_message_to_p
-{
-str fp = "Format and prepare message to phone.";
-
-// lu: Aug-15-2023
-
-@@prepare_small_segment_for_pstn;
-@prepare_message_to_phone_file;
-
-@say(fp);
-}
-
-
-
-//;
-
-void
 @find_lc_partner_listed_in_bsh
 {
 str fp = "Find lc partner listed in big segment header.";
@@ -8232,6 +8186,53 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 
 @footer;
 @say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+//qq
+@prepare_message_to_phone_file()
+{
+str fp = "Prepare message to phone file.";
+
+// lu: Mar-8-2018
+
+@header;
+
+@save_location;
+
+@open_file(get_environment('dropbox') + '\savannah\reach out\message to phone.txt');
+
+@delete_all;
+
+@paste;
+
+@bof;
+
+@delete_carriage_returns;
+
+@footer;
+@say(fp);
+}
+
+
+
+//;
+
+void
+@format_and_prepare_message_to_p
+{
+str fp = "Format and prepare message to phone.";
+
+// lu: Aug-15-2023
+
+@@prepare_small_segment_for_pstn;
+@prepare_message_to_phone_file;
+
 @say(fp);
 }
 
