@@ -8139,6 +8139,51 @@ eol;
 //;
 
 void
+@add_function_for_k_bat_testing
+{
+str fp = "Add function for k.bat testing.";
+
+// lu: Nov-8-2023
+
+@header;
+@find_lc('efk');
+@find_bor_or_previous_rubric;
+@move_up;
+@move_up;
+@find_next_rubric;
+@copy_and_paste_pb;
+@move_down;
+down;
+down;
+down;
+down;
+down;
+down;
+down;
+down;
+eol;
+@add_text_date;
+cr;
+cr;
+up;
+up;
+up;
+up;
+up;
+up;
+up;
+up;
+eol;
+@footer;
+
+@say(fp);
+}
+
+
+
+//;
+
+void
 @find_echo_with_blank_lines
 {
 str fp = "Find echo with ";
