@@ -5224,6 +5224,8 @@ if(!@is_batch_file)
   return();
 }
 
+@header;
+
 @save_location;
 
 @move_dog_park_to_eof;
@@ -5245,9 +5247,9 @@ cr;
 up;
 up;
 up;
+ //qq
 @paste;
 
-
 @bobs;
 up;
 @bobs;
@@ -5264,33 +5266,9 @@ up;
 
 @delete_block;
 
-@seek('lu');
 @eol;
-text(' ');
-@add_text_date;
 
-down;
-down;
-down;
-down;
-down;
-down;
-down;
-@bol;
-text('rem q' + 'q-1');
-cr;
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-@eol;
-text(' ');
+@footer;
 
 @say(fp);
 }
