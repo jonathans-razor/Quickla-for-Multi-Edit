@@ -5247,7 +5247,6 @@ cr;
 up;
 up;
 up;
- //qq
 @paste;
 
 @bobs;
