@@ -10733,6 +10733,51 @@ text('cbf-: %cbf-% - ');
 //;;
 
 void
+@add_text_prettier_cbf_debug_msg()
+{
+str fp = 'Add text prettier cbf debug message.';
+
+@header;
+
+@save_location;
+
+@find_lc('rfpr');
+
+@hc_small_segment_content_dinc;
+
+@recall_location;
+
+eol;
+cr;
+
+@paste;
+
+up;
+up;
+up;
+up;
+up;
+eol;
+@add_text_date_time_no_spaces;
+@eol;
+cr;
+text('rem qj' + 'q');
+up;
+@eol;
+left;
+left;
+left;
+
+@footer;
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
 @add_text_recommended_by()
 {
 str fp = 'Add text recommended by.';
