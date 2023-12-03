@@ -1552,7 +1552,7 @@ if(!@seek_in_all_files_2_arguments(sc, so))
 
 @hc_big_segment;
 
-@find_lc('rfmyca');
+@find_lc('rftpmdc');
 
 @bol;
 
