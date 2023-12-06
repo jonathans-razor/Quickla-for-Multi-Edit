@@ -3623,7 +3623,7 @@ switch(find_Precision)
     break;
   case 2:
     sc = @equate_spaces_and_dashes(sc);
-    sc = '^((:#)||(;#))' + sc;
+    sc = '^((:#)||(;#)||(:\+ @)||(;\+ @))' + sc;
     break;
   case 3:
     sc = @equate_spaces_and_dashes_wcl(sc);
