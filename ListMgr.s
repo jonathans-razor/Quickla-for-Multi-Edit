@@ -10680,12 +10680,19 @@ text(date_time);
 //;;
 
 void
-@add_text_asterisks()
+@toggle_grave_accent()
 {
-str fp = 'Add text asterisks.';
+str fp = 'Toggle grave accent at column 55.';
 
 goto_col(55);
-text('`');
+if (@current_character == '`')
+{
+  del_char;
+}
+else
+{
+  text('`');
+}
 
 @say(fp);
 }
