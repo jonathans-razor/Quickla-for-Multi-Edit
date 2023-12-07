@@ -2930,7 +2930,7 @@ if(@text_is_selected)
   delete_block;
 }
 
-text('http://www.');
+text('http://');
 @eol;
 text('.com');
 left;
