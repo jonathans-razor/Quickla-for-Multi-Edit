@@ -5031,6 +5031,9 @@ url = @get_remote_oj_using_klc('wired', is_found);
 url = @get_remote_oj_using_klc('rfwsj', is_found);
 @surf(url, 0);
 
+url = @get_remote_oj_using_klc('rfzh', is_found);
+@surf(url, 0);
+
 @footer;
 @say(fp);
 }
