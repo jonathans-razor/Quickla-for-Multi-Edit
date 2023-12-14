@@ -2371,7 +2371,7 @@ str fp = "Search Google with appended words.";
 //;
 
 void
-@search_google_with_appended_bss
+@search_google_with_appended_ba
 {
 str fp = "Search Google with appended words.";
 // lu: Jan-21-2022

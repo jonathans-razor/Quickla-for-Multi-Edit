@@ -158,8 +158,9 @@ switch(@filename_extension)
     break;
   case '':
   case 's':
-  case 'sh':
     return("^//;");
+  case 'sh':
+    return("^.;");
     break;
   case 'sql':
     return("^--;");
