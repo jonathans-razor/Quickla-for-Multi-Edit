@@ -13106,4 +13106,43 @@ void
 
 
 
+//;;
+
+void
+@prepare_job_search_hi_for_expst()
+{
+str fp = "Prepare job search history for external pasting.";
+
+// fcd: Dec-15-2023
+
+@header;
+@save_location;
+
+@hc_small_segment_con_inc;
+
+@create_timestamped_file;
+
+@paste;
+
+@bof;
+
+del_line;
+del_line;
+
+@delete_carriage_returns;
+
+@select_all;
+
+@copy;
+
+@close_and_save_file_wo_prompt;
+
+@restore_location;
+@footer;
+
+@say(fp);
+}
+
+
+
 //; (!eflm)
