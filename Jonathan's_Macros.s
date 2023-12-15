@@ -5216,489 +5216,66 @@ if(@seek_from_bof('!rf' + 'cea') != 1)
 //;;
 
 void
-@add_batch_file_stub_bare_bones()
+@add_stub_bare_bones(str lc = parse_str('/1=', mparm_str))
 {
-str fp = "Add batch file stub bare bones.";
-
-// fcd: Jun-30-2020
-
-if(!@is_batch_file)
-{
-  return();
-}
-
-@header;
-
-@save_location;
-
-@move_dog_park_to_eof;
-
-str sc = 'rfbare';
-//int is_found = @seek_in_all_files_2_arguments(sc, fp);
-@find_lc(sc);
-
-@hc_small_segment_content_dinc();
-
-@restore_location;
-
-@find_next_rubric;
-
-@bol;
-cr;
-cr;
-cr;
-up;
-up;
-up;
-@paste;
-
-@bobs;
-up;
-@bobs;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@eol;
-
-@footer;
-
-@say(fp);
-}
-
-
-
-//;;
-
-void
-@add_batch_file_stub_generic()
-{
-str fp = "Add batch file new stub.";
-
-// fcd: Sep-21-2016
-
-if(!@is_batch_file)
-{
-  return();
-}
-
-@save_location;
-
-@move_dog_park_to_eof;
-
-str sc = 'rftnew';
-//int is_found = @seek_in_all_files_2_arguments(sc, fp);
-@find_lc(sc);
-
-@hc_small_segment_content_dinc();
-
-@restore_location;
-
-@find_next_rubric;
-
-@bol;
-cr;
-cr;
-cr;
-up;
-up;
-@paste;
-
-return();
-
-@bobs;
-up;
-@bobs;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@seek('lu');
-@eol;
-text(' ');
-@add_text_date;
-
-down;
-down;
-down;
-down;
-down;
-down;
-down;
-@bol;
-text('rem q' + 'q-1');
-cr;
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-@eol;
-text(' ');
-
-@say(fp);
-}
-
-
-
-//;;
-
-void
-@add_cbf_template()
-{
-str fp = "Add batch file new stub for n.bat.";
-
-// fcd: Jun-12-2018
-
-@save_location;
-
-int original_line_number = @current_line_number;
-
-@move_dog_park_to_eof;
-
-str sc = '!' + 'rfaf';
-
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-
-@hc_small_segment_content_dinc();
-
-@restore_location;
-
-goto_line(original_line_number);
-
-@find_next_rubric;
-
-@bol;
-cr;
-cr;
-up;
-up;
-up;
-@paste;
-
-@find_bobs_or_previous_bs;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@seek('lu');
-eol;
-cr;
-@add_text_date;
-
-up;
-up;
-up;
-up;
-up;
-up;
-@eol;
-cr;
-text('rem Provenance: Jul-16-2021_11_43_AM q' + 'q1');
-up;
-up;
-up;
-up;
-up;
-@eol;
-
-@say(fp);
-}
-
-
-
-//;;
-
-void
-@add_cbf_template_v1()
-{
-str fp = "Add batch file stub - v1.";
-
-// fcd: Jul-16-2021
-
-@save_location;
-
-int original_line_number = @current_line_number;
-
-@move_dog_park_to_eof;
-
-str sc = '!' + 'rfaf';
-
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-
-@hc_small_segment_content_dinc();
-
-@restore_location;
-
-goto_line(original_line_number);
-
-@find_next_rubric;
-
-@bol;
-cr;
-cr;
-up;
-up;
-up;
-@paste;
-
-@find_bobs_or_previous_bs;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@seek('lu');
-
-@eol;
-text(' ');
-@add_text_date;
-
-down;
-down;
-down;
-
-down;
-down;
-down;
-down;
-
-@bol;
-
-text('rem Jul-16-2021_11_40_AM q' + 'q1');
-
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-
-up;
-up;
-
-@eol;
-
-@say(fp);
-}
-
-
-
-//;;
-
-void
-@add_cbf_template_short_version()
-{
-str fp = "Add cbf template short version.";
-
-// fcd: Jun-18-2021
-
-@save_location;
-
-int original_line_number = @current_line_number;
-
-@move_dog_park_to_eof;
-
-str sc = '!' + 'rfafs';
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-
-@hc_small_segment_content_dinc();
-
-@restore_location;
-
-goto_line(original_line_number);
-
-@find_next_rubric;
-
-@bol;
-cr;
-cr;
-up;
-up;
-up;
-@paste;
-
-@find_bobs_or_previous_bs;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@seek('x_marker');
-
-@hc_subject;
-
-@delete_block;
-
-@seek('lu');
-
-@eol;
-text(' ');
-@add_text_date;
-
-down;
-down;
-down;
-
-down;
-down;
-down;
-down;
-
-@bol;
-
-text('rem Dec-10-2020_12_16_PM q' + 'q1');
-
-up;
-up;
-up;
-up;
-up;
-up;
-up;
-
-up;
-up;
-
-@eol;
-
-@say(fp);
-}
-
-
-
-//;;
-
-void
-@@add_cbf_template
-{
-@header;
-@add_cbf_template;
-@footer;
-}
-
-
-
-//;;
-
-void
-@@add_batch_file_stub_generic
-{
-@header;
-@add_batch_file_stub_generic;
-@footer;
-}
-
-
-
-//;;
-
-void
-@add_batch_file_stub_router_v1(str starting_position = parse_str('/1=', mparm_str))
-{
-str fp = "Add batch file stub router version 1.";
-
-// lu: Nov-2-2018
-
-@header;
-
-switch(starting_position)
-{
-  case 'e':
-    @eof;
-    break;
-  case '':
-    break;
-  default:
-    if(!@find_lc(starting_position))
-    {
-      @say(fp + ' Starting position lc not found.');
-      return();
-    }
-    @eof;
-}
-
-@add_cbf_template_v1;
-
-@footer;
-}
-
-
-
-//;;
-
-void
-@add_batch_file_stub_router(str starting_position = parse_str('/1=', mparm_str))
-{
-str fp = "Add batch file stub router.";
+str fp = "Add stub router.";
+// lu: Dec-14-2023
 // lu: Nov-14-2023
 // lu: Nov-2-2018
 @header;
-switch(starting_position)
+switch(lc)
 {
+  case '':
+    break;
   case 'e':
     @eof;
     break;
-  case '.':
-    break;
   default:
-    if (starting_position == '')
+    if(!@find_lc(lc))
     {
-      starting_position = 'n';
-    }
-    if(!@find_lc(starting_position))
-    {
-      @say(fp + ' Starting position lc not found.');
+      @say(fp + ' Error: Starting position (' + lc + ') not found.');
       return();
     }
-    @eof;
+    break;
 }
-@add_cbf_template;
+
+if(!@is_batch_file)
+{
+  return();
+}
+
+@save_location;
+
+str sc = 'rfbare';
+@find_lc(sc);
+
+@hc_small_segment_content_dinc();
+
+@restore_location;
+
+@find_next_rubric;
+
+@bol;
+cr;
+cr;
+cr;
+up;
+up;
+up;
+@paste;
+@bobs;
+@seek('x_marker');
+@hc_word_uc
+@delete_block;
+
+@seek('x_marker');
+@hc_word_uc
+@delete_block;
+@eol;
+
 @footer;
-@say(fp + " Added at (" + starting_position + ")");
+
+@say(fp + " Added at (" + lc + ")");
 }
 
 
@@ -5706,33 +5283,66 @@ switch(starting_position)
 //;;
 
 void
-@add_batch_file_stub_router_sv(str starting_position = parse_str('/1=', mparm_str))
+@add_stub_verbose(str lc = parse_str('/1=', mparm_str))
 {
-str fp = "Add batch file stub router - short version.";
-
+str fp = "Add stub verbose.";
+// lu: Dec-14-2023
+// lu: Nov-14-2023
 // lu: Nov-2-2018
-
 @header;
-
-switch(starting_position)
+switch(lc)
 {
+  case '':
+    break;
   case 'e':
     @eof;
     break;
-  case '':
-    break;
   default:
-    if(!@find_lc(starting_position))
+    if(!@find_lc(lc))
     {
-      @say(fp + ' Starting position lc not found.');
+      @say(fp + ' Error: Starting position (' + lc + ') not found.');
       return();
     }
-    @eof;
+    break;
 }
 
-@add_cbf_template_short_version;
+if(!@is_batch_file)
+{
+  return();
+}
+
+@save_location;
+
+str sc = 'rfv';
+@find_lc(sc);
+
+@hc_small_segment_content_dinc();
+
+@restore_location;
+
+@find_next_rubric;
+
+@bol;
+cr;
+cr;
+cr;
+up;
+up;
+up;
+@paste;
+@bobs;
+@seek('x_marker');
+@hc_word_uc
+@delete_block;
+
+@seek('x_marker');
+@hc_word_uc
+@delete_block;
+@eol;
 
 @footer;
+
+@say(fp + " Added at (" + lc + ")");
 }
 
 
@@ -7092,29 +6702,6 @@ else
 //;
 
 void
-@open_cbf_dictionary_and_add_new
-{
-str fp = "Open the CBF dictionary and add a new definition.";
-
-// lu: Jul-20-2018
-
-@header;
-
-str filename[128] = get_environment('dropbox') + '\it\composable-batch-files\n.bat';
-
-@open_file(filename);
-
-@add_cbf_template;
-
-@footer;
-@say(fp);
-}
-
-
-
-//;
-
-void
 @add_text_bookmark
 {
 str fp = "Add text bookmark.";
@@ -8085,9 +7672,9 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-@add_function_for_python_testing
+@add_stub_leetcode
 {
-str fp = "Add function for Python testing.";
+str fp = "Add function for LeetCode.";
 
 // lu: Nov-8-2023
 
@@ -8121,7 +7708,7 @@ eol;
 //;
 
 void
-@add_function_for_k_bat_testing
+@add_stub_k_bat
 {
 str fp = "Add function for k.bat testing.";
 

@@ -794,21 +794,17 @@ str fp = 'Add rubric below.';
 void
 @add_rubric(str lc = parse_str('/1=', mparm_str))
 {
+str fp = 'Add rubric.';
 @header;
 if(lc == '')
 {
   lc = 'nr';
 }
-switch(lc)
+if(!@find_lc(lc))
 {
-  // So this is a glass ceiling registry of sorts. May-17-2018
-  case 'wkxxxxxx':
-  case 'trxxxxxx':
-    lc = 'gg' + lc;
-    break;
-  default:
+  @say(fp + ' Starting position lc not found.');
+  return();
 }
-@find_lc(lc);
 @add_rubric_below(lc);
 @footer;
 }
