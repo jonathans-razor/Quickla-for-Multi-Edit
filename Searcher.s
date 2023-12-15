@@ -1613,8 +1613,9 @@ void
 
 str fp = 'Search Google Maps.';
 
-str URL = 'https://www.google.com/maps/place/';
+str URL = 'https://www.google.com/maps/search/';
 
+//qq
 str sc = parameter;
 
 if(sc == '')
