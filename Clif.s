@@ -2504,7 +2504,7 @@ else if(xpos('@', lowercased_Clif_Block, 1)) // Naked CMAC Macro ***************
 }
 else // Non-executable Location in Open Files ********************************************
 {
-  status_message_rp += ' The current line is not an executable Clif.';
+  status_message_rp += ' The current line is not an executable Clif. Dec-18-2023_4_56_PM';
   return(6);
 }
 return(0);
@@ -3105,7 +3105,7 @@ return(return_str);
 int
 @run_clif_under_cursor(str &operation_Outcome)
 {
-str fp = "Run cl uc.";
+str fp = "Run cl uc. Dec-18-2023_4_22_PM";
 
 int rv;
 
@@ -3125,7 +3125,7 @@ if(@is_bullet_file)
   if((@first_character(get_line) != ';') && (@first_character(get_line) != ':'))
   {
     mark_pos;
-    @boca; //qcq
+    @boca; // qcq This old token probably means there was a bug I didn't fix.
     rv = @anatomize_clif(0, fp);
     goto_mark;
     @say(fp);
@@ -3136,6 +3136,13 @@ if(@is_bullet_file)
     return(rv);
   }
 }
+
+if(@contains(@get_subject_or_selected_text, 'rzr'))
+{
+  @run_rzr_line(@get_subject_or_selected_text);
+  return(0);
+}
+
 rv = @anatomize_clif(0, fp);
 
 operation_Outcome = fp;
