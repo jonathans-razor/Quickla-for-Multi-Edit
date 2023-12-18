@@ -13039,25 +13039,6 @@ text('><    ><    ><    ><    ><    Separator:');
 
 
 
-//;;
-
-void
-@add_text_debug_for_cbf
-{
-str fp = 'Add text debug for CBF.';
-
-@eol;
-cr;
-text('echo ');
-@add_text_date_time_no_spaces_ws;
-text(' cbf' + 'q');
-@bol;
-
-@say(fp);
-}
-
-
-
 //;+  (skw export, purposes)
 
 void
