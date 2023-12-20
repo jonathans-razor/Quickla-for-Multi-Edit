@@ -2954,17 +2954,20 @@ void
 {
 str fp = "Add job history autotext for h1.";
 
+// lu: Dec-20-2023
 // lu: Nov-14-2023
 
 @header;
 @find_lc('rffjtemplate');
 @find_next_bullet;
-@hc_bullet;
+@hc_small_segment_content_dinc;
 @find_lc('h');
-@find_next_bullet;
-goto_col(1);
+@add_bullet_below;
+cr;
+cr;
 @paste;
-@find_previous_bullet;
+del_line;
+@bob;
 @eol;
 @add_text_date;
 down;
