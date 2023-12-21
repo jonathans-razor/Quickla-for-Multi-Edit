@@ -24,6 +24,8 @@ Metadata: Track Size (!tsjm)
     Date       Lines    Bytes    Macros   Notes
  -----------  ------  ---------  -------  ----------------------------------------------------
 
+:Dec-21-2023   7,875    107,609      284
+
 : Jul-5-2022   8,057    108,788      283
 
 : Jan-3-2022   8,085    109,016      284
@@ -7698,6 +7700,10 @@ down;
 down;
 down;
 eol;
+@run_clif_internally('mle');
+// Dec-21-2023: I tried to put @paste here but it doesn't seem to work. Seems like the 
+// CBF command is not fast enough and/or in a separate process.
+
 @footer;
 
 @say(fp);
@@ -7851,4 +7857,4 @@ str fp = "Paste current small segment to message to phone.";
 
 
 
-//; (!efjo, !efjm)
+//; (!efjm)
