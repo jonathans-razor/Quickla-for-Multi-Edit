@@ -7857,4 +7857,31 @@ str fp = "Paste current small segment to message to phone.";
 
 
 
+//;
+
+void
+@copy_bullet_to_bsa
+{
+str fp = "Copy bullet to bullet staging area.";
+
+@header;
+
+@save_location;
+
+@hc_bullet;
+
+@find_lc('bsa');
+
+@paste_after;
+
+@recall_location;
+
+@footer;
+
+@say(fp);
+// lu: Dec-31-2023
+}
+
+
+
 //; (!efjm)
