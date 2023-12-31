@@ -1343,6 +1343,20 @@ make_message(@trim_period(fp) + ' for "' + Pretty_sc + '".');
 //;;
 
 void
+@goto_youtube
+{
+str fp = 'Go to YooTube home.';
+
+str URL = 'http://www.youtube.com';
+
+@surf(url, 2);
+}
+
+
+
+//;;
+
+void
 @search_youtube_by_views
 {
 str fp = 'Search YouTube exactly using Firefox. Sort by views.';
