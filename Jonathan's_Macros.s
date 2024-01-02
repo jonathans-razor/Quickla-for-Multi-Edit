@@ -5260,7 +5260,6 @@ str sc = 'rfbare';
 @bol;
 cr;
 cr;
-//qq
 cr;
 up;
 up;
