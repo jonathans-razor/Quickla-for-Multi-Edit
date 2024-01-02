@@ -5260,11 +5260,18 @@ str sc = 'rfbare';
 @bol;
 cr;
 cr;
+//qq
 cr;
 up;
 up;
 up;
 @paste;
+up;
+up;
+cr;
+text('rem q' + 'q1');
+cr;
+cr;
 @bobs;
 @seek('x_marker');
 @hc_word_uc
