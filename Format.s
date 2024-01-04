@@ -15,8 +15,10 @@ macro_file Format; // (!fm)
 
 Metadata: Track Size (!tsfm)
 
-    Date       Lines     Bytes    Macros   Notes
+        Date   Lines      Bytes   Macros  Notes
  -----------  ------  ---------  -------  ----------------------------------------------------
+
+: Jan-4-2024   2,366     37,729       75
 
 : Jan-3-2024   2,364     37,685       75
 

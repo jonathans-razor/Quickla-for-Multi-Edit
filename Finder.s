@@ -25,8 +25,10 @@ macro_file Finder; // (!fi)
 
 Metadata: Track Size (!tsfi)
 
-     Date      Lines     Bytes    Macros  Notes
+        Date   Lines      Bytes   Macros  Notes
  -----------  ------  ---------  -------  ----------------------------------------------------
+
+: Jan-4-2024   3,988     64,574      113
 
 : Jan-3-2024   3,984     64,486      113
 

@@ -21,8 +21,10 @@ macro_file Jonathan's_Macros; // (!jo, !jm)
 
 Metadata: Track Size (!tsjm)
 
-    Date       Lines    Bytes    Macros   Notes
+        Date   Lines      Bytes   Macros   Notes
  -----------  ------  ---------  -------  ----------------------------------------------------
+
+: Jan-4-2024   7,898    108,040      284
 
 : Jan-3-2024   7,896    107,996      284
 

@@ -15,8 +15,10 @@ macro_file Searcher; // (!se)
 
 Metadata: Track Size (!tsse)
 
-    Date       Lines     Bytes    Macros  Notes
+        Date   Lines      Bytes   Macros  Notes
  -----------  ------  ---------  -------  ----------------------------------------------------
+
+: Jan-4-2024   2,609     39,038       91
 
 : Jan-3-2024   2,607     38,994       91
 

@@ -12,8 +12,10 @@ macro_file Aliases; // (!rfal, !al)
 
 Metadata: Track Size (!tsal)
 
-     Date      Lines    Bytes     Macros  Notes
+        Date   Lines      Bytes   Macros  Notes
  -----------  ------  ---------  -------  ---------------------------------------------------
+
+: Jan-4-2024     972     12,511       71
 
 : Jan-3-2024     970     12,467       71
 

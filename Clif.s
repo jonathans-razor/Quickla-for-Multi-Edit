@@ -23,8 +23,10 @@ macro_file Clif; // (!cf)
 
 Metadata: Track Size (!tscf)
 
-    Date       Lines     Bytes    Macros  Notes
+        Date   Lines      Bytes   Macros  Notes
  -----------  ------  ---------  -------  ----------------------------------------------------
+
+: Jan-4-2024   4,821     86,031      124
 
 : Jan-3-2024   4,820     85,989      124
 

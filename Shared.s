@@ -13,8 +13,10 @@ macro_file Shared; // (!sh)
 
 Metadata: Track Size (!tssh)
 
-    Date       Lines    Bytes     Macros  Notes
+        Date   Lines      Bytes   Macros  Notes
  -----------  ------  ---------  -------  ---------------------------------------------------
+
+: Jan-4-2024   4,425     74,573      198
 
 : Jan-3-2024   4,423     74,529      198
 

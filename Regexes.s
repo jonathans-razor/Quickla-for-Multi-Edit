@@ -13,8 +13,10 @@ macro_file Regexes; // (!rx)
 
 Metadata: Track Size (!tsre)
 
-     Date      Lines    Bytes     Macros  Notes
+        Date   Lines      Bytes   Macros  Notes
  -----------  ------  ---------  -------  ---------------------------------------------------
+
+: Jan-4-2024   1,677     24,636       87
 
 : Jan-3-2024   1,675     24,592       87
 
