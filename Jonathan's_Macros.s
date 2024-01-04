@@ -5225,16 +5225,18 @@ void
 @add_stub_bare_bones(str lc = parse_str('/1=', mparm_str))
 {
 str fp = "Add stub router.";
-// lu: Dec-14-2023
-// lu: Nov-14-2023
+// lu: Jan-4-2024
 // lu: Nov-2-2018
 @header;
 switch(lc)
 {
   case '':
+    @find_lc('efn');
     break;
   case 'e':
     @eof;
+    break;
+  case 'h': // here, a.k.a. current position
     break;
   default:
     if(!@find_lc(lc))
