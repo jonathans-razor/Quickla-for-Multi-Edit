@@ -3985,4 +3985,49 @@ right;
 
 
 
+//;
+
+void
+@find_word_right
+{
+str fp = "Find word right.";
+
+// lu: Jan-5-2024
+
+str rs;
+str sc;
+
+@header;
+sc = ' [a-zA-Z0-9]';
+
+@seek(sc);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@find_word_left
+{
+str fp = "Find word left. Under construction.";
+
+// lu: Jan-5-2024
+
+str rs;
+str sc;
+
+@header;
+sc = ' [a-zA-Z0-9]';
+
+if(find_text(sc, 1, _regexp | _backward))
+{
+}
+
+@say(fp);
+}
+
+
+
 //; (!effi)
