@@ -24,6 +24,7 @@ Metadata: Track Size (!tsjm)
         Date   Lines      Bytes   Macros   Notes
  -----------  ------  ---------  -------  ----------------------------------------------------
 
+
 : Jan-4-2024   7,898    108,040      284
 
 : Jan-3-2024   7,896    107,996      284
@@ -7895,6 +7896,31 @@ str fp = "Copy bullet to bullet staging area.";
 
 @say(fp);
 // lu: Dec-31-2023
+}
+
+
+
+//;
+
+void
+@prepare_youtube_url_and_stc
+{
+str fp = "Prepare YouTube URL and Surf to Converter. Under construction.";
+
+// lu: Jan-5-2024
+
+str rs;
+str sc;
+
+@header;
+//sc = 'youtu.be';
+//rs = sc + 'pi';
+//@replace_next_occurrence_only(sc, rs);
+@hc_object;
+@surf("https://en.y2mate.is/s34/youtube-to-mp3.html", 0);
+@footer;
+
+@say(fp);
 }
 
 
