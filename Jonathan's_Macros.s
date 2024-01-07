@@ -7917,7 +7917,7 @@ str sc;
 //rs = sc + 'pi';
 //@replace_next_occurrence_only(sc, rs);
 @hc_object;
-@surf("https://en.y2mate.is/s34/youtube-to-mp3.html", 0);
+// link removed Jan-7-2024
 @footer;
 
 @say(fp);
