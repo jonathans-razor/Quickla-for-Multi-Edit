@@ -10675,8 +10675,9 @@ if((@previous_character != ' ') and (@previous_character != ':') and (@previous_
 
 str date_time = @get_formatted_date + " " + @get_time;
 
-date_time = @replace(date_time, ':', '_');
-date_time = @replace(date_time, ' ', '_');
+//qq
+date_time = @replace(date_time, ':', '-');
+date_time = @replace(date_time, ' ', '-');
 
 text(date_time);
 
