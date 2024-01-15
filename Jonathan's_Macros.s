@@ -7477,44 +7477,6 @@ str fp = "Load clipboard with this filename.";
 //;
 
 void
-@find_lc_or_batch_label
-{
-str fp = "Find lc or batch label.";
-
-// lu: Oct-1-2019
-
-@header;
-
-@save_location;
-
-str found_string;
-str sc = @get_user_input_raw(fp);;
-sc = make_literal_x(sc);
-sc = '(^:' + sc + '$)||(!' + sc + ',||\))';
-
-set_global_str('lc', sc); // Added Apr-23-2020.
-
-@bof;
-//@seek_in_all_files_batch_files_o(sc, fp, found_string);
-if (@seek_in_all_files_2_arguments(sc, found_string))
-{
-  fp += ' Found.';
-}
-else
-{
-  fp += ' NOT found or aborted.';
-  @restore_location;
-}
-
-@footer;
-@say(fp);
-}
-
-
-
-//;
-
-void
 @replace_double_colon_with_sing
 {
 str fp = "Replace double colon with single colon.";

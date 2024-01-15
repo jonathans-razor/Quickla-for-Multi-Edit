@@ -1381,7 +1381,7 @@ str wost = @get_wost;
 //;;
 
 void
-@find_again
+@find_again()
 {
 str fp = 'Find again.';
 
@@ -3800,45 +3800,6 @@ void
 //;
 
 void
-@find_batch_file_label_uc()
-{
-str fp = "Find batch file label under cursor.";
-@header;
-
-// fcd: Nov-28-2016
-
-str sc = @hc_word_uc();
-
-@bof;
-
-sc = make_literal_x(sc);
-
-str first_sc = sc;
-
-if(@first_character(sc) != ':')
-{
-  //sc = '^:' + sc + '$';
-  //sc = '^:cart$^.#$'; // definition
-  //sc = '$$:' + sc + '$'; // definition only!
-  sc = '^:' + sc + '$^.*$^set fp'; // works
-}
-
-if(!@seek_in_all_files_2_arguments(sc, fp)){
-  first_sc = '^:' + first_sc + '$';
-  @next_window;
-  @seek_in_all_files_2_arguments(first_sc, fp);
-}
-
-@footer;
-@say('sc: ' + sc);
-@say(fp);
-}
-
-
-
-//;
-
-void
 @find_batch_file_label()
 {
 str fp = "Find batch file label.";
@@ -3918,48 +3879,6 @@ str sc = @get_wost;
 //;
 
 void
-@go_to_definition
-{
-str fp = 'Go to definition';
-
-@header;
-
-if(@first_character(@get_wost) == '@')
-{
-  @find_cmac_definition_f12_key;
-  @footer;
-  return();
-}
-
-switch(@filename_extension)
-{
-  case '':
-    @find_jenkinsfile_function;
-    break;
-  case 'bat':
-    @find_batch_file_label_uc;
-    break;
-  case 'config':
-    @find_mappings_file_definition;
-    break;
-  case 's':
-  case 'sh':
-    @find_cmac_definition_f12_key;
-    break;
-  default:
-    @find_continuum(4, '');
-    break;
-}
-
-@footer;
-
-}
-
-
-
-//;
-
-void
 @find_cmac_definition_lc
 {
 str fp = "Go to macro definition via it's launch code.";
@@ -4026,6 +3945,152 @@ if(find_text(sc, 1, _regexp | _backward))
 }
 
 @say(fp);
+}
+
+
+
+//;
+
+void
+@find_batch_file_label_uc()
+{
+str fp = "Find batch file label under cursor.";
+@header;
+
+// fcd: Nov-28-2016
+
+str sc = @hc_word_uc();
+
+@bof;
+
+sc = make_literal_x(sc);
+
+str first_sc = sc;
+
+if(@first_character(sc) != ':')
+{
+  //sc = '^:' + sc + '$';
+  //sc = '^:cart$^.#$'; // definition
+  //sc = '$$:' + sc + '$'; // definition only!
+  sc = '^:' + sc + '$^.*$^set fp'; // works
+}
+
+if(!@seek_in_all_files_2_arguments(sc, fp)){
+  first_sc = '^:' + first_sc + '$';
+  @next_window;
+  @seek_in_all_files_2_arguments(first_sc, fp);
+}
+
+@footer;
+@say('sc: ' + sc);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@go_to_definition
+{
+str fp = 'Go to definition';
+
+@header;
+
+if(@first_character(@get_wost) == '@')
+{
+  @find_cmac_definition_f12_key;
+  @footer;
+  return();
+}
+
+switch(@filename_extension)
+{
+  case '':
+    @find_jenkinsfile_function;
+    break;
+  case 'bat':
+    @find_batch_file_label_uc;
+    break;
+  case 'config':
+    @find_mappings_file_definition;
+    break;
+  case 's':
+  case 'sh':
+    @find_cmac_definition_f12_key;
+    break;
+  default:
+    @find_continuum(4, '');
+    break;
+}
+
+@footer;
+
+}
+
+
+
+//;
+
+void
+@find_lc_or_batch_label(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "Find lc or batch label.";
+
+// lu: Oct-1-2019
+
+@header;
+
+@save_location;
+
+str found_string;
+
+if (sc == '')
+{
+  sc = @get_user_input_raw(fp);;
+}
+//qq
+sc = make_literal_x(sc);
+sc = '(^:' + sc + '$)||(!' + sc + ',||\))';
+
+set_global_str('lc', sc); // Added Apr-23-2020.
+
+@bof;
+//@seek_in_all_files_batch_files_o(sc, fp, found_string);
+if (@seek_in_all_files_2_arguments(sc, found_string))
+{
+  fp += ' Found.';
+}
+else
+{
+  fp += ' NOT found or aborted.';
+  @restore_location;
+}
+
+@footer;
+//qq
+@say(fp);
+}
+
+
+
+//;
+
+void
+@find_lc_or_batch_label_uc()
+{
+str fp = "Find batch file label under cursor uc.";
+@header;
+
+// fcd: Jan-14-2024
+
+str sc = @hc_word_uc();
+@find_lc_or_batch_label(sc);
+@find_again;
+//qq
+
+@footer;
+@say(fp + ' (' + sc + ')');
 }
 
 
