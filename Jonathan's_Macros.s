@@ -7913,11 +7913,9 @@ str rs;
 str sc;
 
 @header;
-//sc = 'youtu.be';
-//rs = sc + 'pi';
-//@replace_next_occurrence_only(sc, rs);
 @hc_object;
-// link removed Jan-7-2024
+@run_clif_internally('my');
+
 @footer;
 
 @say(fp);

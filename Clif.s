@@ -3168,6 +3168,8 @@ void
 
 str fp = 'Run Clif for internal use.';
 
+// skw: internal_use
+
 @save_location;
 
 if(!@find_lc_known(fp, lc))
