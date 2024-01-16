@@ -5275,8 +5275,9 @@ up;
 up;
 up;
 cr;
-text('rem q' + 'q');
+text('rem   q' + 'q');
 cr;
+text('set cbf-');
 cr;
 @bobs;
 @seek('x_marker');
@@ -7102,6 +7103,22 @@ str fp = "Convert line to double percents.";
 // lu: Jan-28-2019
 
 put_line(@commute_character(get_line, '%', '%%'));
+
+@say(fp);
+}
+
+
+
+//;
+
+void
+@convert_line_to_hat_tricks
+{
+str fp = "Convert line to hat tricks.";
+
+// lu: Jan-15-2024
+
+put_line(@commute_character(get_line, '&', '^^^&'));
 
 @say(fp);
 }

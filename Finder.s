@@ -4049,7 +4049,7 @@ if (sc == '')
 {
   sc = @get_user_input_raw(fp);;
 }
-//qq
+
 sc = make_literal_x(sc);
 sc = '(^:' + sc + '$)||(!' + sc + ',||\))';
 
@@ -4068,7 +4068,7 @@ else
 }
 
 @footer;
-//qq
+
 @say(fp);
 }
 
@@ -4087,7 +4087,6 @@ str fp = "Find batch file label under cursor uc.";
 str sc = @hc_word_uc();
 @find_lc_or_batch_label(sc);
 @find_again;
-//qq
 
 @footer;
 @say(fp + ' (' + sc + ')');
