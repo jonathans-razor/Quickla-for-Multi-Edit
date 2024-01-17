@@ -594,7 +594,7 @@ text('@rt' + 'm');
 cr;
 text('{');
 cr;
-text('str fp = "x');
+text('str fp = "');
 text('";');
 cr;
 cr;
@@ -616,7 +616,6 @@ cr;
 text("@eol;");
 cr;
 cr;
-
 text("@seek(sc);");
 cr;
 text("return();");
@@ -641,7 +640,7 @@ cr;
 cr;
 cr;
 cr;
-@seek_previous('sc =', so);
+@seek_previous('str fp', so);
 eol;
 left;
 left;
@@ -8002,37 +8001,6 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-@xrtm
-{
-str fp = " Jan-17-2024-0-56-AM";
-
-// lu: Jan-16-2024
-
-str rs;
-str sc;
-
-@header;
-sc = 'rem lu: ';
-down;
-
-@seek(sc);
-@replace_next_occurrence_only(sc, 'lu:$');
-up;
-@say(fp);
-return();
-rs = '\0';
-@replace_all_occurrs_inf_one_tof(sc, rs);
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-
-@footer;
-@say(found_str);
-}
-
-
-
-//;
-
-void
 @rtmx
 {
 str fp = "Jan-17-2024";
@@ -8076,7 +8044,6 @@ str sc;
 
 @header;
 sc = '$$$[a-z]';
-  //qq-1
 @eol;
 
 @seek(sc);
@@ -8096,7 +8063,7 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-@rtm
+@rtmx
 {
 str fp = "More than 3 blank lines.";
 
@@ -8107,6 +8074,98 @@ str sc;
 
 @header;
 sc = '$$$$$';
+@eol;
+
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+return();
+@seek(sc);
+rs = '\0';
+@replace_next_occurrence_only(sc, rs);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@rtmx
+{
+str fp = " rem lu. - Jan-17-2024-2-09-PM";
+
+// lu: Jan-16-2024
+
+str rs;
+str sc;
+
+@header;
+sc = 'rem lu: ';
+down;
+
+@seek(sc);
+@replace_next_occurrence_only(sc, 'lu:$');
+up;
+@say(fp);
+return();
+rs = '\0';
+@replace_all_occurrs_inf_one_tof(sc, rs);
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+
+@footer;
+@say(found_str);
+}
+
+
+
+//;
+
+void
+@rtmx
+{
+str fp = "Crowded echo statements.";
+
+// lu: Jan-17-2024
+
+str rs;
+str sc;
+
+@header;
+sc = '[a-z]$^echo';
+  //qq-1
+@eol;
+
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+return();
+@seek(sc);
+rs = '\0';
+@replace_next_occurrence_only(sc, rs);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@rtm
+{
+str fp = "Crowded exit statements.";
+
+// lu: Jan-17-2024
+
+str rs;
+str sc;
+
+@header;
+sc = '[a-z]$^exit';
   //qq-1
 @eol;
 
