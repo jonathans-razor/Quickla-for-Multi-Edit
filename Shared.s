@@ -561,8 +561,16 @@ str
 str fp = 'You pass in the string, the character portion you wish to discard and
 the new character you wish to replace it with. Then, the fixed-up string is returned to you.';
 
-/* skw old_character, old_string, swap, in_string, replace_in_string, replace_string, 
-replace_character */
+/* 
+skw:
+in_string
+old_character
+old_string
+replace_character
+replace_in_string
+replace_string
+swap
+*/
 
 int Countdown = length(original_String);
 str Current_Character;
@@ -1097,7 +1105,14 @@ int
 {
 str fp = 'Switch to named window.';
 
-// skw: window_name, switch_to_n, switch_to_window, go_to_window, find_window
+/*
+skw:
+find_window
+go_to_window
+switch_to_n
+switch_to_window
+window_name
+*/
 
 int Window_Is_Found = 0;
 str Name_of_File;
@@ -1160,12 +1175,15 @@ goto_col(Global_int('initial column number 2'));
 
 
 
-//;; (skw return home, return_home)
+//;;
 
 void
 @@restore_location
 {
 str fp = 'Restore location.';
+// skw:
+// return home
+// return_home
 @header;
 @restore_location;
 @footer;
@@ -1321,7 +1339,12 @@ str fp = 'Copy and paste current line.';
 
 // lu: May-6-2020
 
-// skw copy line, copy line now, copy and paste line now
+/*
+skw:
+copy and paste line now
+copy line
+copy line now
+*/
 
 @bol;
 @copy();
@@ -2263,13 +2286,18 @@ return(rv);
 
 
 
-//;; (!wost) (skw get word or block under cursor, get_word_or_block_uc)
+//;; (!wost)
 
 str
 @get_wost()
 {
-
 str fp = 'Get word under cursor or selected text.';
+
+/*
+skw:
+get word or block under cursor
+get_word_or_block_uc
+*/
 
 str sc;
 

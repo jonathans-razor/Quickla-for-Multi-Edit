@@ -168,7 +168,10 @@ str
 {
 str fp = "Get filename extension of current file.";
 
-// file_extension, fileextension: skw
+// skw:
+// file_extension
+// fileextension
+
 str rv = 'Return the filename extension.';
 return(lower(get_extension(File_name)));
 }
@@ -179,7 +182,7 @@ return(lower(get_extension(File_name)));
 
 
 
-//;; (skw @delete_leading_colons)
+//;; (skw: @delete_leading_colons)
 
 str
 @trim_leading_colons_et_al(str string)
@@ -327,7 +330,7 @@ return(String);
 
 
 
-//;; (skw delete_period, remove_period)
+//;; (skw: delete_period, remove_period)
 
 str
 @trim_period(str string)
@@ -392,11 +395,14 @@ return(copy(parameter, length(parameter) - 3, 1));
 
 
 
-//;; (skw truncate_leftmost_character, truncate_first_character)
+//;;
 
 str
 @trim_first_character(str parameter)
 {
+// skw:
+// truncate_first_character)
+// truncate_leftmost_character
 return(str_del(parameter, 1, 1));
 }
 
@@ -422,11 +428,14 @@ return(copy(string, 1, right_boundary));
 
 
 
-//;; (skw truncate_rightmost_character, delete_last_character)
+//;;
 
 str
 @trim_last_character(str parameter)
 {
+// skw:
+// delete_last_character
+// truncate_rightmost_character
 return(str_del(parameter, length(parameter), 1));
 }
 
@@ -560,7 +569,7 @@ return(c_col);
 
 
 
-//;; (skw Current Line)
+//;; (skw: current line)
 
 int
 @current_line_number()

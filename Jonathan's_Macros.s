@@ -8001,7 +8001,7 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-@rtmx
+@xrtm
 {
 str fp = "Jan-17-2024";
 
@@ -8033,7 +8033,7 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-@rtmx
+@xrtm
 {
 str fp = "Excess whitespace in batch files.";
 
@@ -8063,7 +8063,7 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-@rtmx
+@xrtm
 {
 str fp = "More than 3 blank lines.";
 
@@ -8093,7 +8093,7 @@ rs = '\0';
 //;
 
 void
-@rtmx
+@xrtm
 {
 str fp = "Crowded echo statements.";
 
@@ -8123,7 +8123,7 @@ rs = '\0';
 //;
 
 void
-@rtmx
+@xrtm
 {
 str fp = "Crowded exit statements.";
 
@@ -8153,7 +8153,7 @@ rs = '\0';
 //;
 
 void
-@rtm
+@xrtm
 {
 str fp = " rem lu. - Jan-17-2024-2-09-PM";
 
