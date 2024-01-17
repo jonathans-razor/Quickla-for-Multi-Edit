@@ -7902,4 +7902,132 @@ str sc;
 
 
 
+//;
+
+void
+@xtm2
+{
+str fp = "x";
+
+// lu: Jan-16-2024
+
+str rs;
+str sc;
+
+@header;
+sc = '(_)($$)(:)';
+@eol;
+
+@seek(sc);
+
+@replace_next_occurrence_only(sc, '\0$\2');
+@eol;
+return();
+rs = '\0';
+@replace_all_occurrs_inf_one_tof(sc, rs);
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@xrtm
+{
+str fp = "x";
+
+// lu: Jan-16-2024
+
+str rs;
+str sc;
+
+@header;
+
+sc = '^rem (fcd: )([a-z])';
+@eol;
+
+@seek(sc);
+@replace_next_occurrence_only(sc, 'lu:$\1');
+up;
+@bol;
+return();
+rs = '\0';
+@replace_all_occurrs_inf_one_tof(sc, rs);
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@xrtm
+{
+str fp = "x";
+
+// lu: Jan-16-2024
+
+str rs;
+str sc;
+
+@header;
+sc = '^(creation date: )([a-z])';
+@eol;
+
+@seek(sc);
+@replace_next_occurrence_only(sc, 'lu:$\1');
+up;
+@bol;
+return();
+rs = '\0';
+@replace_all_occurrs_inf_one_tof(sc, rs);
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@rtm
+{
+str fp = " Jan-17-2024-0-56-AM";
+
+// lu: Jan-16-2024
+
+str rs;
+str sc;
+
+@header;
+sc = 'rem lu: ';
+down;
+
+@seek(sc);
+@replace_next_occurrence_only(sc, 'lu:$');
+up;
+@say(fp);
+return();
+rs = '\0';
+@replace_all_occurrs_inf_one_tof(sc, rs);
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+
+@footer;
+@say(found_str);
+}
+
+
+
 //; (!efjm)
