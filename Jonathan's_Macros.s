@@ -8002,7 +8002,7 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-@rtm
+@xrtm
 {
 str fp = " Jan-17-2024-0-56-AM";
 
@@ -8026,6 +8026,100 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 
 @footer;
 @say(found_str);
+}
+
+
+
+//;
+
+void
+@rtmx
+{
+str fp = "Jan-17-2024";
+
+// lu: Jan-17-2024
+
+str rs;
+str sc;
+
+@header;
+sc = '^$:[a-z]';
+@eol;
+
+down;
+@seek(sc);
+@bol;
+return();
+rs = '\0';
+@replace_next_occurrence_only(sc, rs);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@rtmx
+{
+str fp = "Excess whitespace in batch files.";
+
+// lu: Jan-17-2024
+
+str rs;
+str sc;
+
+@header;
+sc = '$$$[a-z]';
+  //qq-1
+@eol;
+
+@seek(sc);
+return();
+rs = '\0';
+@replace_next_occurrence_only(sc, rs);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@rtm
+{
+str fp = "More than 3 blank lines.";
+
+// lu: Jan-17-2024
+
+str rs;
+str sc;
+
+@header;
+sc = '$$$$$';
+  //qq-1
+@eol;
+
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+return();
+@seek(sc);
+rs = '\0';
+@replace_next_occurrence_only(sc, rs);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+
+@footer;
+@say(found_str);
+@say(fp);
 }
 
 
