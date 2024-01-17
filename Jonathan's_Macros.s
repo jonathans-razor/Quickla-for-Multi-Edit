@@ -8095,6 +8095,66 @@ rs = '\0';
 void
 @rtmx
 {
+str fp = "Crowded echo statements.";
+
+// lu: Jan-17-2024
+
+str rs;
+str sc;
+
+@header;
+sc = '[a-z]$^echo';
+@eol;
+
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+return();
+@seek(sc);
+rs = '\0';
+@replace_next_occurrence_only(sc, rs);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@rtmx
+{
+str fp = "Crowded exit statements.";
+
+// lu: Jan-17-2024
+
+str rs;
+str sc;
+
+@header;
+sc = '[a-z]$^exit';
+@eol;
+
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+return();
+@seek(sc);
+rs = '\0';
+@replace_next_occurrence_only(sc, rs);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@rtm
+{
 str fp = " rem lu. - Jan-17-2024-2-09-PM";
 
 // lu: Jan-16-2024
@@ -8117,68 +8177,6 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 
 @footer;
 @say(found_str);
-}
-
-
-
-//;
-
-void
-@rtmx
-{
-str fp = "Crowded echo statements.";
-
-// lu: Jan-17-2024
-
-str rs;
-str sc;
-
-@header;
-sc = '[a-z]$^echo';
-  //qq-1
-@eol;
-
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-return();
-@seek(sc);
-rs = '\0';
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
-
-@footer;
-@say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@rtm
-{
-str fp = "Crowded exit statements.";
-
-// lu: Jan-17-2024
-
-str rs;
-str sc;
-
-@header;
-sc = '[a-z]$^exit';
-  //qq-1
-@eol;
-
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-return();
-@seek(sc);
-rs = '\0';
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
-
-@footer;
-@say(found_str);
-@say(fp);
 }
 
 
