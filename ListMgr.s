@@ -3046,30 +3046,6 @@ cr;
 //;;
 
 void
-@import_and_format_clipboard_l1()
-{
-@find_lc('rfnptl');
-@import_and_format_clipboard_bor;
-}
-
-
-
-//;;
-
-void
-@import_and_format_clipboard_l2()
-{
-@header;
-@find_lc('rfnptl');
-@import_and_format_clipboard_bor;
-@footer;
-}
-
-
-
-//;;
-
-void
 @multiedit_paste()
 {
 str fp = 'Paste from buffer using the Multi-Edit command.';
@@ -3153,6 +3129,85 @@ else
   @say(fp);
   return();
 }
+
+@footer;
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@import_and_format_clipboard_l2()
+{
+@header;
+str fp = "Import and format clipboard - level 2.";
+@find_lc('rfnptl');
+@import_and_format_clipboard_bor;
+@footer;
+}
+
+
+
+//;;
+
+void
+@import_and_format_clipboard_mf
+{
+str fp = "Open mf and paste its contents to Now Playing Task List (nptl).";
+
+// lu:
+// Jan-19-2024
+// Dec-1-2019
+
+@header;
+
+str filename[128] = Get_Environment('dropbox') + '\savannah\reach out\myfile.txt';
+
+@open_file(filename);
+
+rm('block^selectall');
+
+@copy;
+
+@close_file;
+
+@find_lc('rfnptl');
+@import_and_format_clipboard_bor;
+
+@footer;
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@import_and_format_clipboard_mtx
+{
+str fp = "Open mtx and paste its contents to Now Playing Task List (nptl).";
+
+// lu:
+// Jan-19-2024
+
+@header;
+
+str filename[128] = Get_Environment('dropbox') + '\savannah\reach out\message-to-xps.txt';
+
+@open_file(filename);
+
+rm('block^selectall');
+
+@copy;
+
+delete_block;
+
+@close_and_save_file_wo_prompt
+
+@find_lc('rfnptl');
+@import_and_format_clipboard_bor;
 
 @footer;
 @say(fp);

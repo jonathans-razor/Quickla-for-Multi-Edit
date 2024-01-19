@@ -6657,35 +6657,6 @@ if(@find_lc(@get_user_input_nonspace(fp)))
 //;
 
 void
-@copy_aff_file_contents_to_nptl
-{
-str fp = "Open ph and copy it's contents to Now Playing Task List (nptl).";
-
-// lu: Dec-1-2019
-
-@header;
-
-str filename[128] = Get_Environment('dropbox') + '\savannah\reach out\myfile.txt';
-
-@open_file(filename);
-
-rm('block^selectall');
-
-@copy;
-
-@close_file;
-
-@import_and_format_clipboard_l1;
-
-@footer;
-@say(fp);
-}
-
-
-
-//;
-
-void
 @find_next_long_line_then_hwwi
 {
 str fp = "Find next long line then hard word wrap it.";
@@ -6850,6 +6821,33 @@ str sc = @get_sj;
 @find_continuum_2(sc, find_precision);
 
 //@say(fp + ' LC: ' + lc + ', Find Precision: ' + find_precision);
+}
+
+
+
+//;
+
+void
+@ff_lc_backwards(str lc = parse_str('/1=', mparm_str))
+{
+str fp = 'Find from lc backwards, wost.';
+
+/*
+lu: Jan-19-2024
+skw: 
+ff_eof
+find_backwards
+find_from_eof
+*/
+
+str sc = @get_sj;
+
+@find_lc(lc);
+
+@find_backwards(sc);
+
+@say(fp);
+
 }
 
 
