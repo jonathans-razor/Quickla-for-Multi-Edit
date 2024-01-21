@@ -7816,7 +7816,7 @@ str fp = "Paste clipboard text to message to phone file.";
 
 @save_location;
 
-@open_file(get_environment('dropbox') + '\savannah\reach out\message to phone.txt');
+@open_file(get_environment('dropbox') + '\savannah\reach out\message-to-phone.txt');
 
 @delete_all;
 

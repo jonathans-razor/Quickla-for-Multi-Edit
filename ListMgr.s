@@ -3155,7 +3155,7 @@ str fp = "Import and format clipboard - level 2.";
 void
 @import_and_format_clipboard_mf
 {
-str fp = "Open mf and paste its contents to Now Playing Task List (nptl).";
+str fp = "Open myfile.txt and paste its contents to Now Playing Task List (nptl).";
 
 // lu:
 // Jan-19-2024
