@@ -5049,6 +5049,35 @@ url = @get_remote_oj_using_klc('rfzh', is_found);
 //;
 
 void
+@view_youtube
+{
+str fp = "View YouTube tech videos.";
+
+// fcd: Jan-23-2024
+
+@header;
+
+int is_found = 0;
+str url;
+
+url = @get_remote_oj_using_klc('rftrav', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rftheo', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc("fy", is_found);
+@surf(url, 2);
+
+@footer;
+@say(fp);
+}
+
+
+
+//;
+
+void
 @open_multiple_local_hosts
 {
 str fp = "Open multiple local hosts.";
