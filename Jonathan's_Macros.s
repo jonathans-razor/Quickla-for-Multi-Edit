@@ -7106,54 +7106,6 @@ str fp = "Move bullet to same lc as last time.";
 //;
 
 void
-@convert_slashes_to_backslashes
-{
-str fp = "Convert slashes to backslashes.";
-
-// lu: Jan-17-2019 12:21 PM
-
-put_line(@replace(get_line, '/', '\'));
-
-@say(fp);
-}
-
-
-
-//;
-
-void
-@convert_line_to_double_percents
-{
-str fp = "Convert line to double percents.";
-
-// lu: Jan-28-2019
-
-put_line(@commute_character(get_line, '%', '%%'));
-
-@say(fp);
-}
-
-
-
-//;
-
-void
-@convert_line_to_hat_tricks
-{
-str fp = "Convert line to hat tricks.";
-
-// lu: Jan-15-2024
-
-put_line(@commute_character(get_line, '&', '^^^&'));
-
-@say(fp);
-}
-
-
-
-//;
-
-void
 @add_a_new_label_at_passthrough
 {
 str fp = 'Add a new label at pass-through.';

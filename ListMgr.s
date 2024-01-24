@@ -11775,6 +11775,54 @@ text(Current_Line);
 
 
 
+//;;
+
+void
+@convert_slashes_to_backslashes
+{
+str fp = "Convert slashes to backslashes.";
+
+// lu: Jan-17-2019 12:21 PM
+
+put_line(@replace(get_line, '/', '\'));
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@convert_line_to_double_percents
+{
+str fp = "Convert line to double percents.";
+
+// lu: Jan-28-2019
+
+put_line(@commute_character(get_line, '%', '%%'));
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@convert_line_to_hat_tricks
+{
+str fp = "Convert line to hat tricks.";
+
+// lu: Jan-28-2019
+
+put_line(@commute_character(get_line, '&', '^^^&'));
+
+@say(fp);
+}
+
+
+
 //; Dangerous Macro (skw lower case, lower_case, convert_file_to_lowercase)
 
 void
