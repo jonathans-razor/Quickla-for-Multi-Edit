@@ -9366,7 +9366,7 @@ eof;
 
 //;
 
-void
+int
 @go_to_first_bullet_at_lc(str lc = parse_str('/1=', mparm_str))
 {
 
@@ -9385,19 +9385,20 @@ str fp = 'Go to the first bullet at lc "' + lc + '".';
 if(!@find_lc_known(fp, lc))
 {
   @footer;
-  return();
+  return(1);
 }
 
 if(!@is_bullet_file)
 {
   @footer;
-  return();
+  return(1);
 }
 
 @find_next_bullet;
 
 @footer;
 @say(fp);
+return(0);
 }
 
 
@@ -9529,7 +9530,10 @@ if(@seek_in_all_files_2_arguments(sc, so))
 else
 {
   fp += ' Double q was NOT found, so go to the now playing task list.';
-  @go_to_first_bullet_at_lc('rfnptl');
+  if (@go_to_first_bullet_at_lc('cyd') == 1)
+  {
+    @go_to_first_bullet_at_lc('rfnptl');
+  }
   @restore_column;
 }
 
@@ -9658,7 +9662,7 @@ if(search_criterion_was_found)
 else
 {
   so = 'Search criterion NOT found, so go to personal task list.';
-  @go_to_first_bullet_at_lc('t');
+  @go_to_first_bullet_at_lc('cyd');
 }
 
 /* Use Case(s)
