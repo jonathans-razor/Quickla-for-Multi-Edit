@@ -8160,4 +8160,29 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 
 
 
+//;
+
+void
+@add_new_ct_rubric
+{
+str fp = "Add new ct rubric.";
+
+// lu: Jan-29-2024
+
+@header;
+
+@find_lc('ct');
+@delete_text_lc_on_cl;
+@find_lc('ct-template');
+@copy_and_paste_pb;
+text(" (!c" + "t): ");
+@add_text_date;
+
+@footer;
+
+@say(fp);
+}
+
+
+
 //; (!efjm)
