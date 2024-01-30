@@ -9530,10 +9530,7 @@ if(@seek_in_all_files_2_arguments(sc, so))
 else
 {
   fp += ' Double q was NOT found, so go to the now playing task list.';
-  if (@go_to_first_bullet_at_lc('cyd') == 1)
-  {
-    @go_to_first_bullet_at_lc('rfnptl');
-  }
+  @go_to_first_bullet_at_lc('rfnptl');
   @restore_column;
 }
 

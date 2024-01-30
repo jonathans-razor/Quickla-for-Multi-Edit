@@ -8177,6 +8177,8 @@ str fp = "Add new ct rubric.";
 @copy_and_paste_pb;
 text(" (!c" + "t): ");
 @add_text_date;
+@add_bullet_below;
+text('Today:');
 
 @footer;
 
