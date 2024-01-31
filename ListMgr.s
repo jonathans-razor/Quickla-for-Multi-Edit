@@ -3187,7 +3187,7 @@ rm('block^selectall');
 void
 @import_and_format_clipboard_mtx
 {
-str fp = "Open mtx and paste its contents to Now Playing Task List (nptl).";
+str fp = "Open message-to-xps and paste its contents to Now Playing Task List (nptl).";
 
 // lu:
 // Jan-19-2024
