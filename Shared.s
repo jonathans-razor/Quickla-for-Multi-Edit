@@ -1330,30 +1330,6 @@ rm('Paste /WC=1');
 
 
 
-//;;
-
-void
-@copy_and_paste_current_line()
-{
-str fp = 'Copy and paste current line.';
-
-// lu: May-6-2020
-
-/*
-skw:
-copy and paste line now
-copy line
-copy line now
-*/
-
-@bol;
-@copy();
-@paste();
-
-}
-
-
-
 //;+ Current Window
 
 
@@ -2822,6 +2798,15 @@ str fp = 'Copy and paste line.';
 @bol;
 @paste;
 @say(fp);
+
+/*
+skw:
+copy_and_paste_current_line
+copy and paste line now
+copy line
+copy line now
+*/
+
 }
 
 
