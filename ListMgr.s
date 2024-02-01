@@ -13141,14 +13141,58 @@ else
 
 
 
-//;
+//;+ Separator Family (!fysep)
+
+
+
+//;;
 
 void
 @add_text_separator
 {
 str fp = 'Add text highligthed event.';
 
-text('><    ><    ><    ><    ><    Separator:');
+if(!@is_asc_file)
+{
+  return();
+}
+
+@header;
+@add_bullet_below;
+text('  ><    ><    ><    ><    ><    ><    Separator: ');
+@footer;
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@add_text_urgent
+{
+str fp = 'Add text urgent.';
+
+if(!@is_asc_file)
+{
+  return();
+}
+
+@header;
+
+@save_location;
+
+@find_lc('rfurge');
+down;
+down;
+@hc_perimeter_button;
+
+@recall_location;
+
+@paste_after_with_subbullet;
+
+@footer;
 
 @say(fp);
 }
