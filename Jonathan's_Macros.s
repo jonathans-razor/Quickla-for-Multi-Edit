@@ -5060,16 +5060,14 @@ str fp = "View YouTube tech videos.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc('rfwdsy', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rftrav', is_found);
+//qq
+url = @get_remote_oj_using_klc("rffy", is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rftheo', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc("fy", is_found);
+url = @get_remote_oj_using_klc('rftrav', is_found);
 @surf(url, 2);
 
 @footer;
