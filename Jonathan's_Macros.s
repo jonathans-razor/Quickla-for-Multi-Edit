@@ -5308,6 +5308,8 @@ up;
 cr;
 text('rem   q' + 'q');
 cr;
+text('set cbf-url=');
+cr;
 text('set cbf-');
 cr;
 @bobs;
