@@ -5064,6 +5064,12 @@ str url;
 url = @get_remote_oj_using_klc("rffy", is_found);
 @surf(url, 2);
 
+url = @get_remote_oj_using_klc("rfjh", is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc("rflv", is_found);
+@surf(url, 2);
+
 url = @get_remote_oj_using_klc('rftheo', is_found);
 @surf(url, 2);
 
