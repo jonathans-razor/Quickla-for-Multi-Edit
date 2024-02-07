@@ -2797,6 +2797,7 @@ str fp = 'Copy and paste line.';
 @copy;
 @bol;
 @paste;
+@eol;
 @say(fp);
 
 /*
