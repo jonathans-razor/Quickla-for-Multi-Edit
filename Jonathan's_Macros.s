@@ -8199,4 +8199,34 @@ text('Today:');
 
 
 
+//;
+
+void
+@convert_line_leetcode_filename
+{
+str fp = "Convert line to be a LeetCode filename.";
+
+// lu: Feb-9-2024
+
+@convert_line_to_lower_case;
+@convert_line_to_dashes;
+right;
+right;
+right;
+if(@current_character == '.')
+{
+  @delete_character;
+}
+@bol;
+right;
+text('vc ');
+@eol;
+text('.js');
+@hc_object;
+
+@say(fp);
+}
+
+
+
 //; (!efjm)

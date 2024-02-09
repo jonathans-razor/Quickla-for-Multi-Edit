@@ -11690,7 +11690,7 @@ eol;
 //;;
 
 void
-@convert_line_to_dashes
+@convert_line_to_dashes()
 {
 str fp = 'Replace text spaces and underscores with dashes.';
 // skw: spaces_to_dashes
