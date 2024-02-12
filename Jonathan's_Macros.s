@@ -5311,7 +5311,7 @@ up;
 cr;
 text('rem   q' + 'q');
 cr;
-text('call pn >nul');
+text('call n >nul');
 cr;
 text('set cbf-pt=%cbf-pt%\');
 cr;
