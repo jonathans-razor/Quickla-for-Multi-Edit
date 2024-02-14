@@ -8229,4 +8229,34 @@ text('.js');
 
 
 
+//;
+
+void
+@xrtm
+{
+str fp = "n*js";
+
+// lu: Feb-14-2024
+
+str rs;
+str sc;
+
+@header;
+sc = 'n...\.js';
+@eol;
+
+int is_found = @seek_in_all_files_2_arguments(sc, fp);
+return();
+@seek(sc);
+rs = '\0';
+@replace_next_occurrence_only(sc, rs);
+@replace_all_occurrs_inf_one_tof(sc, rs);
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
 //; (!efjm)
