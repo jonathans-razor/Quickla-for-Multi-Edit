@@ -1347,6 +1347,32 @@ make_message(@trim_period(fp) + ' for "' + Pretty_sc + '".');
 //;;
 
 void
+@search_yahoo_finance
+{
+str fp = 'Search Yahoo Finance.';
+
+str URL = 'https://finance.yahoo.com/quote/';
+
+str sc = @get_subject_or_selected_text;
+
+str Pretty_sc = sc;
+
+sc = @commute_character(sc, ' ', '+');
+
+fp = @trim_period(fp);
+
+URL += sc;
+
+@surf(url, 2);
+
+make_message(@trim_period(fp) + ' for "' + Pretty_sc + '".');
+}
+
+
+
+//;;
+
+void
 @goto_youtube
 {
 str fp = 'Go to YooTube home.';
