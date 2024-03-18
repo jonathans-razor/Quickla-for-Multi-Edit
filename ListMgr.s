@@ -6013,7 +6013,7 @@ text('=');
 
 
 
-//;; skw copy and paste subject
+//;; skw copy and paste subject, copy_sj
 
 void
 @copy_and_paste_sj()
