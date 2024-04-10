@@ -4857,12 +4857,8 @@ void
 {
 str fp = "Add bullet at c and paste without wrapping.";
 
-@header;
-
 @add_bullet_at_lc('rfwtl');
 @paste;
-
-@footer;
 
 @say(fp);
 }
@@ -6857,6 +6853,24 @@ str sc = @get_sj;
 @find_continuum_2(sc, find_precision);
 
 //@say(fp + ' LC: ' + lc + ', Find Precision: ' + find_precision);
+}
+
+
+
+//;
+
+void
+@go_to_lc_and_paste(str lc = parse_str('/1=', mparm_str))
+{
+str fp = 'Go to lc and paste.';
+
+// lu: Apr-10-2024
+
+@add_bullet_at_lc(lc);
+@paste;
+@word_wrap;
+
+@say(fp);
 }
 
 
