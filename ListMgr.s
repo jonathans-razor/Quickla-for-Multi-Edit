@@ -10093,36 +10093,6 @@ if(!@is_bullet_File)
 //;;
 
 void
-@add_bullet_at_remote_mor(str lc = parse_str('/1=', mparm_str))
-{
-str fp = 'Add bullet at middle of remote rubric.';
-@header;
-
-if(!@find_lc_known(fp, lc))
-{
-  @footer;
-  return();
-}
-
-int Number_of_Bullets_in_Rubric = @count_bullets;
-int Counter = 0;
-while(Counter < (Number_of_Bullets_in_Rubric / 2))
-{
-  @find_next_bullet;
-  Counter++;
-}
-
-@add_bullet_below;
-
-@footer;
-@say(fp);
-}
-
-
-
-//;;
-
-void
 @add_bullet_at_mor
 {
 str fp = 'Add bullet at middle of current rubric.';
@@ -13092,55 +13062,6 @@ str fp = "Scrub externally copied content for internal pasting.";
 
 
 
-//; (!2mum1)
-
-void
-@paste_with_arguments(str arguments = parse_str('/1=', mparm_str))
-{
-str fp = "Paste with arguments.";
-
-@header;
-
-// Last Updated: Sep-21-2016
-
-str first_parameter, second_parameter;
-
-@parse_arguments(arguments, ".", first_parameter, second_parameter);
-
-str lc = first_parameter; // Default location is below here versus a remote lc.
-
-str wrapping_is_on = second_parameter; // Wrapping is on by default ("") versus no wrapping "n".
-
-if(lc != '')
-{
-  lc;
-  @find_lc(lc);
-}
-
-@add_bullet_below;
-
-// Enforce the default.
-if((wrapping_is_on == '') || (wrapping_is_on == 'y') || (wrapping_is_on == 'w'))
-{
-  @say('Control is in if code block.');
-  @paste_with_wikipedia_format;
-}
-else
-{
-  @say('Control is in else code block.');
-  @scrub_externally_copied_data;
-  @paste;
-  down;
-  @backspace;
-}
-@bob;
-
-@footer;
-@say(fp);
-}
-
-
-
 //;+ Separator Family (!fysep)
 
 
@@ -13280,6 +13201,77 @@ del_line;
 
 @restore_location;
 @footer;
+
+@say(fp);
+}
+
+
+
+//;+ Remote Pasting
+
+
+
+//;;
+
+void
+@paste_with_arguments(str arguments = parse_str('/1=', mparm_str))
+{
+str fp = "Paste with arguments.";
+
+@header;
+
+// Last Updated: Sep-21-2016
+
+str first_parameter, second_parameter;
+
+@parse_arguments(arguments, ".", first_parameter, second_parameter);
+
+str lc = first_parameter; // Default location is below here versus a remote lc.
+
+str wrapping_is_on = second_parameter; // Wrapping is on by default ("") versus no wrapping "n".
+
+if(lc != '')
+{
+  lc;
+  @find_lc(lc);
+}
+
+@add_bullet_below;
+
+// Enforce the default.
+if((wrapping_is_on == '') || (wrapping_is_on == 'y') || (wrapping_is_on == 'w'))
+{
+  @say('Control is in if code block.');
+  @paste_with_wikipedia_format;
+}
+else
+{
+  @say('Control is in else code block.');
+  @scrub_externally_copied_data;
+  @paste;
+  down;
+  @backspace;
+}
+@bob;
+
+@footer;
+@say(fp);
+}
+
+
+
+//;
+
+void
+@go_to_lc_and_paste(str lc = parse_str('/1=', mparm_str))
+{
+str fp = 'Go to lc and paste.';
+
+// lu: Apr-10-2024
+
+@add_bullet_at_lc(lc);
+@paste;
+@word_wrap;
 
 @say(fp);
 }
