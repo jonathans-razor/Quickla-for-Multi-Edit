@@ -4094,4 +4094,30 @@ str sc = @hc_word_uc();
 
 
 
+//;
+
+void
+@cross_bf_and_lc_boundary
+{
+str fp = "Cross BF and LC boundary.";
+
+str search_string = '';
+
+@header;
+
+if (!@is_batch_file)
+{
+  find_text('!', 0, _regexp);
+  right;
+}
+search_string = @hc_word_uc;
+@next_window;
+@find_lc_or_batch_label(search_string);
+
+@footer;
+@say(fp + ' (' + search_string + ')');
+}
+
+
+
 //; (!effi)
