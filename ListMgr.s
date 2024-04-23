@@ -11680,6 +11680,23 @@ put_line(Current_Line);
 //;;
 
 void
+@convert_line_to_dashes_n_lower()
+{
+str fp = 'Replace text spaces and underscores with dashes and convert to lower case.';
+// skw: spaces_to_dashes
+
+@convert_line_to_dashes;
+@convert_line_to_lower_case;
+@hc_subject;
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
 @convert_line_to_spaces()
 {
 str fp = 'Replace text dashes or underscores with spaces.';
