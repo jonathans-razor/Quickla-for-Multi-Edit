@@ -208,6 +208,23 @@ make_message(fp);
 //;
 
 void
+@browse_current_line_w_chrome(str parameter = parse_str('/1=', mparm_str))
+{
+str fp = 'Browser current line with Chrome.';
+
+str URL = @trim_colons(@get_current_line);
+
+//qq
+@surf(URL, 1);
+
+make_message(fp);
+}
+
+
+
+//;
+
+void
 @search_graze(str parameter = parse_str('/1=', mparm_str))
 {
 str fp = 'Search Graze.';
