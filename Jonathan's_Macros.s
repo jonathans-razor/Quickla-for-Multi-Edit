@@ -8184,6 +8184,7 @@ text(" (!c" + "t): ");
 @add_text_date;
 @add_bullet_below;
 text('Today:');
+@add_bullet_above;
 
 @footer;
 

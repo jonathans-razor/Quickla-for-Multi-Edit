@@ -1535,6 +1535,9 @@ switch(lower(Get_Extension(File_name)))
   case 'asc':
     rv = ':';
     break;
+  case 'bashrc':
+    rv = '# ';
+    break;
   case 'bat':
     rv = 'rem ';
     break;

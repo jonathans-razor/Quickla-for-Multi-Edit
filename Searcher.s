@@ -214,7 +214,6 @@ str fp = 'Browser current line with Chrome.';
 
 str URL = @trim_colons(@get_current_line);
 
-//qq
 @surf(URL, 1);
 
 make_message(fp);
