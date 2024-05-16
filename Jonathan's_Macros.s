@@ -8177,11 +8177,9 @@ str fp = "Add new ct rubric.";
 @header;
 
 @find_lc('ct');
-@delete_text_lc_on_cl;
-@find_lc('ct-template');
 @copy_and_paste_pb;
-text(" (!c" + "t): ");
 @add_text_date;
+//return();
 @add_bullet_below;
 text('Today:');
 @add_bullet_above;
