@@ -8287,7 +8287,7 @@ rs = '\0';
 //;
 
 void
-@rtm
+@rt2
 {
 str fp = "sanction duplicate lks.";
 
@@ -8309,6 +8309,30 @@ rs = '\0';
 
 @footer;
 @say(found_str);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@split_current_link_onto_2_lines
+{
+str fp = "Split current link onto 2 lines.";
+
+// lu: Aug-22-2024
+
+@header;
+
+@bol;
+@seek(': ');
+del_char;
+cr;
+//qq-1
+
+@footer;
+
 @say(fp);
 }
 
