@@ -4990,6 +4990,9 @@ url = @get_remote_oj_using_klc('rfscne', is_found);
 url = @get_remote_oj_using_klc('ftl', is_found);
 @surf(url, 0);
 
+url = @get_remote_oj_using_klc('apne', is_found);
+@surf(url, 0);
+
 url = @get_remote_oj_using_klc('rfcnn', is_found);
 @surf(url, 0);
 
@@ -8329,7 +8332,6 @@ str fp = "Split current link onto 2 lines.";
 @seek(': ');
 del_char;
 cr;
-//qq-1
 
 @footer;
 
