@@ -3740,8 +3740,8 @@ if(!@find_lc_known(fp, lc))
   return();
 }
 
-// What do I call this feature? Auto-Rubric-Population? (skw January) (!arpo)
-switch(lc) //qcq
+// What do I call this feature? Auto-Rubric-Population? (skw January, add_date) (!arpo)
+switch(lc)
 {
   // Add http string. ****
   case 'aspl':
@@ -3749,7 +3749,7 @@ switch(lc) //qcq
     @add_bullet_below;
     @add_text_blank_url;
     break;
-  case 'diar':
+  case 'dia':
     @add_bullet_below;
     @add_text_date;
     text(': ');
@@ -3757,10 +3757,11 @@ switch(lc) //qcq
   case 'h':
     @add_autotext_block_1_at_job_hi;
     break;
-  case 'shon': // (!shon)
+  case 'log':
     @add_bullet_below;
     @add_text_date;
-    @paste_with_wikipedia_format;
+    right;
+    right;
     break;
   case 'nopc':
     @add_bullet_below;
@@ -3771,6 +3772,11 @@ switch(lc) //qcq
   case 'rzr':
     @add_bullet_below;
     text('rzr ');
+    break;
+  case 'shon': // (!shon)
+    @add_bullet_below;
+    @add_text_date;
+    @paste_with_wikipedia_format;
     break;
   default:
     if(@is_code_word_line)
