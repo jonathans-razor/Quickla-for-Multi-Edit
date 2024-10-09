@@ -913,6 +913,34 @@ return(indicated_lc);
 
 //;;
 
+str
+@get_1way_lc()
+{
+str fp = "Get 1way lc.";
+
+// fcd: Oct-9-2024
+
+str lc;
+
+int position_of_1way = xpos('1way', get_line, 1);
+
+goto_col(position_of_1way + 4);
+
+while(!at_eol)
+{
+  lc += @current_character; 
+  right;
+}
+
+lc = @trim_last_character(lc);
+
+return(lc);
+}
+
+
+
+//;;
+
 void
 @determine_if_lc_is_unique()
 {

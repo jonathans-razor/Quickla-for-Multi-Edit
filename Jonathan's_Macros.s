@@ -4781,7 +4781,7 @@ str lc;
 
 if(@current_line_contains('^'))
 {
-  str lc = @get_indicated_lc_2;
+  lc = @get_indicated_lc_2;
   @find_lc(lc);
   @footer;
   return();
@@ -4789,7 +4789,15 @@ if(@current_line_contains('^'))
 
 if(@current_line_contains('&'))
 {
-  str lc = @get_indicated_lc_2;
+  lc = @get_indicated_lc_2;
+  @find_lc(lc);
+  @footer;
+  return();
+}
+
+if(@current_line_contains('1way'))
+{
+  lc = @get_1way_lc;
   @find_lc(lc);
   @footer;
   return();

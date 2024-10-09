@@ -18,6 +18,7 @@ prototype Finder
   void @find_rightmost_colon_on_curline();
   str  @find_special_character(str sc);
   str  @get_indicated_lc_2();
+  str  @get_1way_lc();
   str  @hc_word_uc();
   void @open_cmac_files();
 //qq-1
