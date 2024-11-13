@@ -4995,7 +4995,7 @@ url = @get_remote_oj_using_klc('revo', is_found);
 url = @get_remote_oj_using_klc('rfscne', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('ftl', is_found);
+url = @get_remote_oj_using_klc('rftnp', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('apne', is_found);
@@ -5004,7 +5004,7 @@ url = @get_remote_oj_using_klc('apne', is_found);
 url = @get_remote_oj_using_klc('rfcnn', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('dawi', is_found);
+url = @get_remote_oj_using_klc('rftele', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('fcnp', is_found);
@@ -5025,7 +5025,7 @@ url = @get_remote_oj_using_klc('rfnyt', is_found);
 url = @get_remote_oj_using_klc('rfquil', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('quma', is_found);
+url = @get_remote_oj_using_klc('rfquan', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfreas', is_found);
@@ -5043,7 +5043,7 @@ url = @get_remote_oj_using_klc('wired', is_found);
 url = @get_remote_oj_using_klc('rfwsj', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('rfzh', is_found);
+url = @get_remote_oj_using_klc('rfzehe', is_found);
 @surf(url, 0);
 
 @footer;
