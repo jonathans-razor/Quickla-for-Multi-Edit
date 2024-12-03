@@ -4989,9 +4989,6 @@ str fp = "Pass a url to a browser.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc('revo', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('rfscne', is_found);
 @surf(url, 0);
 
@@ -5043,6 +5040,9 @@ url = @get_remote_oj_using_klc('wired', is_found);
 url = @get_remote_oj_using_klc('rfwsj', is_found);
 @surf(url, 0);
 
+url = @get_remote_oj_using_klc('revo', is_found);
+@surf(url, 0);
+
 url = @get_remote_oj_using_klc('rfzehe', is_found);
 @surf(url, 0);
 
@@ -5073,6 +5073,12 @@ url = @get_remote_oj_using_klc('rftrav', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rftheo', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rftc', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfjr', is_found);
 @surf(url, 2);
 
 @footer;
