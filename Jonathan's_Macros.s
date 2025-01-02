@@ -5004,9 +5004,6 @@ url = @get_remote_oj_using_klc('rfcnn', is_found);
 url = @get_remote_oj_using_klc('rftele', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('fcnp', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('rffox', is_found);
 @surf(url, 0);
 
@@ -5055,9 +5052,9 @@ url = @get_remote_oj_using_klc('rfzehe', is_found);
 //;
 
 void
-@view_youtube
+@view_youtube_favorite_channels
 {
-str fp = "View YouTube tech videos.";
+str fp = "View YouTube favorite channels.";
 
 // fcd: Jan-23-2024
 
@@ -5066,19 +5063,19 @@ str fp = "View YouTube tech videos.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc("rffy", is_found);
+url = @get_remote_oj_using_klc('rffi', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rftrav', is_found);
+url = @get_remote_oj_using_klc('rfjr', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rftheo', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rftc', is_found);
+url = @get_remote_oj_using_klc('rftrav', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rfjr', is_found);
+url = @get_remote_oj_using_klc('rftc', is_found);
 @surf(url, 2);
 
 @footer;
