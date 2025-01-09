@@ -5979,6 +5979,7 @@ void
 @replace_definition
 {
 str fp = "Replace current definition with the clipboard definition.";
+// lu: c. many years prior to Jan-6-2025
 // This is a good example of a beautiful and composed macro.
 @header;
 @delete_definition_keep_lkctr;
