@@ -1,4 +1,4 @@
-macro_file Jonathan's_Macros; // (!jo, !jm)
+macro_file Jonathan's_Macros; // (!jmac)
 
 // Miscellaneous macros.
 
@@ -19,11 +19,13 @@ macro_file Jonathan's_Macros; // (!jo, !jm)
 
 /*
 
-Metadata: Track Size (!tsjm)
+Metadata: Track Size (!tsjmac)
 
         Date   Lines      Bytes   Macros   Notes
  -----------  ------  ---------  -------  ----------------------------------------------------
 
+
+:Jan-13-2025   8,354    113,438      297
 
 : Jan-4-2024   7,898    108,040      284
 
