@@ -4984,8 +4984,6 @@ void
 {
 str fp = "Pass a url to a browser.";
 
-// fcd: Jan-29-2020
-
 @header;
 
 int is_found = 0;
@@ -5047,6 +5045,9 @@ url = @get_remote_oj_using_klc('rfzehe', is_found);
 
 @footer;
 @say(fp);
+
+// fcd: Jan-29-2020
+
 }
 
 
@@ -5058,12 +5059,16 @@ void
 {
 str fp = "View YouTube favorite channels.";
 
-// fcd: Jan-23-2024
-
 @header;
 
 int is_found = 0;
 str url;
+
+url = @get_remote_oj_using_klc('rfmark', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfdobr', is_found);
+@surf(url, 2);
 
 url = @get_remote_oj_using_klc('rffi', is_found);
 @surf(url, 2);
@@ -5082,6 +5087,8 @@ url = @get_remote_oj_using_klc('rftc', is_found);
 
 @footer;
 @say(fp);
+
+// fcd: Jan-23-2024
 }
 
 
