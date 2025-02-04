@@ -156,6 +156,10 @@ switch(@filename_extension)
   case 'bat':
     return("^:+_");
     break;
+  case 'bashrc':
+//qq
+    return("\\#\\#");
+    break;
   case 'config':
     return("^ @<entity type");
     break;
