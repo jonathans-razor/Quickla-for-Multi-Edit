@@ -157,7 +157,6 @@ switch(@filename_extension)
     return("^:+_");
     break;
   case 'bashrc':
-//qq
     return("\\#\\#");
     break;
   case 'config':

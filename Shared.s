@@ -201,6 +201,7 @@ switch(@filename_extension)
 {
   case '':
   case 'asc':
+  case 'bashrc':
   case 'bat':
   case 'htm':
   case 'ps1':
@@ -230,6 +231,7 @@ switch(@filename_extension)
 {
   case "": // Jenkinsfile
   case "asc":
+  case 'bashrc':
   case "bat":
   case "ps1":
   case "s":
