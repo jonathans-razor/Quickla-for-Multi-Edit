@@ -1546,7 +1546,7 @@ up;
 @delete_line;
 down;
 
-str sc = weekday + ' Official Template';
+str sc = weekday + ' Perennial';
 
 str so;
 
@@ -4777,7 +4777,7 @@ str fp = "Find lc partner.";
 
 // fcd: Dec-7-2015
 
-// skw 1z, 2z
+// skw 1z, 2z, find companion lc, go to companion lc
 
 str lc;
 
