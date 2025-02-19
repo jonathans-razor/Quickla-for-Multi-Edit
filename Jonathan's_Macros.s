@@ -8205,10 +8205,13 @@ str fp = "Add new ct rubric.";
 @find_lc('ct');
 @copy_and_paste_pb;
 @add_text_date;
-//return();
+@add_bullet_below;
+text('Good morning. Yesterday: ');
 @add_bullet_below;
 text('Today:');
-@add_bullet_above;
+up;
+up;
+eol;
 
 @footer;
 
