@@ -5468,6 +5468,13 @@ str
 {
 str fp = 'Delete rubric.';
 
+// lu: Feb-20-2025
+
+if(c_line == 1)
+{
+  return('BOF so no action taken.');
+}
+
 @hc_rubric;
 delete_block;
 down;
