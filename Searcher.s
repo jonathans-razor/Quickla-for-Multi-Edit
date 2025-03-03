@@ -2361,6 +2361,18 @@ https://github.com/search?utf8=%E2%9C%93&q=RichardCampbell&type=Users&ref=search
 //;
 
 void
+@search_google_with_app_2(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "How tall is [blank].";
+// lu: Mar-3-2025
+@search_google_main(0, 0, 'How tall is ' + @get_sj + '?');
+}
+
+
+
+//;
+
+void
 @search_google_with_appendag(str sc = parse_str('/1=', mparm_str))
 {
 str fp = "Search Google with an appended word.";
