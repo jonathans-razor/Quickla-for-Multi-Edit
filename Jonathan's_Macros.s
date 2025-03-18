@@ -8133,67 +8133,6 @@ rs = '\0';
 //;
 
 void
-@xrtm
-{
-str fp = "Crowded exit statements.";
-
-// lu: Jan-17-2024
-
-str rs;
-str sc;
-
-@header;
-sc = '[a-z]$^exit';
-@eol;
-
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-return();
-@seek(sc);
-rs = '\0';
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
-
-@footer;
-@say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@xrtm
-{
-str fp = " rem lu. - Jan-17-2024-2-09-PM";
-
-// lu: Jan-16-2024
-
-str rs;
-str sc;
-
-@header;
-sc = 'rem lu: ';
-down;
-
-@seek(sc);
-@replace_next_occurrence_only(sc, 'lu:$');
-up;
-@say(fp);
-return();
-rs = '\0';
-@replace_all_occurrs_inf_one_tof(sc, rs);
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-
-@footer;
-@say(found_str);
-}
-
-
-
-//;
-
-void
 @add_new_ct_rubric
 {
 str fp = "Add new ct rubric.";
@@ -8359,6 +8298,23 @@ cr;
 @footer;
 
 @say(fp);
+}
+
+
+
+//;
+
+void
+@add_date_at_lc(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "Add date at lc.";
+// lu: Mar-18-2025
+
+@find_lc(sc);
+@add_bullet_below;
+@add_text_date;
+
+@say(fp + ' (' + sc + ')');
 }
 
 

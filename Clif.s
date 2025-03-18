@@ -3765,12 +3765,6 @@ switch(lc)
     right;
     right;
     break;
-  case 'nopc':
-    @add_bullet_below;
-    text('+ ');
-    @add_text_date;
-    @add_subbullet_below;
-    break;
   case 'rzr':
     @add_bullet_below;
     text('rzr ');
@@ -3779,6 +3773,10 @@ switch(lc)
     @add_bullet_below;
     @add_text_date;
     @paste_with_wikipedia_format;
+    break;
+  case 'wslog':
+    @add_bullet_below;
+    @add_text_date;
     break;
   default:
     if(@is_code_word_line)
