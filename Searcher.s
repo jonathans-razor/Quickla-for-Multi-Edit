@@ -1443,7 +1443,6 @@ void
 void
 @search_youtube_liberally
 {
-//qq
 @search_youtube(false, false);
 }
 
