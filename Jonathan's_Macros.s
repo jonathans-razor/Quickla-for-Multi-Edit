@@ -5085,6 +5085,9 @@ url = @get_remote_oj_using_klc('rftrav', is_found);
 url = @get_remote_oj_using_klc('rftc', is_found);
 @surf(url, 2);
 
+url = @get_remote_oj_using_klc('rfstek', is_found);
+@surf(url, 2);
+
 @footer;
 @say(fp);
 
@@ -8315,6 +8318,28 @@ str fp = "Add date at lc.";
 @add_text_date;
 
 @say(fp + ' (' + sc + ')');
+}
+
+
+
+//;
+
+void
+@paste_bullet_after_first_jdb
+{
+str fp = "Paste bullet after first junk drawer bullet.";
+// lu: Apr-22-2025
+
+@header;
+@save_location;
+@cut_bullet;
+@find_lc('rfjd');
+@find_next_bullet;
+@paste_after_with_subbullet;
+@recall_location;
+@footer;
+
+@say(fp);
 }
 
 
