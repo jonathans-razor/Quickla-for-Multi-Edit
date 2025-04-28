@@ -5088,6 +5088,9 @@ url = @get_remote_oj_using_klc('rftc', is_found);
 url = @get_remote_oj_using_klc('rfstek', is_found);
 @surf(url, 2);
 
+url = @get_remote_oj_using_klc('rfhoyt', is_found);
+@surf(url, 2);
+
 @footer;
 @say(fp);
 
