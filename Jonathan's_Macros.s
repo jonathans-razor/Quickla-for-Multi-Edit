@@ -5064,12 +5064,6 @@ str fp = "View YouTube favorite channels.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc('rfmark', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfdobr', is_found);
-@surf(url, 2);
-
 url = @get_remote_oj_using_klc('rffi', is_found);
 @surf(url, 2);
 
