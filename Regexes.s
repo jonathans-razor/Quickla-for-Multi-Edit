@@ -157,7 +157,7 @@ switch(@filename_extension)
     return("^:+_");
     break;
   case 'bashrc':
-    return("\\#\\#");
+    return("\\#\\;");
     break;
   case 'config':
     return("^ @<entity type");
@@ -219,6 +219,7 @@ switch(lower(get_extension(File_name)))
   case 's':
     return('^/' + '/;([^;]||$)');
     break;
+  case 'bashrc':
   case 'sh':
     return('^\#' + ';([^;]||$)');
     break;
@@ -512,6 +513,7 @@ switch(lower(get_extension(File_name)))
   case 's':
     return("^//;;");
     break;
+  case 'bashrc':
   case 'sh':
     return('^\#' + ';;');
     break;

@@ -4695,46 +4695,6 @@ goto_mark;
 
 // Beginning of 1-2 tests.
 
-if(@perform_next_test('1f', remote_lc_partner))
-{
-  return(1);
-}
-
-if(@perform_next_test('2f', remote_lc_partner))
-{
-  return(1);
-}
-
-if(@perform_next_test('1g', remote_lc_partner))
-{
-  return(1);
-}
-
-if(@perform_next_test('2g', remote_lc_partner))
-{
-  return(1);
-}
-
-if(@perform_next_test('1m', remote_lc_partner))
-{
-  return(1);
-}
-
-if(@perform_next_test('2m', remote_lc_partner))
-{
-  return(1);
-}
-
-if(@perform_next_test('1s', remote_lc_partner))
-{
-  return(1);
-}
-
-if(@perform_next_test('2s', remote_lc_partner))
-{
-  return(1);
-}
-
 if(@perform_next_test('1z', remote_lc_partner))
 {
   return(1);

@@ -1873,6 +1873,7 @@ str sc = @get_subject_or_selected_text;
 void
 @find_in_big_segment_header_uc(str sc = parse_str('/1=', mparm_str))
 {
+// skw: find in rubrics, find in headers
 str fp = 'Find in big segment headers using the word under the cursor.';
 @header;
 if(sc == '')

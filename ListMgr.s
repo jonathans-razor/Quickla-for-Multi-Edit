@@ -8222,6 +8222,7 @@ if(@is_selected)
 
 @header;
 
+//qq
 switch(@current_line_type)
 {
   case 'rubric':
