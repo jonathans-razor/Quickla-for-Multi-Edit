@@ -4949,6 +4949,9 @@ str fp = "Pass a url to a browser.";
 int is_found = 0;
 str url;
 
+url = @get_remote_oj_using_klc('rfffx', is_found);
+@surf(url, 0);
+
 url = @get_remote_oj_using_klc('rfscne', is_found);
 @surf(url, 0);
 
@@ -5023,6 +5026,15 @@ str fp = "View YouTube favorite channels.";
 
 int is_found = 0;
 str url;
+
+url = @get_remote_oj_using_klc('rfsypo', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfroki', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfbesh', is_found);
+@surf(url, 2);
 
 url = @get_remote_oj_using_klc('rffi', is_found);
 @surf(url, 2);
