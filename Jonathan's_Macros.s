@@ -1965,7 +1965,7 @@ str fp = "Open OWA with r8 also.";
 str url = 'https://outlook.office365.com/owa/?realm=nesassociates.com&exsvurl=1&ll-cc=1033&modurl=0&path=/mail/inbox';
 
 url = 'https://outlook.office.com/owa/';
-@surf(URL, 3);
+@surf(url, 3);
 
 @say(fp);
 }

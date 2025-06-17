@@ -194,7 +194,7 @@ str fp = 'Browser current line with Firefox.';
 
 str URL = @trim_colons(@get_current_line);
 
-@surf(URL, 2);
+@surf(url, 2);
 
 /* Use Cases
 
@@ -216,7 +216,7 @@ str fp = 'Browser current line with Chrome.';
 
 str URL = @trim_colons(@get_current_line);
 
-@surf(URL, 1);
+@surf(url, 1);
 
 make_message(fp);
 }
@@ -243,7 +243,7 @@ sc = @commute_common_characters(sc);
 
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -277,7 +277,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += sc;
 URL += '&hl=en&btnG=Search&as_sdt=1%2C47&as_sdtp=on';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -315,7 +315,7 @@ URL += '&ac_posn=-1&ac_rec=false&ac_count=-1&ac_match=false&v1=';
 URL += sc;
 URL += '&search_submit=';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -379,7 +379,7 @@ else // Normal version
   URL += sc;
 }
 
-@surf(URL, Browser_Number);
+@surf(url, browser_number);
 
 /* Use Case(s)
 
@@ -421,7 +421,7 @@ sc = @commute_character(sc, '\?', 'x%3F');
 
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -469,7 +469,7 @@ sc = @commute_character(sc, '\?', 'x%3F');
 
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -586,7 +586,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += sc;
 URL += '?s=t';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Case(s)
 
@@ -1101,7 +1101,7 @@ str fp = "Search google using a definition search.";
 
 // skw: define
 
-@search_google_main(2, 7, '');
+@search_google_main(2, 8, '');
 
 @say(fp);
 }
@@ -1166,7 +1166,7 @@ if(lc != '')
   @find_lc(lc);
 }
 
-@search_google_main(0, 7, @get_sj);
+@search_google_main(0, 8, @get_sj);
 
 @restore_location;
 }
@@ -1593,7 +1593,7 @@ URL += sc;
 
 URL += "&submit.x=35&submit.y=23";
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Case(s)
 
@@ -1631,7 +1631,7 @@ URL += sc;
 
 //URL += "&submit.x=35&submit.y=23";
 
-@surf(URL, 0);
+@surf(url, 0);
 
 @say(@trim_period(fp) + ' for "' + Pretty_sc + '".');
 }
@@ -1658,7 +1658,7 @@ sc = @commute_character(sc, ' ', '+');
 
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -1692,7 +1692,7 @@ sc = @commute_character(sc, ' ', '+');
 
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -1738,7 +1738,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += "&text=";
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -1774,7 +1774,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += "&text=";
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -1817,7 +1817,7 @@ URL += "&categories=course&sort=displayDate";
 // I noticed that Firefox gives you the sort options dropdown list, but Chrome does not. 
 // Weirder. Nov-15-2018
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -1851,7 +1851,7 @@ str Pretty_sc = sc;
 
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -1887,7 +1887,7 @@ sc = @commute_character(sc, ' ', '+');
 //URL += "&find_loc=Washington%2C+DC&ns=1#";
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -1923,7 +1923,7 @@ sc = @commute_character(sc, ' ', '+');
 //URL += "/Find?highlight=true&searchTerm=";
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -1959,7 +1959,7 @@ sc = @commute_character(sc, ' ', '+');
 //URL += "/Find?highlight=true&searchTerm=";
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -2111,7 +2111,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += sc;
 URL += "&title=Special%3ASearch";
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -2153,7 +2153,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += sc;
 URL += '&string=exact';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -2191,7 +2191,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += sc;
 URL += '&c=apps';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -2229,7 +2229,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += sc;
 //URL += '&type=Repositories&ref=advsearch&l=&l=';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -2271,7 +2271,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += sc;
 URL += '&type=Repositories&ref=advsearch&l=&l=';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -2309,7 +2309,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += sc + ' Xamarin Forms';
 URL += '&type=Repositories&ref=advsearch&l=&l=';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -2346,7 +2346,7 @@ sc = @commute_character(sc, ' ', '+');
 URL += sc;
 URL += '&type=Users&ref=searchresults';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 

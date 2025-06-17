@@ -2421,7 +2421,7 @@ else If(xpos('http', Lowercased_clif_Block, 1)) // Open Link Using Default appli
   int Position_of_HTTP = xpos('http', clif_Block, 1) - 1;
   uRL = str_del(clif_Block, 1, Position_of_HTTP);
   status_message_rp = 'Surf to: ' + uRL;
-  @surf(uRL, 0);
+  @surf(url, 0);
 }
 // Character 92 is the backslash.
 else if(xpos(char(92), clif_Block, 1)) // Open a Folder or File *****************************

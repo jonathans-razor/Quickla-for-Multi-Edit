@@ -3859,6 +3859,9 @@ switch(browser_number) // This list is ordered by how much i like them.
   case 7: // Brave
     Command_Line = "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe";
     break;
+  case 8: // Chrome Canary
+    Command_Line = "C:\\Users\\jonat\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe";
+    break;
 }
 
 /* Use Case(s)
