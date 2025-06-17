@@ -217,6 +217,11 @@ if(!@is_content_area_file)
   rv = ''; 
 }
 
+if(at_eof)
+{
+  rv = 'at_eof';
+}
+
 //@say(rv);
 return(rv);
 }
@@ -8165,6 +8170,10 @@ if(!@is_content_area_file)
 
 switch(current_line_type)
 {
+  case 'at_eof':
+    fp += ' EOF position adjustment.';
+    @bob;
+    break;
   case 'bullet':
     if(key2 == 13) // The alt+control keys were pressed.
     {

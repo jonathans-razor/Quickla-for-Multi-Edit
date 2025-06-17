@@ -679,6 +679,16 @@ del_char;
 
 
 
+//; An easier to type alias for make_message.
+
+void
+@say(str message = parse_str('/1=', mparm_str))
+{
+make_message(message);
+}
+
+
+
 //;+ Backspace and Deleting
 
 
@@ -730,7 +740,9 @@ del_line;
 void
 @delete_line()
 {
+str fp = 'Delete line.';
 del_line;
+@say(fp);
 }
 
 
@@ -904,16 +916,6 @@ void
 {
 str fp = "Go to the beginning of the block.";
 goto_line(block_line1);
-}
-
-
-
-//; An easier to type alias for make_message.
-
-void
-@say(str message = parse_str('/1=', mparm_str))
-{
-make_message(message);
 }
 
 
