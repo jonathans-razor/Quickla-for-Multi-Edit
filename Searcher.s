@@ -134,7 +134,7 @@ if(sc == '')
 
 URL += sc;
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -170,7 +170,7 @@ sc = @commute_common_characters(sc);
 URL += sc;
 URL += '&index=blended';
 
-@surf(URL, 0);
+@surf(url, 0);
 
 /* Use Cases
 
@@ -1166,7 +1166,7 @@ if(lc != '')
   @find_lc(lc);
 }
 
-@search_google_main(0, 8, @get_sj);
+@search_google_main(0, 7, @get_sj);
 
 @restore_location;
 }
