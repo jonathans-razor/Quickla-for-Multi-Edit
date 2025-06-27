@@ -8313,4 +8313,22 @@ str fp = "Paste bullet after first junk drawer bullet.";
 
 
 
+//;
+
+void
+@toggle_grocery_wish_list_item
+{
+str fp = "Find grocery wish list item.";
+// cd: Jun-27-2025
+@header;
+str hc_subject = @hc_subject;
+@find_lc('wlg');
+find_text(hc_subject, 0, _RegExp);
+@toggle_grave_accent;
+@footer;
+@say(fp);
+}
+
+
+
 //; (!efjm)

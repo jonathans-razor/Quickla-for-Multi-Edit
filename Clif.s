@@ -11,7 +11,7 @@ macro_file Clif; // (!cf)
 #include Shared.sh   // One of my guys.
 
 // Used by 'ShellExecute'. Initially I need to comment some of this code.
-#include ShellApi.sh // qcq
+#include ShellApi.sh
 
 #include WinExec.sh  // Used by 'Execprog'.
 
@@ -3751,6 +3751,11 @@ switch(lc)
     @add_bullet_below;
     @add_text_blank_url;
     break;
+  case 'com':
+    @add_bullet_below;
+    @add_text_date;
+    @add_subbullet_below;
+    break;
   case 'dia':
     @add_bullet_below;
     @add_text_date;
@@ -3773,6 +3778,11 @@ switch(lc)
     @add_bullet_below;
     @add_text_date;
     @paste_with_wikipedia_format;
+    break;
+  case 'ta':
+    @add_bullet_below;
+    @add_text_date;
+    text('  ');
     break;
   case 'wslog':
     @add_bullet_below;

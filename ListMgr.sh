@@ -132,5 +132,6 @@ prototype ListMgr
   str  @query_previous_bsr();
   void @restore_location_2();
   void @run_both_track_size_clifs(str lc);
+  void @toggle_grave_accent();
   void @switch_to_task_window();
 }
