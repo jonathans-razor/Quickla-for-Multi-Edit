@@ -5268,17 +5268,6 @@ if(!@is_batch_file)
   return();
 }
 
-@save_location;
-
-str sc = 'rfbare';
-@find_lc(sc);
-
-@hc_small_segment_content_dinc();
-
-@restore_location;
-
-@find_next_rubric;
-
 @bol;
 cr;
 cr;
@@ -5286,16 +5275,17 @@ cr;
 up;
 up;
 up;
-@paste;
-up;
-up;
+text(':_');
+cr;
+text(':');
+cr;
+text('echo. & echo * ');
 cr;
 text('rem  q' + 'q');
 cr;
 text('call n >nul');
 cr;
 text('set cbf-pt=%cbf-pt%\');
-cr;
 cr;
 text('set cbf-lh=');
 cr;
@@ -5307,15 +5297,11 @@ text('set cbf-=');
 cr;
 text('set cbf-url=');
 cr;
-@bobs;
-@seek('x_marker');
-@hc_word_uc
-@delete_block;
-
-@seek('x_marker');
-@hc_word_uc
-@delete_block;
-@eol;
+text('exit/b');
+cr;
+@bor;
+down;
+eol;
 
 @footer;
 
