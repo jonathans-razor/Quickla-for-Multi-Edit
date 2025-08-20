@@ -8314,4 +8314,21 @@ find_text(hc_subject, 0, _RegExp);
 
 
 
+//;
+
+void
+@rtm
+{
+str fp = "x";
+
+// lu: Aug-20-2025
+
+
+//qq-1
+
+@say(@left(@get_formatted_date, 3));
+}
+
+
+
 //; (!efjm)

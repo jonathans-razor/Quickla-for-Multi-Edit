@@ -2749,7 +2749,6 @@ if(!@is_text_file)
   return();
 }
 
-@get_date
 @replace_all_occurrences_in_file('\[Month Name\]', @left(@get_formatted_date, 3));
 
 eof;
@@ -10589,6 +10588,7 @@ if(!@find_lc('rfomt'))
 
 @paste;
 
+//qq
 @format_data_for_monthly_itin;
 
 @close_and_save_file_wo_prompt;
