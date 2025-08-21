@@ -8323,9 +8323,6 @@ str fp = "x";
 
 // lu: Aug-20-2025
 
-
-//qq-1
-
 @say(@left(@get_formatted_date, 3));
 }
 

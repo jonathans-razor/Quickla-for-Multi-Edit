@@ -10588,7 +10588,6 @@ if(!@find_lc('rfomt'))
 
 @paste;
 
-//qq
 @format_data_for_monthly_itin;
 
 @close_and_save_file_wo_prompt;
