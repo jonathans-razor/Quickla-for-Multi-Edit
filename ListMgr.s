@@ -13105,9 +13105,9 @@ str fp = "Scrub externally copied content for internal pasting.";
 //;;
 
 void
-@add_text_separator
+@add_text_alert
 {
-str fp = 'Add text highligthed event.';
+str fp = 'Add text alert.';
 
 if(!@is_asc_file)
 {
@@ -13115,8 +13115,18 @@ if(!@is_asc_file)
 }
 
 @header;
-@add_bullet_below;
-text('  ><    ><    ><    ><    ><    ><    Separator: ');
+
+@save_location;
+
+@find_lc('rfalert');
+down;
+down;
+@hc_perimeter_button;
+
+@recall_location;
+@find_next_small_segment;
+@paste;
+
 @footer;
 
 @say(fp);
@@ -13149,6 +13159,28 @@ down;
 
 @paste_after_with_subbullet;
 
+@footer;
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@add_text_separator
+{
+str fp = 'Add text highligthed event.';
+
+if(!@is_asc_file)
+{
+  return();
+}
+
+@header;
+@add_bullet_below;
+text('  ><    ><    ><    ><    ><    ><    Separator: ');
 @footer;
 
 @say(fp);
