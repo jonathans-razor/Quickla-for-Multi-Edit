@@ -4964,9 +4964,6 @@ url = @get_remote_oj_using_klc('apne', is_found);
 url = @get_remote_oj_using_klc('rfcnn', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('rftele', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('rffox', is_found);
 @surf(url, 0);
 
@@ -5027,12 +5024,6 @@ str fp = "View YouTube favorite channels.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc('rfsypo', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfroki', is_found);
-@surf(url, 2);
-
 url = @get_remote_oj_using_klc('rfbesh', is_found);
 @surf(url, 2);
 
@@ -5042,16 +5033,25 @@ url = @get_remote_oj_using_klc('rffi', is_found);
 url = @get_remote_oj_using_klc('rfjr', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rftheo', is_found);
+url = @get_remote_oj_using_klc('rfhoyt', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rftc', is_found);
+url = @get_remote_oj_using_klc('rfsypo', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfroki', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfstek', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rfhoyt', is_found);
+url = @get_remote_oj_using_klc('rftc', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rftele', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rftheo', is_found);
 @surf(url, 2);
 
 @footer;
