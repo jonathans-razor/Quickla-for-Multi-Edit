@@ -4950,19 +4950,16 @@ str fp = "Pass a url to a browser.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc('rfffx', is_found);
-@surf(url, 0);
-
-url = @get_remote_oj_using_klc('rfscne', is_found);
-@surf(url, 0);
-
-url = @get_remote_oj_using_klc('rftnp', is_found);
-@surf(url, 0);
-
-url = @get_remote_oj_using_klc('apne', is_found);
+url = @get_remote_oj_using_klc('rfapne', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfcnn', is_found);
+@surf(url, 0);
+
+url = @get_remote_oj_using_klc('rffci', is_found);
+@surf(url, 0);
+
+url = @get_remote_oj_using_klc('rfffx', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rffox', is_found);
@@ -4989,16 +4986,19 @@ url = @get_remote_oj_using_klc('rfreas', is_found);
 url = @get_remote_oj_using_klc('reut', is_found);
 @surf(url, 0);
 
+url = @get_remote_oj_using_klc('revo', is_found);
+@surf(url, 0);
+
+url = @get_remote_oj_using_klc('rfscne', is_found);
+@surf(url, 0);
+
+url = @get_remote_oj_using_klc('rftnp', is_found);
+@surf(url, 0);
+
 url = @get_remote_oj_using_klc('rfwash', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('wired', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('rfwsj', is_found);
-@surf(url, 0);
-
-url = @get_remote_oj_using_klc('revo', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfzehe', is_found);
@@ -5026,6 +5026,9 @@ int is_found = 0;
 str url;
 
 url = @get_remote_oj_using_klc('rfbesh', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfclra', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rffi', is_found);
