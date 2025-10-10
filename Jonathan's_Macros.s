@@ -5034,13 +5034,14 @@ url = @get_remote_oj_using_klc('rfclra', is_found);
 url = @get_remote_oj_using_klc('rffi', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rfjr', is_found);
+// If rfhoyt doesn't appear twice, it doesn't show up at all. Crazy. Oct-8-2025
+url = @get_remote_oj_using_klc('rfhoyt', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfhoyt', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rfsypo', is_found);
+url = @get_remote_oj_using_klc('rfjr', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfroki', is_found);
