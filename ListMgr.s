@@ -13124,8 +13124,7 @@ down;
 @hc_perimeter_button;
 
 @recall_location;
-@find_next_small_segment;
-@paste;
+@paste_after;
 
 @footer;
 
