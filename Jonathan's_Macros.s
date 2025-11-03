@@ -5038,6 +5038,9 @@ url = @get_remote_oj_using_klc('rfjr', is_found);
 url = @get_remote_oj_using_klc('rftc', is_found);
 @surf(url, 2);
 
+url = @get_remote_oj_using_klc('rfsubs', is_found);
+@surf(url, 2);
+
 url = @get_remote_oj_using_klc('rftheo', is_found);
 @surf(url, 2);
 
