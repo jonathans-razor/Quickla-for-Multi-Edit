@@ -2365,6 +2365,18 @@ https://github.com/search?utf8=%E2%9C%93&q=RichardCampbell&type=Users&ref=search
 //;
 
 void
+@search_google_with_app_3(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "Quarterback for [blank].";
+// lu: Nov-24-2025
+@search_google_main(0, 0, 'Quarterback for the ' + @get_sj + '?');
+}
+
+
+
+//;
+
+void
 @search_google_with_app_2(str sc = parse_str('/1=', mparm_str))
 {
 str fp = "How tall is [blank].";

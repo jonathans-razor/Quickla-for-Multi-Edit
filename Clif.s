@@ -3774,19 +3774,21 @@ switch(lc)
     @add_bullet_below;
     text('rzr ');
     break;
-  case 'shon': // (!shon)
+  case 'shon':
     @add_bullet_below;
     @add_text_date;
     @paste_with_wikipedia_format;
+    break;
+  case 'hslog':
+  case 'r2log':
+  case 'wslog':
+    @add_bullet_below;
+    @add_text_date;
     break;
   case 'ta':
     @add_bullet_below;
     @add_text_date;
     text('  ');
-    break;
-  case 'wslog':
-    @add_bullet_below;
-    @add_text_date;
     break;
   default:
     if(@is_code_word_line)
@@ -3826,7 +3828,7 @@ int rv = @run_clif_under_cursor(sm);
 if(rv == 6)
 {
   return_home = false;
-  @perform_custom_lc_process3(lc, return_home); //QCQ
+  @perform_custom_lc_process3(lc, return_home);
 }
 
 return(0);

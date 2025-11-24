@@ -960,7 +960,8 @@ if((@first_character(get_line) == ':') && (@is_batch_file))
 @save_location;
 
 str so = @get_lc_on_current_line(lc);
-set_global_str('search_str', '!'+ lc); // Added Aug-21-2025.
+// This seemed buggy, so I commented the following line on Nov-17-2025.
+//set_global_str('search_str', '!'+ lc); // Added Aug-21-2025.
 
 if(length(lc) == 0)
 {

@@ -4950,9 +4950,6 @@ str fp = "Pass a url to a browser.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc('rfapne', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('rfcnn', is_found);
 @surf(url, 0);
 
@@ -4972,6 +4969,9 @@ url = @get_remote_oj_using_klc('rfnema', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfnyt', is_found);
+@surf(url, 0);
+
+url = @get_remote_oj_using_klc('rfpoly', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfquil', is_found);
@@ -5071,6 +5071,9 @@ url = @get_remote_oj_using_klc('rfbesh', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfclra', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfefp', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rffi', is_found);
@@ -8341,20 +8344,6 @@ find_text(hc_subject, 0, _RegExp);
 @toggle_grave_accent;
 @footer;
 @say(fp);
-}
-
-
-
-//;
-
-void
-@rtm
-{
-str fp = "x";
-
-// lu: Aug-20-2025
-
-@say(@left(@get_formatted_date, 3));
 }
 
 
