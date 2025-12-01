@@ -817,7 +817,7 @@ str fp = 'Add rubric.';
 @header;
 if(lc == '')
 {
-  lc = 'nr';
+  lc = 'gc';
 }
 if(!@find_lc(lc))
 {
