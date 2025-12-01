@@ -3774,11 +3774,13 @@ switch(lc)
     @add_bullet_below;
     text('rzr ');
     break;
+  case 'rfshon':
   case 'shon':
     @add_bullet_below;
     @add_text_date;
     @paste_with_wikipedia_format;
     break;
+  case 'emlog':
   case 'hslog':
   case 'r2log':
   case 'wslog':

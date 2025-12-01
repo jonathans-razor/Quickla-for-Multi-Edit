@@ -12011,7 +12011,7 @@ str fp = "Move rubric to the first position with me.";
 
 @cut_rubric;
 @bof;
-find_text('glass ceiling rubric', 0, _regexp);
+find_text('!-gc', 0, _regexp);
 @find_next_rubric;
 @bol;
 @paste;
