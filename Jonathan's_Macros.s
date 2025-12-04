@@ -5070,6 +5070,9 @@ url = @get_remote_oj_using_klc('rfalho', is_found);
 url = @get_remote_oj_using_klc('rfbesh', is_found);
 @surf(url, 2);
 
+url = @get_remote_oj_using_klc('rfdaga', is_found);
+@surf(url, 2);
+
 url = @get_remote_oj_using_klc('rfclra', is_found);
 @surf(url, 2);
 
@@ -8346,6 +8349,37 @@ str hc_subject = @hc_subject;
 find_text(hc_subject, 0, _RegExp);
 @toggle_grave_accent;
 @footer;
+@say(fp);
+}
+
+
+
+//;
+
+void
+@cut_and_paste_to_email_log
+{
+str fp = "Cut current bullet and paste it to email log.";
+
+@header;
+
+// lu: Dec-2-2025
+
+if(!@is_bullet_file)
+{
+  return();
+}
+
+@@prepare_small_segment_for_pstn;
+@find_lc('emlog');
+@add_bullet_below;
+text('+ ');
+@add_text_date;
+@add_subbullet_below;
+@paste_with_wikipedia_format;
+
+@footer;
+
 @say(fp);
 }
 
