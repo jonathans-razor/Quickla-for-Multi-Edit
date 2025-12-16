@@ -979,6 +979,21 @@ void
 //;;
 
 void
+@search_youtube_main(str sc)
+{
+str fp = 'Search YouTube main.';
+str URL = 'http://www.youtube.com/results?search_query=';
+str pretty_sc = sc;
+sc = @commute_character(sc, ' ', '+');
+@surf(url + sc, 2);
+@say(@trim_period(fp) + ' for "' + pretty_sc + '".');
+}
+
+
+
+//;;
+
+void
 @search_google_main(int search_type, int browser_number, str search_criterion)
 {
 str fp = 'Search Google.';
@@ -2358,6 +2373,32 @@ https://github.com/search?utf8=%E2%9C%93&q=RichardCampbell&type=Users&ref=search
 */
 
 @say(@trim_period(fp) + ' for "' + pretty_sc + '".');
+}
+
+
+
+//;
+
+void
+@search_youtube_with_can_2
+{
+str sc = 'nfl highlights';
+str fp = sc;
+// lu: Dec-16-2025
+@search_youtube_main(sc);
+}
+
+
+
+//;
+
+void
+@search_youtube_with_can_1
+{
+str sc = 'nfl highlights week ';
+str fp = sc + ' [blank]';
+// lu: Dec-16-2025
+@search_youtube_main(sc + @get_sj);
 }
 
 
