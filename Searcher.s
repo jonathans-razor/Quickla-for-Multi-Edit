@@ -2365,6 +2365,18 @@ https://github.com/search?utf8=%E2%9C%93&q=RichardCampbell&type=Users&ref=search
 //;
 
 void
+@search_google_with_app_4(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "when did this person die [blank].";
+// lu: Dec-16-2025
+@search_google_main(0, 0, 'When did this person die ' + @get_sj + '?');
+}
+
+
+
+//;
+
+void
 @search_google_with_app_3(str sc = parse_str('/1=', mparm_str))
 {
 str fp = "Quarterback for [blank].";
