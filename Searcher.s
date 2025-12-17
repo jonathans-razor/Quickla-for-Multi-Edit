@@ -2395,7 +2395,7 @@ str fp = sc;
 void
 @search_youtube_with_can_1
 {
-str sc = 'nfl highlights week ';
+str sc = 'nfl highlights 2025 ';
 str fp = sc + ' [blank]';
 // lu: Dec-16-2025
 @search_youtube_main(sc + @get_sj);
