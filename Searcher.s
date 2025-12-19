@@ -2380,6 +2380,58 @@ https://github.com/search?utf8=%E2%9C%93&q=RichardCampbell&type=Users&ref=search
 //;
 
 void
+@search_google_with_can_6
+{
+str sc = 'can this nfl team make the playoffs ';
+str fp = sc;
+// lu: Dec-19-2025
+@search_google_main(0, 0, sc + @get_sj);
+}
+
+
+
+//;
+
+void
+@search_google_with_can_5
+{
+str sc = 'wide receiver for ';
+str fp = sc;
+// lu: Dec-19-2025
+@search_google_main(0, 0, sc + @get_sj);
+}
+
+
+
+//;
+
+void
+@search_google_with_can_4
+{
+str sc = 'running back for ';
+str fp = sc;
+// lu: Dec-19-2025
+@search_google_main(0, 0, sc + @get_sj);
+}
+
+
+
+//;
+
+void
+@search_google_with_can_3
+{
+str sc = 'head coach for ';
+str fp = sc;
+// lu: Dec-19-2025
+@search_google_main(0, 0, sc + @get_sj);
+}
+
+
+
+//;
+
+void
 @search_youtube_with_can_2
 {
 str sc = 'nfl highlights';
