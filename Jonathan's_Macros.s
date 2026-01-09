@@ -4950,6 +4950,9 @@ str fp = "Pass a url to a browser.";
 int is_found = 0;
 str url;
 
+url = @get_remote_oj_using_klc('rfbrne', is_found);
+@surf(url, 0);
+
 url = @get_remote_oj_using_klc('rfcnn', is_found);
 @surf(url, 0);
 
@@ -4963,9 +4966,6 @@ url = @get_remote_oj_using_klc('rffox', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfght', is_found);
-@surf(url, 0);
-
-url = @get_remote_oj_using_klc('rfnema', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfnyt', is_found);

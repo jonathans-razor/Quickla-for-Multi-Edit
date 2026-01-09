@@ -2458,6 +2458,18 @@ str fp = sc + ' [blank]';
 //;
 
 void
+@search_google_with_app_5(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "Stock symbol.";
+// lu: Jan-7-2026
+@search_google_main(0, 0, 'What is the stock symbol for ' + @get_sj + '?');
+}
+
+
+
+//;
+
+void
 @search_google_with_app_4(str sc = parse_str('/1=', mparm_str))
 {
 str fp = "when did this person die [blank].";
@@ -2546,7 +2558,7 @@ void
 {
 str fp = "Search Google with appended words - streaming service.";
 // lu: Nov-8-2021
-@search_google_main(0, 0, @get_sj + ' on which streaming service can I watch');
+@search_google_main(0, 0, 'on which streaming service can I watch ' + @get_sj);
 }
 
 
