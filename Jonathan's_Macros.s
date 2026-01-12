@@ -4941,6 +4941,30 @@ up;
 //;
 
 void
+@read_headlines_test
+{
+str fp = "Pass a url to a browser.";
+
+@header;
+
+int is_found = 0;
+str url;
+
+url = @get_remote_oj_using_klc('rfffx', is_found);
+@surf(url, 0);
+
+@footer;
+@say(fp);
+
+// fcd: Jan-29-2020
+
+}
+
+
+
+//;
+
+void
 @read_headlines
 {
 str fp = "Pass a url to a browser.";
@@ -4950,7 +4974,7 @@ str fp = "Pass a url to a browser.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc('rfbrne', is_found);
+url = @get_remote_oj_using_klc('rfbrei', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfcnn', is_found);

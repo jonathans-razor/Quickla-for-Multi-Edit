@@ -13345,4 +13345,30 @@ str fp = 'Go to lc and paste.';
 
 
 
+//;
+
+void
+@add_bullet_at_remote_mor(str lc = parse_str('/1=', mparm_str))
+{
+str fp = 'Add bullet at remote MOR.';
+
+@header;
+
+str so;
+int search_criterion_was_found = 0;
+
+so = @find_lc_core(lc, search_criterion_was_found, fp);
+
+if(search_criterion_was_found)
+{
+  @mor;
+  @add_bullet_below;
+}
+
+@footer;
+@say(fp);
+}
+
+
+
 //; (!eflm)
