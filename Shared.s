@@ -1,4 +1,4 @@
-macro_file Shared; // (!sh)
+macro_file Shared; // (!shar)
 
 // Shared utilities.
 
@@ -11,7 +11,7 @@ macro_file Shared; // (!sh)
 
 /*
 
-Metadata: Track Size (!tssh)
+Metadata: Track Size (!tsshar)
 
         Date   Lines      Bytes   Macros  Notes
  -----------  ------  ---------  -------  ---------------------------------------------------
