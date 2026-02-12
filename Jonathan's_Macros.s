@@ -4989,19 +4989,10 @@ url = @get_remote_oj_using_klc('rfffx', is_found);
 url = @get_remote_oj_using_klc('rffox', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('rfght', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('rfnyt', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('rfpoly', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('rfquil', is_found);
-@surf(url, 0);
-
-url = @get_remote_oj_using_klc('rfquan', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rfreas', is_found);
