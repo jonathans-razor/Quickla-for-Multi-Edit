@@ -1,4 +1,4 @@
-macro_file Jonathan's_Macros; // (!jmac)
+macro_file Jonathan's_Macros; // (!jm)
 
 // Miscellaneous macros.
 
