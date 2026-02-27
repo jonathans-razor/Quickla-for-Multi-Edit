@@ -5,6 +5,7 @@ macro_file Searcher; // (!se)
 
 #include Aliases.sh
 #include Finder.sh
+#include ListMgr.sh
 #include Shared.sh
 
 
@@ -2451,6 +2452,27 @@ str sc = 'nfl highlights 2025 ';
 str fp = sc + ' [blank]';
 // lu: Dec-16-2025
 @search_youtube_main(sc + @get_sj);
+}
+
+
+
+//;
+
+void
+@search_youtube_with_app_1
+{
+str fp = ' official music video';
+@header;
+// lu: Feb-27-2026
+str URL = 'http://www.youtube.com/results?search_query=';
+//qq
+str left_string = @hc_subject;
+str sc = left_string + ' ' + fp;
+URL += sc;
+URL += '&search_type=&aq=f';
+@surf(url, 2);
+@footer;
+@say(fp + ' (' + sc + ')');
 }
 
 
