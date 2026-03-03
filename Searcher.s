@@ -2465,7 +2465,6 @@ str fp = ' official music video';
 @header;
 // lu: Feb-27-2026
 str URL = 'http://www.youtube.com/results?search_query=';
-//qq
 str left_string = @hc_subject;
 str sc = left_string + ' ' + fp;
 URL += sc;
@@ -2477,7 +2476,23 @@ URL += '&search_type=&aq=f';
 
 
 
-//;
+//;+ Search Google With App Family
+
+
+
+//;;
+
+void
+@search_google_with_app_6(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'What is the difference between [blank] and [blank].';
+// lu: Mar-3-2026
+@search_google_main(0, 0, 'What is the difference between ' + @get_sj + '?');
+}
+
+
+
+//;;
 
 void
 @search_google_with_app_5(str sc = parse_str('/1=', mparm_str))
@@ -2489,7 +2504,7 @@ str fp = "Stock symbol.";
 
 
 
-//;
+//;;
 
 void
 @search_google_with_app_4(str sc = parse_str('/1=', mparm_str))
@@ -2501,7 +2516,7 @@ str fp = "when did this person die [blank].";
 
 
 
-//;
+//;;
 
 void
 @search_google_with_app_3(str sc = parse_str('/1=', mparm_str))
@@ -2513,7 +2528,7 @@ str fp = "Quarterback for [blank].";
 
 
 
-//;
+//;;
 
 void
 @search_google_with_app_2(str sc = parse_str('/1=', mparm_str))

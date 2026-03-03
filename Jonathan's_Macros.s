@@ -5082,9 +5082,6 @@ str url;
 url = @get_remote_oj_using_klc('rfalho', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rfbesh', is_found);
-@surf(url, 2);
-
 url = @get_remote_oj_using_klc('rfdaga', is_found);
 @surf(url, 2);
 
@@ -5097,13 +5094,13 @@ url = @get_remote_oj_using_klc('rfefp', is_found);
 url = @get_remote_oj_using_klc('rffi', is_found);
 @surf(url, 2);
 
+url = @get_remote_oj_using_klc('rfpide', is_found);
+@surf(url, 2);
+
 url = @get_remote_oj_using_klc('rfroki', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfstek', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rftele', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfvery', is_found);
