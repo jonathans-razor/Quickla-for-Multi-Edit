@@ -3518,6 +3518,7 @@ void
 @bobs()
 {
 str fp = 'Go to the beginning of the current big segment. ';
+// skw: beginning-content-area-series-sz
 find_text(@big_segment, 0, _regexp | _backward);
 }
 

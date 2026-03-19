@@ -346,6 +346,7 @@ str
 @boca()
 {
 str fp = "Go to the beginning of content area.";
+// skw: beginning-content-area-series-sz
 str rv = @current_line_type;
 while(rv == '' and !@at_bof)
 {
@@ -6558,11 +6559,21 @@ int initial_column = @current_column;
 
 up;
 
+@bobs
 @boca;
 
-@paste;
-
-@find_previous_small_segment;
+if(@is_big_segment)
+{
+  up;
+  up;
+  @paste;
+  @boca; 
+}
+else
+{
+  @paste;
+  @find_previous_small_segment;
+}
 
 goto_col(initial_column);
 
