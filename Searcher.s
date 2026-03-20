@@ -1205,7 +1205,6 @@ if(lc != '')
   @find_lc(lc);
 }
 
-//qq
 @search_google_main(0, 2, @get_sj);
 
 @restore_location;
