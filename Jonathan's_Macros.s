@@ -5007,9 +5007,6 @@ url = @get_remote_oj_using_klc('revo', is_found);
 url = @get_remote_oj_using_klc('rfscne', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('rftnp', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('rfwash', is_found);
 @surf(url, 0);
 

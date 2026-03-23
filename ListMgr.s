@@ -6559,7 +6559,7 @@ int initial_column = @current_column;
 
 up;
 
-@bobs
+//qq
 @boca;
 
 if(@is_big_segment)
