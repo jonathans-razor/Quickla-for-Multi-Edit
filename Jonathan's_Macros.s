@@ -8154,6 +8154,7 @@ text('+ Good morning. Yesterday: ');
 text('+ Today:');
 up;
 up;
+@add_subbullet_below;
 eol;
 
 @footer;
