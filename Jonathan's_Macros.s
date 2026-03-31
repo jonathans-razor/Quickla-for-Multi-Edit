@@ -8395,4 +8395,23 @@ text('+ ');
 
 
 
+//;
+
+void
+@run_razor(str sc = parse_str('/1=', mparm_str))
+{
+str fp = "Run run river, carry me home to the ocean. Run razor line.";
+// Description: This function allows you to run CBFs that are open inside of Multi-Edit without 
+// having to switch to a command prompt.
+
+@header;
+// lu: Mar-31-2026
+
+@run_rzr_line('rzr j ' + sc);
+@footer;
+@say(sc);
+}
+
+
+
 //; (!efjm)
