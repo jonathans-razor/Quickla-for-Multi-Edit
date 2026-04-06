@@ -2506,6 +2506,18 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_7(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'How do you pronounce [blank]?';
+// lu: Apr-6-2026
+@search_google_main(0, 0, 'How do you pronounce ' + @get_sj + '?');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_6(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'What is the difference between [blank] and [blank].';
