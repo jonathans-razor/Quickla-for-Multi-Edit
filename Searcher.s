@@ -2506,6 +2506,18 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_8(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'How old is [blank]?';
+// lu: Apr-9-2026
+@search_google_main(0, 0, 'How old is ' + @get_sj + '?');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_7(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'How do you pronounce [blank]?';
