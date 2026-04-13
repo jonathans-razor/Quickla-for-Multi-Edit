@@ -5041,18 +5041,30 @@ str url;
 url = @get_remote_oj_using_klc('rfhoyt', is_found);
 @surf(url, 2);
 
+//1
 url = @get_remote_oj_using_klc('rfhoyt', is_found);
+@surf(url, 2);
+
+//2
+url = @get_remote_oj_using_klc('rfaz', is_found);
+@surf(url, 2);
+
+//3
+url = @get_remote_oj_using_klc('rfjr', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfjr', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rftc', is_found);
-@surf(url, 2);
-
+//4
 url = @get_remote_oj_using_klc('rfsubs', is_found);
 @surf(url, 2);
 
+//5
+url = @get_remote_oj_using_klc('rftc', is_found);
+@surf(url, 2);
+
+//6
 url = @get_remote_oj_using_klc('rftheo', is_found);
 @surf(url, 2);
 
