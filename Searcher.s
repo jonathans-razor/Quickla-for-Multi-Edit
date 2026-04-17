@@ -1404,13 +1404,16 @@ make_message(@trim_period(fp) + ' for "' + Pretty_sc + '".');
 //;;
 
 void
-@search_yahoo_finance
+@search_yahoo_finance(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'Search Yahoo Finance.';
 
 str URL = 'https://finance.yahoo.com/quote/';
 
-str sc = @get_subject_or_selected_text;
+if(sc == '')
+{
+  sc = @get_subject_or_selected_text;
+}
 
 str Pretty_sc = sc;
 
