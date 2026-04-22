@@ -5045,10 +5045,6 @@ url = @get_remote_oj_using_klc('rfhoyt', is_found);
 url = @get_remote_oj_using_klc('rfhoyt', is_found);
 @surf(url, 2);
 
-//2
-url = @get_remote_oj_using_klc('rfaz', is_found);
-@surf(url, 2);
-
 //3
 url = @get_remote_oj_using_klc('rfjr', is_found);
 @surf(url, 2);
@@ -5090,6 +5086,9 @@ int is_found = 0;
 str url;
 
 url = @get_remote_oj_using_klc('rfalho', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfaz', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfdaga', is_found);

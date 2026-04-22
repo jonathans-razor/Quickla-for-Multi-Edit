@@ -4873,7 +4873,6 @@ void
 {
 str fp = 'Run razor 2 - batch file version.';
 //@run_this_executable_file(batch_file + '.bat');
-//qq
 @run_application_1p(batch_file + '.bat');
 //@say(fp);
 }
