@@ -5085,9 +5085,6 @@ str fp = "View YouTube favorite channels, biweekly checker.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc('rfalho', is_found);
-@surf(url, 2);
-
 url = @get_remote_oj_using_klc('rfaz', is_found);
 @surf(url, 2);
 
