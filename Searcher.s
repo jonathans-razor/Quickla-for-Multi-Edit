@@ -2509,6 +2509,20 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_9(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'release date';
+// lu: Apr-27-2026
+@search_google_main(0, 0, @get_sj + ' release date');
+@add_subbullet_below;
+text('release date: ');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_8(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'How old is [blank]?';
