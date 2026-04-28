@@ -9687,7 +9687,7 @@ if(search_criterion_was_found)
 else
 {
   so = 'Search criterion NOT found, so go to personal task list.';
-  @go_to_first_bullet_at_lc('cyd');
+  @go_to_first_bullet_at_lc('rfnptl');
 }
 
 /* Use Case(s)
