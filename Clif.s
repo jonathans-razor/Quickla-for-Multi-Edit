@@ -3416,7 +3416,6 @@ if(@current_line_contains(',,,'))
 
 if(@current_line_contains(',,'))
 {
-  @say('May-29-2018');
   @perform_indicated_action;
   return();
 }
@@ -3456,34 +3455,9 @@ else if(@contains(sc, 'cart-'))
   @search_jira('', 0);
   return();
 }
-else if(@contains(sc, 'earm-'))
-{
-  @search_jira('', 0);
-  return();
-}
-else if(@contains(sc, 'esops-'))
-{
-  @search_jira('', 0);
-  return();
-}
-else if(@contains(sc, 'imm-'))
-{
-  @search_jira('', 0);
-  return();
-}
-else if(@contains(sc, 'lbm-'))
-{
-  @search_jira('', 0);
-  return();
-}
 else if(@contains(sc, 'rzr'))
 {
   @run_rzr_line(sc);
-  return();
-}
-else if(@contains(sc, 'sebplan-'))
-{
-  @search_jira('', 0);
   return();
 }
 
@@ -3553,10 +3527,6 @@ if(@contains(sc, 'MERDEV-'))
   return(1);
 }
 else if(@contains(sc, 'cart-'))
-{
-  return(1);
-}
-else if(@contains(sc, 'sebplan-'))
 {
   return(1);
 }

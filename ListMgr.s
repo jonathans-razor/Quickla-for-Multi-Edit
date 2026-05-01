@@ -1,3 +1,5 @@
+
+
 macro_file ListMgr; // (!lm)
 
 // List manager.
@@ -10362,6 +10364,19 @@ void
 {
 str fp = 'Add text misspelling.';
 @add_text_at_eol('msp');
+}
+
+
+
+//;;
+
+void
+@add_text_dash_then_lk2
+{
+str fp = 'Add text dash then lk2.';
+@eol;
+left;
+text(' - lk#2');
 }
 
 
