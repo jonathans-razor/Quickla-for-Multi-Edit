@@ -5035,11 +5035,7 @@ str fp = "View YouTube favorite channels, daily checker.";
 @header;
 
 int is_found = 0;
-str url;
-
-// If rfhoyt doesn't appear twice, it doesn't show up at all. Crazy. Oct-8-2025
-url = @get_remote_oj_using_klc('rfhoyt', is_found);
-@surf(url, 2);
+str url = '';
 
 //1
 url = @get_remote_oj_using_klc('rfhoyt', is_found);
