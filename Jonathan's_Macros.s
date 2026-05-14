@@ -5053,6 +5053,10 @@ url = @get_remote_oj_using_klc('rfjr', is_found);
 url = @get_remote_oj_using_klc('rfsubs', is_found);
 @surf(url, 2);
 
+//4
+url = @get_remote_oj_using_klc('rfsubs', is_found);
+@surf(url, 2);
+
 //5
 url = @get_remote_oj_using_klc('rftc', is_found);
 @surf(url, 2);
@@ -5109,6 +5113,33 @@ url = @get_remote_oj_using_klc('rfstek', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfvery', is_found);
+@surf(url, 2);
+
+@footer;
+@say(fp);
+
+// fcd: Jan-23-2024
+}
+
+
+
+//;
+
+void
+@view_youtube_favorite_channels3
+{
+str fp = "View YouTube favorite channels, biweekly checker.";
+
+@header;
+
+int is_found = 0;
+str url;
+
+//qq
+url = @get_remote_oj_using_klc('rfhoyt', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfsubs', is_found);
 @surf(url, 2);
 
 @footer;

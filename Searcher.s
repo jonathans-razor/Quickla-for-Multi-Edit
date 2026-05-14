@@ -2509,6 +2509,18 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_10(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'how many championships';
+// lu: Apr-27-2026
+@search_google_main(0, 0, 'How many championships  has ' + @get_sj + ' won?');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_9(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'release date';
