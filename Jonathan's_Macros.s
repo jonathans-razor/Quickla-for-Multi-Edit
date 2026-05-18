@@ -5135,7 +5135,6 @@ str fp = "View YouTube favorite channels, biweekly checker.";
 int is_found = 0;
 str url;
 
-//qq
 url = @get_remote_oj_using_klc('rfhoyt', is_found);
 @surf(url, 2);
 
