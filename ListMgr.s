@@ -4225,7 +4225,6 @@ switch(sc_digits_only)
     break;
   case '15':
     @find_previous_big_segment;
-    @find_previous_big_segment;
     @mor;
     @paste_after;
     fp += 'previous mor';
@@ -7258,9 +7257,6 @@ switch(@trim(location_refiner))
   case 'w': // This means Go to, a.k.a. remain, at lc location.
     return_home = false;
     break;
-  case 'wm':
-  case 'mw':
-    return_home = false;
   case 'm':
     @mor;
     modifier = ' (mor @ lc ' + lc + ')';
