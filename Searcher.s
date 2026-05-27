@@ -2509,6 +2509,30 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_12(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'When did [blank] die?';
+// lu: May-26-2026
+@search_google_main(0, 0, 'When did ' + @get_sj + ' die?');
+}
+
+
+
+//;;
+
+void
+@search_google_with_app_11(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'How did [blank] die?';
+// lu: May-26-2026
+@search_google_main(0, 0, 'How did ' + @get_sj + ' die?');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_10(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'how many championships';
