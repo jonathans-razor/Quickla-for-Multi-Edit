@@ -8433,4 +8433,26 @@ text('+ ');
 
 
 
+//;
+
+void
+@log_an_entry(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'Log an entry';
+// lu: May-27-2026
+@header;
+@save_location;
+@cut_bullet;
+@find_lc(sc);
+@add_bullet_below;
+text('+');
+@add_text_date;
+@paste_after_with_subbullet;
+@restore_location;
+@footer;
+@say(fp);
+}
+
+
+
 //; (!efjm)

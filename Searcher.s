@@ -2509,6 +2509,18 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_13(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'What is the opposite of [blank]?';
+// lu: May-26-2026
+@search_google_main(0, 0, 'What is the opposite of ' + @get_sj + '?');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_12(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'When did [blank] die?';
