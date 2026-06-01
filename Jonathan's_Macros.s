@@ -2463,6 +2463,8 @@ void
 {
 str fp = "Transpose precolon phrase and object portions of a line.";
 
+// skw move_object, switch, swap
+
 str precolon_Phrase = @hc_subject;
 str oj = @hc_object;
 @hc_subject;
