@@ -2509,6 +2509,18 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_15(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'Where is [blank]?';
+// lu: Jun-1-2026
+@search_google_main(0, 0, 'Where is ' + @get_sj + '?');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_14(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'When is [blank]?';

@@ -5108,6 +5108,9 @@ url = @get_remote_oj_using_klc('rffi', is_found);
 url = @get_remote_oj_using_klc('rfpide', is_found);
 @surf(url, 2);
 
+url = @get_remote_oj_using_klc('rflefr', is_found);
+@surf(url, 2);
+
 url = @get_remote_oj_using_klc('rfroki', is_found);
 @surf(url, 2);
 
