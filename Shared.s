@@ -573,7 +573,6 @@ old_string
 replace_character
 replace_in_string
 replace_string
-swap
 */
 
 int Countdown = length(original_String);

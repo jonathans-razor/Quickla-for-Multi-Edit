@@ -1722,7 +1722,8 @@ if(Number_of_Lines_in_Rubric == 0)
   Number_of_Lines_in_Rubric = 1;
 }
 
-return(Number_of_Lines_in_Rubric);
+@say(str(number_of_lines_in_rubric));
+return(number_of_lines_in_rubric);
 }
 
 
@@ -4953,12 +4954,12 @@ if(sc == 'Function aborted.')
 
 set_global_str('search_str', sc);
 
-int Number_of_Lines_in_Rubric = @count_lines_in_rubric;
+int number_of_lines_in_rubric = @count_lines_in_rubric;
 
 mark_pos;
 @bor;
 
-if(find_text(sc, Number_of_Lines_in_Rubric, _regexp))
+if(find_text(sc, number_of_lines_in_rubric, _regexp))
 {
   so = 'FOUND.';
   pop_mark;
@@ -4992,7 +4993,7 @@ set_global_str('search_str', sc);
 
 mark_pos;
 
-@bobs;
+@bor;
 
 if(find_text(sc, Number_of_Lines_in_Rubric + 3, _regexp))
 {
