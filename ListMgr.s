@@ -4938,14 +4938,17 @@ else
 //;;
 
 void
-@ff_bor_ui
+@ff_bor_ui(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'Find from BOR.';
 str so;
 
 @header;
 
-str sc = @get_user_input_raw(fp);
+if (sc == '')
+{
+  sc = @get_user_input_raw(fp);
+}
 if(sc == 'Function aborted.')
 {
   @say(sc);

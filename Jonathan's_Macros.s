@@ -4997,9 +4997,6 @@ url = @get_remote_oj_using_klc('rfnyt', is_found);
 url = @get_remote_oj_using_klc('rfquil', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('rfreas', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('reut', is_found);
 @surf(url, 0);
 
