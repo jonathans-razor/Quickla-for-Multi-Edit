@@ -3096,7 +3096,7 @@ str fp = "Run run river, carry me home to the ocean. Run razor line.";
 
 @run_rzr_line('rzr j ' + sc);
 @footer;
-@say(sc);
+@say('Run razor. (' + sc + ')');
 }
 
 
