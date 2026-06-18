@@ -4230,6 +4230,12 @@ switch(sc_digits_only)
     @paste_after;
     fp += 'previous mor';
     break;
+  case '2':
+    @find_previous_big_segment;
+    @eor;
+    @paste_after;
+    fp += 'previous eor';
+    break;
   case '3':
     left;
     @bobs;
