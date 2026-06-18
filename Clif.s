@@ -3756,11 +3756,6 @@ switch(lc)
     @add_text_date;
     text(': ');
     break;
-  case 'em':
-    @add_bullet_below;
-    @add_text_date;
-    @paste_after_with_subbullet;
-    break;
   case 'h':
     @add_autotext_block_1_at_job_hi;
     break;

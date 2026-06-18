@@ -8457,4 +8457,39 @@ text('+');
 
 
 
+//;
+
+void
+@cut_n_paste_bullet_to_email_log
+{
+str fp = "Cut and paste bullet to email log.";
+
+// lu: Jun-18-2026
+
+if(!@is_asc_file)
+{
+  return();
+}
+
+@header;
+
+@cut_bullet;
+
+@find_lc('emlog');
+
+@add_bullet_below;
+
+@add_text_date;
+
+@paste_after;
+
+text(':');
+
+@footer;
+
+@say(fp);
+}
+
+
+
 //; (!efjm)

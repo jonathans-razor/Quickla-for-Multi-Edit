@@ -125,6 +125,8 @@ int
 {
 str fp = 'Verify that the user is in an asc file.';
 
+// skw if not asc, bullet file, if not bullet file
+
 switch(@filename_extension)
 {
   case "asc":
