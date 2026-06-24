@@ -1217,6 +1217,7 @@ if(lc != '')
 void
 @search_google_image_tab(str sc = parse_str('/1=', mparm_str))
 {
+//qq
 @search_google_main(3, 0, @get_sj);
 }
 
@@ -1765,8 +1766,7 @@ void
 
 str fp = 'Search Google Translate.';
 
-str URL = 'https://translate.google.com/?sl=it&tl=en&op=translate';
-
+str URL = 'https://translate.google.com/?sl=auto&tl=en&op=translate';
 str sc = parameter;
 
 if(sc == '')
@@ -2780,18 +2780,6 @@ void
 str fp = "Search Google with appended words.";
 // lu: Mar-5-2018
 @search_google_main(0, 0, @get_sj + ' phone number');
-}
-
-
-
-//;
-
-void
-@search_google_with_appended_rd
-{
-str fp = "Search Google with appended words.";
-// lu: May-4-2018
-@search_google_main(0, 0, @get_sj + ' release date');
 }
 
 
