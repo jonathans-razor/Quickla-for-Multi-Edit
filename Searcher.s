@@ -1217,7 +1217,6 @@ if(lc != '')
 void
 @search_google_image_tab(str sc = parse_str('/1=', mparm_str))
 {
-//qq
 @search_google_main(3, 0, @get_sj);
 }
 
