@@ -2514,6 +2514,7 @@ str fp = '[blank] nude photos';
 // lu: Jul-3-2026 From my experimentation, I am unable to turn off safe search using a
 // command ran from Multi-Edit. If I run the command using cbf 'google', I am able to turn
 // off safe search.
+//qq
 @search_google_main(0, 1, @get_sj + ' nude photos');
 }
 
