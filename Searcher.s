@@ -2508,6 +2508,18 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_17(str sc = parse_str('/1=', mparm_str))
+{
+str fp = '[blank] nude photos';
+// lu: Jun-1-2026
+@search_google_main(0, 0, @get_sj + ' nude photos');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_16(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'What is the story behind [blank]?';

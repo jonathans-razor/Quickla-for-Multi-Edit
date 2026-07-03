@@ -4985,7 +4985,7 @@ url = @get_remote_oj_using_klc('rfcnn', is_found);
 url = @get_remote_oj_using_klc('rffci', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('rfffx', is_found);
+url = @get_remote_oj_using_klc('rffano', is_found);
 @surf(url, 0);
 
 url = @get_remote_oj_using_klc('rffox', is_found);
