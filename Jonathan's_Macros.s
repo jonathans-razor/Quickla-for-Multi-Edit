@@ -8492,4 +8492,38 @@ text(':');
 
 
 
+//;
+
+void
+@add_text_log_metadata
+{
+str fp = "x";
+
+// lu: Jul-6-2026
+
+if(!@is_asc_file)
+{
+  return();
+}
+if (!@is_big_segment)
+{
+  @say('This macro only works on big segments.');
+  return();
+}
+
+eol;
+cr;
+cr;
+text(' Date         Notes');
+cr;
+text(' -----------  --------------------------------------------------------------------------------');
+cr;
+cr;
+text(':');
+
+@say(fp);
+}
+
+
+
 //; (!efjm)
