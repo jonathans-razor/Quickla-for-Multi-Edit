@@ -2099,10 +2099,10 @@ switch(@first_3_characters(@lower(get_environment("computername"))))
 {
   case "lip":
   case "lit":
-    return(10);
+    return(9);
     break;
   default:
-    return(16);
+    return(15);
 }
 }
 
