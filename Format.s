@@ -124,7 +124,7 @@ Metadata: Track Size (!tsfm)
 
 
 
-//;;(!ww)
+//;;(!wowr)
 
 void
 @word_wrap()

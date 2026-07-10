@@ -4705,7 +4705,7 @@ return(sc);
 
 
 
-//;+ Find From
+//;+ Find From (!-ffsz)
 
 
 
@@ -4855,7 +4855,7 @@ switch(lower(get_extension(File_name)))
 
 
 
-//;+ Find From
+//;+ Find From - Premier Functions (!-fifr)
 
 
 
@@ -4946,6 +4946,7 @@ else
 void
 @ff_bor_ui(str sc = parse_str('/1=', mparm_str))
 {
+//qq
 str fp = 'Find from BOR.';
 str so;
 
@@ -4988,7 +4989,7 @@ else
 //;;
 
 void
-@ff_bor_uc
+@ff_bor_wost
 {
 str fp = 'Starting at the beginning of this big segment, find word or block under cursor.';
 str so;

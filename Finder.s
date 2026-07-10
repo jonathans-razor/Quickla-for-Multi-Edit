@@ -1325,7 +1325,7 @@ return(em);
 
 
 
-//;+ Find From
+//;+ Find From (!-ffsz)
 
 
 
@@ -1356,7 +1356,6 @@ else
   so = '"' + sc + '"' + ' NOT found in this file. ';
   goto_mark;
 }
-
 @say(fp + ' ' + so);
 }
 

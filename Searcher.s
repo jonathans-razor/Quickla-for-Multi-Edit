@@ -2508,6 +2508,18 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_19(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'When was [blank] invented?';
+// lu: Jul-3-2026
+@search_google_main(0, 1, 'When was ' + @get_sj + ' invented?');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_18(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'What are the arguments for and against [blank]';
