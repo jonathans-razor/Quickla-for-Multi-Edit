@@ -4705,45 +4705,6 @@ return(sc);
 
 
 
-//;+ Find From (!-ffsz)
-
-
-
-//;;
-
-void
-@ff_lc_wost
-{
-str fp = 'Begin a search on the word under cursor from a particular user inputted launch code.';
-@header;
-
-str  sc = @get_wost;
-set_global_str('search_str', sc);
-
-str lc = @get_user_input_nonspace('Search from launch code.');
-
-if((lc == 'Function aborted.'))
-{
-  @say(lc);
-  return();
-}
-
-@header;
-
-int search_criterion_was_found;
-str so = @find_lc_core(lc, search_criterion_was_found, fp);
-
-if(search_criterion_was_found)
-{
-  @find_continuum(12, '');
-}
-
-@footer;
-@say(fp + ' ' + so);
-}
-
-
-
 //;
 
 int
@@ -4851,174 +4812,6 @@ switch(lower(get_extension(File_name)))
 }
 
 @footer;
-}
-
-
-
-//;+ Find From - Premier Functions (!-fifr)
-
-
-
-//;;
-
-void
-@ff_bobs_ui
-{
-str fp = 'Find from beginning of big segment and only search this big segment.';
-str so;
-
-@header;
-
-str sc = @get_user_input_raw(fp);
-if(sc == 'Function aborted.')
-{
-  @say(sc);
-  return();
-}
-
-set_global_str('search_str', sc);
-
-int Number_of_Lines_in_bs = @count_lines_in_bs;
-
-mark_pos;
-@bobs;
-
-if(find_text(sc, Number_of_Lines_in_bs, _regexp))
-{
-  so = 'FOUND in this bs.';
-  pop_mark;
-}
-else
-{
-  so = 'NOT found in this bs.';
-  goto_mark;
-}
-
-@footer;
-@say(fp + ' ' + so);
-}
-
-
-
-//;;
-
-void
-@ff_bobs_wost
-{
-str fp = 'Find from beginning of big segment using wost and only search this big segment.';
-str so;
-
-@header;
-
-str sc = @get_wost;
-if(sc == 'Function aborted.')
-{
-  @say(sc);
-  return();
-}
-
-set_global_str('search_str', sc);
-
-int Number_of_Lines_in_bs = @count_lines_in_bs;
-
-mark_pos;
-@bobs;
-
-if(find_text(sc, Number_of_Lines_in_bs, _regexp))
-{
-  so = 'FOUND in this bs.';
-  pop_mark;
-}
-else
-{
-  so = 'NOT found in this bs.';
-  goto_mark;
-}
-
-@footer;
-@say(fp + ' ' + so);
-}
-
-
-
-//;;
-
-void
-@ff_bor_ui(str sc = parse_str('/1=', mparm_str))
-{
-//qq
-str fp = 'Find from BOR.';
-str so;
-
-@header;
-
-if (sc == '')
-{
-  sc = @get_user_input_raw(fp);
-}
-if(sc == 'Function aborted.')
-{
-  @say(sc);
-  return();
-}
-
-set_global_str('search_str', sc);
-
-int number_of_lines_in_rubric = @count_lines_in_rubric;
-
-mark_pos;
-@bor;
-
-if(find_text(sc, number_of_lines_in_rubric, _regexp))
-{
-  so = 'FOUND.';
-  pop_mark;
-}
-else
-{
-  so = '(' + sc + ') NOT found.';
-  goto_mark;
-}
-
-@footer;
-@say(fp + ' ' + so);
-}
-
-
-
-//;;
-
-void
-@ff_bor_wost
-{
-str fp = 'Starting at the beginning of this big segment, find word or block under cursor.';
-str so;
-
-@header;
-
-int Number_of_Lines_in_Rubric = @count_lines_in_rubric;
-
-str sc = @get_wost;
-set_global_str('search_str', sc);
-
-mark_pos;
-
-@bor;
-
-if(find_text(sc, Number_of_Lines_in_Rubric + 3, _regexp))
-{
-  so = 'FOUND in this rubric.';
-  pop_mark;
-}
-else
-{
-  so = 'NOT found in this rubric.';
-  goto_mark;
-}
-
-@footer;
-
-@say(fp + " " + so + " (" + sc + ")");
 }
 
 
@@ -13399,6 +13192,208 @@ if(search_criterion_was_found)
 
 @footer;
 @say(fp);
+}
+
+
+
+//;+ Find From - Premier Functions (!-fifr)
+
+
+
+//;;
+
+void
+@ff_bobs_ui
+{
+str fp = 'Find from beginning of big segment and only search this big segment.';
+str so;
+
+@header;
+
+str sc = @get_user_input_raw(fp);
+if(sc == 'Function aborted.')
+{
+  @say(sc);
+  return();
+}
+
+set_global_str('search_str', sc);
+
+int Number_of_Lines_in_bs = @count_lines_in_bs;
+
+mark_pos;
+@bobs;
+
+if(find_text(sc, Number_of_Lines_in_bs, _regexp))
+{
+  so = 'FOUND in this bs.';
+  pop_mark;
+}
+else
+{
+  so = 'NOT found in this bs.';
+  goto_mark;
+}
+
+@footer;
+@say(fp + ' ' + so);
+}
+
+
+
+//;;
+
+void
+@ff_bobs_wost
+{
+str fp = 'Find from beginning of big segment using wost and only search this big segment.';
+str so;
+
+@header;
+
+str sc = @get_wost;
+if(sc == 'Function aborted.')
+{
+  @say(sc);
+  return();
+}
+
+set_global_str('search_str', sc);
+
+int Number_of_Lines_in_bs = @count_lines_in_bs;
+
+mark_pos;
+@bobs;
+
+if(find_text(sc, Number_of_Lines_in_bs, _regexp))
+{
+  so = 'FOUND in this bs.';
+  pop_mark;
+}
+else
+{
+  so = 'NOT found in this bs.';
+  goto_mark;
+}
+
+@footer;
+@say(fp + ' ' + so);
+}
+
+
+
+//;;
+
+void
+@ff_bor_ui(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'Find from BOR.';
+str so;
+
+@header;
+
+if (sc == '')
+{
+  sc = @get_user_input_raw(fp);
+}
+if(sc == 'Function aborted.')
+{
+  @say(sc);
+  return();
+}
+
+set_global_str('search_str', sc);
+
+int number_of_lines_in_rubric = @count_lines_in_rubric;
+
+mark_pos;
+@bor;
+
+if(find_text(sc, number_of_lines_in_rubric, _regexp))
+{
+  so = 'FOUND.';
+  pop_mark;
+}
+else
+{
+  so = '(' + sc + ') NOT found.';
+  goto_mark;
+}
+
+@footer;
+@say(fp + ' ' + so);
+}
+
+
+
+//;;
+
+void
+@ff_bor_wost
+{
+str fp = 'Starting at the beginning of this big segment, find word or block under cursor.';
+str so;
+
+@header;
+
+int Number_of_Lines_in_Rubric = @count_lines_in_rubric;
+
+str sc = @get_wost;
+set_global_str('search_str', sc);
+
+mark_pos;
+
+@bor;
+
+if(find_text(sc, Number_of_Lines_in_Rubric + 3, _regexp))
+{
+  so = 'FOUND in this rubric.';
+  pop_mark;
+}
+else
+{
+  so = 'NOT found in this rubric.';
+  goto_mark;
+}
+
+@footer;
+
+@say(fp + " " + so + " (" + sc + ")");
+}
+
+
+
+//;;
+
+void
+@ff_lc_wost
+{
+str fp = 'Begin a search on the word under cursor from a particular user inputted launch code.';
+@header;
+
+str  sc = @get_wost;
+set_global_str('search_str', sc);
+
+str lc = @get_user_input_nonspace('Search from launch code.');
+
+if((lc == 'Function aborted.'))
+{
+  @say(lc);
+  return();
+}
+
+@header;
+
+int search_criterion_was_found;
+str so = @find_lc_core(lc, search_criterion_was_found, fp);
+
+if(search_criterion_was_found)
+{
+  @find_continuum(12, '');
+}
+
+@footer;
+@say(fp + ' ' + so);
 }
 
 

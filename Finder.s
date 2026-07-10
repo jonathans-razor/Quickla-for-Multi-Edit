@@ -1325,7 +1325,7 @@ return(em);
 
 
 
-//;+ Find From (!-ffsz)
+//;+ Find From Top (!-fifr)
 
 
 
