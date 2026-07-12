@@ -3486,6 +3486,38 @@ if(@contains(operation_outcome, 'not an executable'))
 
 //;;
 
+void
+@view_youtube_favorite_channels3
+{
+str fp = "View YouTube favorite channels, biweekly checker.";
+
+@header;
+
+@find_lc('thleelmu');
+@execute_code_word_line;
+
+@find_lc('thlemaan');
+@execute_code_word_line;
+
+@find_lc('thlejofe');
+@execute_code_word_line;
+
+@find_lc('thleriwr');
+@execute_code_word_line;
+
+@find_lc('thleriwr');
+@execute_code_word_line;
+
+@footer;
+@say(fp);
+
+// fcd: Jan-23-2024
+}
+
+
+
+//;;
+
 int
 @is_code_word_line()
 {
