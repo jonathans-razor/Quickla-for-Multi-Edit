@@ -3489,7 +3489,7 @@ if(@contains(operation_outcome, 'not an executable'))
 void
 @view_youtube_favorite_channels3
 {
-str fp = "View YouTube favorite channels, biweekly checker.";
+str fp = "View thought leaders. These generally refer to individuals or ideas that don't have a traditional channel.";
 
 @header;
 
