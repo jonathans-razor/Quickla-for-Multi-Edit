@@ -6912,10 +6912,41 @@ str sc = @get_sj;
 //;
 
 void
-@ff_lc_backwards(str lc = parse_str('/1=', mparm_str))
+@ff_lc_with_precision_ui(str lc = parse_str('/1=', mparm_str))
 {
-str fp = 'Find from lc backwards, wost.';
+str fp = 'Find from lc with precision.';
 
+// lu: Aug-1-2018
+
+str first_parameter, second_parameter;
+@parse_arguments(lc, ".", first_parameter, second_parameter);
+str lc = first_parameter;
+str find_precision = second_parameter;
+
+if(lc == '')
+{
+  @say('You must enter an LC.');
+  return();
+}
+str sc = @get_user_input_raw(fp);
+
+@find_lc(lc);
+
+@find_continuum_2(sc, find_precision);
+
+//@say(fp + ' LC: ' + lc + ', Find Precision: ' + find_precision);
+}
+
+
+
+//;
+
+void
+@ff_lc_backwards_wost(str lc = parse_str('/1=', mparm_str))
+{
+str fp = 'Find from lc backwards wost.';
+
+@header;
 /*
 lu: Jan-19-2024
 skw: 
@@ -6924,11 +6955,18 @@ find_backwards
 find_from_eof
 */
 
+if(lc == '')
+{
+  @say('You must enter an LC.');
+  return();
+}
 str sc = @get_sj;
 
 @find_lc(lc);
 
 @find_backwards(sc);
+
+@footer;
 
 @say(fp);
 

@@ -13363,39 +13363,4 @@ else
 
 
 
-//;;
-
-void
-@ff_lc_wost
-{
-str fp = 'Begin a search on the word under cursor from a particular user inputted launch code.';
-@header;
-
-str  sc = @get_wost;
-set_global_str('search_str', sc);
-
-str lc = @get_user_input_nonspace('Search from launch code.');
-
-if((lc == 'Function aborted.'))
-{
-  @say(lc);
-  return();
-}
-
-@header;
-
-int search_criterion_was_found;
-str so = @find_lc_core(lc, search_criterion_was_found, fp);
-
-if(search_criterion_was_found)
-{
-  @find_continuum(12, '');
-}
-
-@footer;
-@say(fp + ' ' + so);
-}
-
-
-
 //; (!eflm)
