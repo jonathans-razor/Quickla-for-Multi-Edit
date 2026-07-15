@@ -4458,7 +4458,7 @@ Use colon in the first position of the object to signify an inline noun.
 
 */
 
-int text_Is_Selected = 0;
+int text_is_selected = 0;
 int show_outer_status_message = true;
 
 @header;
@@ -4476,11 +4476,11 @@ else
 str initial_window_name = truncate_path(file_name);
 int initial_row_number = @current_row_number;
 int initial_column_number = @current_column_number;
-str user_Input;
+str user_input;
 
 if(is_repeater)
 {
-  user_input = Global_Str('status_bar_text');
+  user_input = global_str('status_bar_text');
 }
 else
 {
@@ -4503,8 +4503,13 @@ if(user_Input == 'Function aborted.')
   return();
 }
 
+//qq
+  @say(' Jul-15-2026 2-13 ');
+  return();
+
 if(user_Input == '')
 {
+  @say(' Jul-15-2026');
   return();
 }
 
