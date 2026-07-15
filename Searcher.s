@@ -2036,8 +2036,6 @@ url += sc;
 
 /*  Use Cases
 
-sui generis
-
 heiress
 
 */
