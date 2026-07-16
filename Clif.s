@@ -4503,10 +4503,6 @@ if(user_Input == 'Function aborted.')
   return();
 }
 
-//qq
-  @say(' Jul-15-2026 2-13 ');
-  return();
-
 if(user_Input == '')
 {
   @say(' Jul-15-2026');
