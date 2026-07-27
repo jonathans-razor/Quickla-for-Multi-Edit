@@ -3082,21 +3082,49 @@ up;
 
 
 
-//;
+//;+ Run Razor
+
+
+
+//;;
 
 void
 @run_razor(str sc = parse_str('/1=', mparm_str))
 {
-str fp = "Run run river, carry me home to the ocean. Run razor line.";
+str fp = "Run open CBF.";
 // Description: This function allows you to run CBFs that are open inside of Multi-Edit without 
 // having to switch to a command prompt.
 
 @header;
 // lu: Mar-31-2026
 
+//qq
+if(sc == '')
+{
+  if(@hc_subject == '_')
+  {
+    down;
+  }
+  sc = @hc_subject;
+}
+
 @run_rzr_line('rzr j ' + sc);
 @footer;
 @say('Run razor. (' + sc + ')');
+}
+
+
+
+//;;
+
+void
+@run_razor_2(str batch_file = parse_str('/1=', mparm_str))
+{
+str fp = 'Run razor 2 - batch file version.';
+// Code sample: Type 'z.zh', would run the batch file 'zh.bat'.
+//@run_this_executable_file(batch_file + '.bat');
+@run_application_1p(batch_file + '.bat');
+//@say(fp);
 }
 
 
@@ -3401,6 +3429,11 @@ str fp = 'Execute cwl.';
 
 if(@is_batch_file)
 {
+//qq
+  if(@hc_subject == '_')
+  {
+    down;
+  }
   @run_razor(@hc_subject);
   return();
 }
@@ -4865,19 +4898,6 @@ if(@switch_to_named_window('mz.asc'))
 @quick_launcher_router('rff8', 0);
 
 @say(fp);
-}
-
-
-
-//;
-
-void
-@run_razor_2(str batch_file = parse_str('/1=', mparm_str))
-{
-str fp = 'Run razor 2 - batch file version.';
-//@run_this_executable_file(batch_file + '.bat');
-@run_application_1p(batch_file + '.bat');
-//@say(fp);
 }
 
 
