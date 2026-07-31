@@ -4010,8 +4010,11 @@ void
 @lp_date()
 {
 str fp = 'Load clipboard date.';
+@header;
 @set_clipboard(@get_formatted_date);
 fp += ' (' + @get_formatted_date + ')';
+//qq
+@footer;
 @say(fp);
 }
 
