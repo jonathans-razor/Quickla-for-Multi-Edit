@@ -4013,7 +4013,6 @@ str fp = 'Load clipboard date.';
 @header;
 @set_clipboard(@get_formatted_date);
 fp += ' (' + @get_formatted_date + ')';
-//qq
 @footer;
 @say(fp);
 }
@@ -4740,9 +4739,11 @@ void
 {
 str fp = "Find lc partner.";
 
+// lu: Aug-5-2026
 // fcd: Dec-7-2015
 
 // skw 1z, 2z, find companion lc, go to companion lc
+// If there's an entangled lc, go to it.
 
 str lc;
 

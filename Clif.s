@@ -3098,7 +3098,6 @@ str fp = "Run open CBF.";
 @header;
 // lu: Mar-31-2026
 
-//qq
 if(sc == '')
 {
   if(@hc_subject == '_')
@@ -3429,7 +3428,6 @@ str fp = 'Execute cwl.';
 
 if(@is_batch_file)
 {
-//qq
   if(@hc_subject == '_')
   {
     down;
