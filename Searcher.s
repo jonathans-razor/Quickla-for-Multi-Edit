@@ -1713,7 +1713,7 @@ make_message(@trim_period(fp) + ' for "' + sc + '".');
 
 
 
-//;
+//;+
 
 void
 @search_google_maps(str parameter = parse_str('/1=', mparm_str))
@@ -1753,6 +1753,42 @@ Austin
 */
 
 make_message(@trim_period(fp) + ' for "' + sc + '".');
+}
+
+
+
+//;;
+
+void
+@directions_from_home_to_blank
+{
+str fp = "Directions from home to [blank].";
+
+// lu: Aug-6-2026
+
+str sc = @get_subject;
+
+@search_google_maps(sc = 'directions from home to ' + sc);
+
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@directions_from_blank_to_blank
+{
+str fp = "Directions from home to [blank].";
+
+// lu: Aug-6-2026
+
+str sc = @get_subject;
+
+@search_google_maps(sc = 'directions from ' + sc);
+
+@say(fp);
 }
 
 
