@@ -833,7 +833,18 @@ int Result;
 int Starting_Window = cur_window;
 int Window_Counter = 0;
 
-str Filename = Get_Environment('reach out') + '\Savannah Summary.txt';
+//qq
+str filename[128] = get_environment('savannah') + '\reach out\mz.asc';
+
+if(!file_exists(filename))
+{
+  @say('Error: Mz.asc is not present. *******************************************');
+  return();
+}
+
+//Filename = Get_Environment('reach out') + '\Savannah Summary.txt';
+//filename[128] = get_environment('savannah') + '\reach out\Savannah Summary.txt';
+filename = get_environment('savannah') + '\reach out\Savannah Summary.txt';
 
 Result = S_Create_File(Filename, Handle);
 
@@ -4973,7 +4984,7 @@ url = @get_remote_oj_using_klc('rfffx', is_found);
 void
 @read_headlines
 {
-str fp = "Pass a url to a browser.";
+str fp = "Read headlines.";
 
 @header;
 
@@ -8012,193 +8023,6 @@ int is_found = @seek_in_all_files_2_arguments(sc, fp);
 //;
 
 void
-@xrtm
-{
-str fp = "x";
-
-// lu: Jan-16-2024
-
-str rs;
-str sc;
-
-@header;
-
-sc = '^rem (fcd: )([a-z])';
-@eol;
-
-@seek(sc);
-@replace_next_occurrence_only(sc, 'lu:$\1');
-up;
-@bol;
-return();
-rs = '\0';
-@replace_all_occurrs_inf_one_tof(sc, rs);
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-
-@footer;
-@say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@xrtm
-{
-str fp = "x";
-
-// lu: Jan-16-2024
-
-str rs;
-str sc;
-
-@header;
-sc = '^(creation date: )([a-z])';
-@eol;
-
-@seek(sc);
-@replace_next_occurrence_only(sc, 'lu:$\1');
-up;
-@bol;
-return();
-rs = '\0';
-@replace_all_occurrs_inf_one_tof(sc, rs);
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-
-@footer;
-@say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@xrtm
-{
-str fp = "Jan-17-2024";
-
-// lu: Jan-17-2024
-
-str rs;
-str sc;
-
-@header;
-sc = '^$:[a-z]';
-@eol;
-
-down;
-@seek(sc);
-@bol;
-return();
-rs = '\0';
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-
-@footer;
-@say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@xrtm
-{
-str fp = "Excess whitespace in batch files.";
-
-// lu: Jan-17-2024
-
-str rs;
-str sc;
-
-@header;
-sc = '$$$[a-z]';
-@eol;
-
-@seek(sc);
-return();
-rs = '\0';
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-
-@footer;
-@say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@xrtm
-{
-str fp = "More than 3 blank lines.";
-
-// lu: Jan-17-2024
-
-str rs;
-str sc;
-
-@header;
-sc = '$$$$$';
-@eol;
-
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-return();
-@seek(sc);
-rs = '\0';
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
-
-@footer;
-@say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@xrtm
-{
-str fp = "Crowded echo statements.";
-
-// lu: Jan-17-2024
-
-str rs;
-str sc;
-
-@header;
-sc = '[a-z]$^echo';
-@eol;
-
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-return();
-@seek(sc);
-rs = '\0';
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
-
-@footer;
-@say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
 @add_new_ct_rubric
 {
 str fp = "Add new ct rubric.";
@@ -8251,66 +8075,6 @@ text('vc ');
 text('.js');
 @hc_object;
 
-@say(fp);
-}
-
-
-
-//;
-
-void
-@xrtm
-{
-str fp = "n*js";
-
-// lu: Feb-14-2024
-
-str rs;
-str sc;
-
-@header;
-sc = 'n...\.js';
-@eol;
-
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-return();
-@seek(sc);
-rs = '\0';
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
-
-@footer;
-@say(found_str);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@xrtm
-{
-str fp = "Find illegal z references.";
-
-// lu: Feb-18-2024
-
-str rs;
-str sc;
-
-@header;
-sc = '!1z';
-@eol;
-
-int is_found = @seek_in_all_files_2_arguments(sc, fp);
-return();
-rs = '\0';
-@seek(sc);
-@replace_next_occurrence_only(sc, rs);
-@replace_all_occurrs_inf_one_tof(sc, rs);
-
-@footer;
-@say(found_str);
 @say(fp);
 }
 
