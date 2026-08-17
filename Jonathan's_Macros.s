@@ -833,7 +833,6 @@ int Result;
 int Starting_Window = cur_window;
 int Window_Counter = 0;
 
-//qq
 str filename[128] = get_environment('savannah') + '\reach out\mz.asc';
 
 if(!file_exists(filename))
