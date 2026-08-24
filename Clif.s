@@ -3536,7 +3536,7 @@ str fp = "View thought leaders. These generally refer to individuals or ideas th
 @find_lc('thleriwr');
 @execute_code_word_line;
 
-@find_lc('thleriwr');
+@find_lc('thlemata');
 @execute_code_word_line;
 
 @footer;
