@@ -916,21 +916,25 @@ return(indicated_lc);
 //;;
 
 str
-@get_1way_lc()
+@get_series_lc()
 {
-str fp = "Get 1way lc.";
+str fp = "Get series lc.";
 
-// fcd: Oct-9-2024
+// fcd: Aug-23-2026
 
 str lc;
 
-int position_of_1way = xpos('1way', get_line, 1);
+int position_of_series = xpos('!-', get_line, 1);
 
-goto_col(position_of_1way + 4);
+goto_col(position_of_series + 1);
 
 while(!at_eol)
 {
   lc += @current_character; 
+  if ((@current_character == ')') || (@current_character == ','))
+  {
+    break;
+  }
   right;
 }
 

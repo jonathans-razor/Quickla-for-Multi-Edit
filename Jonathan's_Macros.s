@@ -4773,10 +4773,9 @@ if(@current_line_contains('&'))
   return();
 }
 
-if(@current_line_contains('1way'))
+if(@current_line_contains('!-'))
 {
-  // I noticed that the 1way lc may have an issue if it is the first lc. Sep-24-2025
-  lc = @get_1way_lc;
+  lc = @get_series_lc;
   @find_lc(lc);
   @footer;
   return();
