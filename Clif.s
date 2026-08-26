@@ -2114,38 +2114,11 @@ void
 {
 str fp = "Run Multi-Edit abstraction layer batch file.";
 
-// lu: Feb-1-2019
+// lu: Aug-25-2026
 
 str command_line = 'c:\windows\system32\cmd.exe /k';
 
-//razor_string = @replace_once(razor_string, 'rzrp', 'rzrp.bat');
-//razor_string = @replace_once(razor_string, 'rzr', 'rzr.bat');
-
 command_line += ' ' + razor_string;
-
-//@say(razor_string);
-//return();
-
-//str trimmed_clif_block = @trim_before_phrase(clif_block, '):');
-
-//trimmed_clif_block = @trim_first_character(trimmed_clif_block);
-//trimmed_clif_block = @trim_first_character(trimmed_clif_block);
-
-//@log('trimmed_clif_block: ' + trimmed_clif_block);
-
-//str bat_file_parameter = @trim_before_phrase(trimmed_clif_block, 'batx');
-
-//bat_file_parameter = @trim_left(bat_file_parameter, 5);
-
-//@log('bat_file_parameter: ' + bat_file_parameter);
-
-//str batch_file_name = @trim_after_phrase(trimmed_clif_block, 'batx');
-
-//batch_file_name = @trim_last_character(batch_file_name);
-
-//str argument = char(34) + batch_file_name + ' ' + bat_file_parameter + ' ' + char(34);
-
-//@log('batch_file_name: ' + batch_file_name);
 
 execprog(
   command_line, 
