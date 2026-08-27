@@ -5,6 +5,7 @@ prototype Clif
   int  @anatomize_clif(int desired_action, str &fp);
   void @edit_file_remotely();
   void @edit_file_under_cursor();
+  void @execute_code_word_line();
   void @process_batx_clif_block(str clif_block);
   void @find_backwards(str args);
   int  @folder_exists(str path);

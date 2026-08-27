@@ -1569,7 +1569,7 @@ if(!@seek_in_all_files_2_arguments(sc, so))
 }
 
 @hc_big_segment;
-
+    
 @find_lc('rftpmdc');
 
 @bol;
@@ -1592,6 +1592,13 @@ text(')');
 
 @find_lc('rfnow');
 @find_next_bullet;
+
+if(@current_line_contains('pwi'))
+{ 
+  // Aug-27-2026
+  @execute_code_word_line;
+}
+
 
 @footer;
 @say(fp + ' (Hi ' + weekday + '.)');
