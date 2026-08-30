@@ -3744,15 +3744,19 @@ str
 {
 str fp = "Get chrome path.";
 
+// lu: Aug-30-2026
 // fcd: Jun-13-2014
 
-str return_string = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
+str return_string = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 
 switch(@lower(Get_Environment("ComputerName")))
 {
   case "w8":
     return_string = 
       "C:\\Users\\Jonathan\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe";
+  case "xps":
+    return_string = 
+      "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
   break;
 }
 

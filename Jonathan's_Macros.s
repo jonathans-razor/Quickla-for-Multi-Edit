@@ -5114,6 +5114,9 @@ url = @get_remote_oj_using_klc('rfaz', is_found);
 url = @get_remote_oj_using_klc('rfafwn', is_found);
 @surf(url, 2);
 
+url = @get_remote_oj_using_klc('rfbapr', is_found);
+@surf(url, 2);
+
 url = @get_remote_oj_using_klc('rfdaga', is_found);
 @surf(url, 2);
 
