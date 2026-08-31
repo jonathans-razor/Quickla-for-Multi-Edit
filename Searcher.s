@@ -1127,38 +1127,6 @@ str fp = "Search google using a definition search.";
 //;;
 
 void
-@run_chrome
-{
-str fp = "Run chrome.";
-
-// fcd: Jun-13-2014
-
-@surf("http://www.google.com/advanced_search?hl=en&safe=active", 1);
-
-@say(fp);
-}
-
-
-
-//;;
-
-void
-@run_opera
-{
-str fp = "Run Opera.";
-
-// lu: Nov-5-2018
-
-@surf("http://www.google.com/advanced_search?hl=en&safe=active", 4);
-
-@say(fp);
-}
-
-
-
-//;;
-
-void
 @search_google_exactly
 {
 @search_google_main(1, 0, '');
@@ -1305,6 +1273,65 @@ void
 @search_google_images_liberally
 {
 @search_google_images(false);
+}
+
+
+
+//;+ Browsers
+
+
+
+//;;
+
+void
+@run_brave
+{
+str fp = "Run brave.";
+// fcd: Aug-31-2026
+@surf("http://www.google.com/advanced_search?hl=en&safe=active", 7);
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@run_chrome
+{
+str fp = "Run chrome.";
+// fcd: Jun-13-2014
+@surf("http://www.google.com/advanced_search?hl=en&safe=active", 1);
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@run_norton
+{
+str fp = "Run Noorton.";
+// fcd: Aug-31-2026
+@surf("http://www.google.com/advanced_search?hl=en&safe=active", 9);
+@say(fp);
+}
+
+
+
+//;;
+
+void
+@run_opera
+{
+str fp = "Run Opera.";
+
+// lu: Nov-5-2018
+
+@surf("http://www.google.com/advanced_search?hl=en&safe=active", 4);
+
+@say(fp);
 }
 
 

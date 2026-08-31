@@ -3867,6 +3867,9 @@ switch(browser_number) // This list is ordered by how much i like them.
   case 8: // Chrome Canary
     Command_Line = "C:\\Users\\jonat\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe";
     break;
+  case 9: // Norton
+    Command_Line = "C:\\Program Files\\Norton\\Browser\\Application\\NortonBrowser.exe";
+    break;
 }
 
 /* Use Case(s)
