@@ -8324,4 +8324,17 @@ text(':');
 
 
 
+//;
+
+void
+@run_chrome
+{
+str fp = "Run chrome.";
+// lu: Aug-31-2026
+@surf('http://www.google.com/advanced_search?hl=en&safe=active', 1);
+@say(fp);
+}
+
+
+
 //; (!efjm)
