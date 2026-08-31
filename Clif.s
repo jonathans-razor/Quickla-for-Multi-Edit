@@ -3409,6 +3409,8 @@ if(@is_batch_file)
   return();
 }
 
+// Current line contains section. ****
+
 // (skw triple comma, triple_comma)
 if(@current_line_contains(',,,'))
 {
@@ -3447,16 +3449,13 @@ if(@current_line_contains_regex(@comma_lc))
   return();
 }
 
+// Subject or selected text contains section. ****
+
 str sc = @get_subject_or_selected_text;
 
-if(@contains(sc, 'atp-'))
+if(@contains(sc, ' versus '))
 {
-  @search_jira('', 0);
-  return();
-}
-else if(@contains(sc, 'cart-'))
-{
-  @search_jira('', 0);
+  @search_google_with_app_6(sc);
   return();
 }
 else if(@contains(sc, 'rzr'))
@@ -3503,6 +3502,7 @@ str fp = "View thought leaders. These generally refer to individuals or ideas th
 @find_lc('thlemata');
 @execute_code_word_line;
 
+// Duplicate to compensate for the bug that I haven't been able to figure out yet. Aug-30-2026
 @find_lc('thlemata');
 @execute_code_word_line;
 

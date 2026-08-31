@@ -2705,8 +2705,14 @@ void
 @search_google_with_app_6(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'What is the difference between [blank] and [blank].';
+// lu: Aug-31-2026
 // lu: Mar-3-2026
-@search_google_main(0, 0, 'What is the difference between ' + @get_sj + '?');
+if(sc == '')
+{
+  sc = @get_sj;
+}
+sc = @replace(sc, ' versus ', ' and ');
+@search_google_main(0, 0, 'What is the difference between ' + sc + '?');
 }
 
 
