@@ -4136,7 +4136,9 @@ str sc = @hc_word_uc();
 void
 @cross_bf_and_lc_boundary
 {
-str fp = "Cross BF and LC boundary.";
+str fp = "Cross CBF and LC boundary.";
+
+// This is the macro that would find a cbf lc from a regular lc.
 
 str search_string = '';
 
