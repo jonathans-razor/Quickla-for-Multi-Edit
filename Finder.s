@@ -4096,7 +4096,7 @@ set_global_str('lc', sc); // Added Apr-23-2020.
 //@seek_in_all_files_batch_files_o(sc, fp, found_string);
 if (@seek_in_all_files_2_arguments(sc, found_string))
 {
-  fp += ' Found.';
+  fp += ' Found partner.';
 }
 else
 {
@@ -4138,9 +4138,8 @@ void
 {
 str fp = "Cross CBF and LC boundary.";
 
-// This is the macro that would find a cbf lc from a regular lc.
-
 str search_string = '';
+int initial_line = @current_line;
 
 @header;
 
@@ -4155,7 +4154,10 @@ search_string = @hc_word_uc;
 @find_lc_or_batch_label(search_string);
 
 @footer;
-@say(fp + ' (' + search_string + ')');
+if(@current_line == initial_line)
+{
+  @say(fp + ' No partners for: (' + search_string + ').' );
+}
 }
 
 
