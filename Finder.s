@@ -4144,6 +4144,7 @@ str search_string = '';
 
 if (!@is_batch_file)
 {
+  @bol;
   find_text('!', 0, _regexp);
   right;
 }
