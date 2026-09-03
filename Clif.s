@@ -3094,7 +3094,6 @@ void
 {
 str fp = 'Run razor 2 - batch file version.';
 // Code sample: Type 'z.zh', would run the batch file 'zh.bat'.
-//@run_this_executable_file(batch_file + '.bat');
 @run_application_1p(batch_file + '.bat');
 //@say(fp);
 }
@@ -3495,6 +3494,7 @@ void
 str fp = "View thought leaders. These generally refer to individuals or ideas that don't have a traditional channel.";
 
 @header;
+@save_location;
 
 @find_lc('thleelmu');
 @execute_code_word_line;
@@ -3506,6 +3506,7 @@ str fp = "View thought leaders. These generally refer to individuals or ideas th
 @find_lc('thlemata');
 @execute_code_word_line;
 
+@restore_location;
 @footer;
 @say(fp);
 
