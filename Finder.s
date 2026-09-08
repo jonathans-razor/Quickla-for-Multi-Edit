@@ -4092,8 +4092,6 @@ sc = '(^:' + sc + '$)||(!' + sc + ',||\))';
 
 set_global_str('lc', sc); // Added Apr-23-2020.
 
-@bof;
-//@seek_in_all_files_batch_files_o(sc, fp, found_string);
 if (@seek_in_all_files_2_arguments(sc, found_string))
 {
   fp += ' Found partner.';
@@ -4150,7 +4148,7 @@ if (!@is_batch_file)
   right;
 }
 search_string = @hc_word_uc;
-@next_window;
+right;
 @find_lc_or_batch_label(search_string);
 
 @footer;
