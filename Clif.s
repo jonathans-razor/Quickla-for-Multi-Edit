@@ -3517,6 +3517,28 @@ str fp = "View thought leaders. These generally refer to individuals or ideas th
 
 //;;
 
+void
+@ask_stock_related_questions
+{
+str fp = "Ask stock related questions.";
+
+@header;
+@save_location;
+
+@find_lc('strq1');
+@execute_code_word_line;
+
+@restore_location;
+@footer;
+@say(fp);
+
+// fcd: Jan-23-2024
+}
+
+
+
+//;;
+
 int
 @is_code_word_line()
 {

@@ -2569,6 +2569,18 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_20(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'Is [blank] a good investment?';
+// lu: Sep-10-2026
+@search_google_main(0, 1, 'Is ' + @get_sj + ' a good investment?');
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_19(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'When was [blank] invented?';
@@ -3058,6 +3070,22 @@ str status_Message = @trim_period(fp) + ' for "' + Pretty_sc + '".';
 
 @say(status_Message);
 
+}
+
+
+
+//;
+
+void
+@browse_current_line(int browser_number = parse_int('/1=', mparm_str))
+{
+str fp = 'Browser current line.';
+str url = @trim_colons(@get_current_line);
+@surf(url, browser_number);
+/* Use Cases
+https://www.youtube.com/watch?v=N9_ccYCKhWk
+*/
+make_message(fp);
 }
 
 

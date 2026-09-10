@@ -5103,6 +5103,8 @@ void
 {
 str fp = "View YouTube favorite channels, biweekly checker.";
 
+// (!-fv2)
+
 @header;
 
 int is_found = 0;
@@ -8332,6 +8334,21 @@ void
 str fp = "Run chrome.";
 // lu: Aug-31-2026
 @surf('http://www.google.com/advanced_search?hl=en&safe=active', 1);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@analyze_individual_stock
+{
+str fp = "Analysze individual stock.";
+// lu: Sep-10-2026
+str sc = @get_subject_or_selected_text;
+@search_google_with_app_20(sc);
+@search_yahoo_finance(sc);
 @say(fp);
 }
 
