@@ -3073,6 +3073,7 @@ str fp = "Run open CBF.";
 
 if(sc == '')
 {
+//qq
   if(@hc_subject == '_')
   {
     down;
