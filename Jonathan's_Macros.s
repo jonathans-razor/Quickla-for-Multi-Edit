@@ -3761,7 +3761,7 @@ if(efbo){ so = @replace_all_occurrs_inf_one_tof(sc, rs); efbo = 0; }
 
 
 
-//;+ Load Clipboard
+//;+ Load Clipboard (!lp, !-lp)
 
 
 
@@ -8345,9 +8345,8 @@ void
 @analyze_individual_stock
 {
 str fp = "Analysze individual stock.";
-// lu: Sep-10-2026
+// lu: Sep-11-2026
 str sc = @get_subject_or_selected_text;
-@search_google_with_app_20(sc);
 @search_yahoo_finance(sc);
 @say(fp);
 }
