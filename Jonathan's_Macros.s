@@ -19,11 +19,12 @@ macro_file Jonathan's_Macros; // (!jm)
 
 /*
 
-Metadata: Track Size (!tsjmac)
+Metadata: Track Size (!tsjm)
 
         Date   Lines      Bytes   Macros   Notes
  -----------  ------  ---------  -------  ----------------------------------------------------
 
+:Sep-13-2026   8,384    114,781      301
 
 :Jan-13-2025   8,354    113,438      297
 

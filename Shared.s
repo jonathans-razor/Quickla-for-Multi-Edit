@@ -11,10 +11,12 @@ macro_file Shared; // (!shar)
 
 /*
 
-Metadata: Track Size (!tsshar)
+Metadata: Track Size (!tssh)
 
         Date   Lines      Bytes   Macros  Notes
  -----------  ------  ---------  -------  ---------------------------------------------------
+
+:Sep-13-2026   4,456     75,059      197
 
 : Dec-9-2024   4,441     74,537      197
 
