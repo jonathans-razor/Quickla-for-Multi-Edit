@@ -5122,6 +5122,9 @@ url = @get_remote_oj_using_klc('rfbapr', is_found);
 url = @get_remote_oj_using_klc('rfdaga', is_found);
 @surf(url, 2);
 
+url = @get_remote_oj_using_klc('rfbima', is_found);
+@surf(url, 2);
+
 url = @get_remote_oj_using_klc('rfclra', is_found);
 @surf(url, 2);
 
@@ -5140,9 +5143,6 @@ url = @get_remote_oj_using_klc('rflasc', is_found);
 url = @get_remote_oj_using_klc('rflefr', is_found);
 @surf(url, 2);
 
-url = @get_remote_oj_using_klc('rfroki', is_found);
-@surf(url, 2);
-
 url = @get_remote_oj_using_klc('rfstek', is_found);
 @surf(url, 2);
 
@@ -5152,6 +5152,35 @@ url = @get_remote_oj_using_klc('rftele', is_found);
 url = @get_remote_oj_using_klc('rfvery', is_found);
 @surf(url, 2);
 
+@footer;
+@say(fp);
+
+// fcd: Jan-23-2024
+}
+
+
+
+//;;
+
+void
+@view_youtube_favorite_channels3
+{
+str fp = "View thought leaders. These generally refer to individuals or ideas that don't have a traditional channel.";
+
+@header;
+@save_location;
+
+@find_lc('thleelmu');
+@execute_code_word_line;
+
+@find_lc('thlemata');
+@execute_code_word_line;
+
+// Duplicate to compensate for the bug that I haven't been able to figure out yet. Aug-30-2026
+@find_lc('thlemata');
+@execute_code_word_line;
+
+@restore_location;
 @footer;
 @say(fp);
 

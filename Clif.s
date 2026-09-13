@@ -3489,35 +3489,6 @@ if(@contains(operation_outcome, 'not an executable'))
 //;;
 
 void
-@view_youtube_favorite_channels3
-{
-str fp = "View thought leaders. These generally refer to individuals or ideas that don't have a traditional channel.";
-
-@header;
-@save_location;
-
-@find_lc('thleelmu');
-@execute_code_word_line;
-
-@find_lc('thlemata');
-@execute_code_word_line;
-
-// Duplicate to compensate for the bug that I haven't been able to figure out yet. Aug-30-2026
-@find_lc('thlemata');
-@execute_code_word_line;
-
-@restore_location;
-@footer;
-@say(fp);
-
-// fcd: Jan-23-2024
-}
-
-
-
-//;;
-
-void
 @ask_stock_related_questions
 {
 str fp = "Ask stock related questions.";
