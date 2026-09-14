@@ -1452,7 +1452,7 @@ fp = @trim_period(fp);
 
 URL += sc;
 
-@surf(url, 2);
+@surf(url, 7);
 
 make_message(@trim_period(fp) + ' for "' + Pretty_sc + '".');
 }
@@ -2573,12 +2573,15 @@ URL += '&search_type=&aq=f';
 void
 @search_google_with_app_20(str sc = parse_str('/1=', mparm_str))
 {
+@header;
+@save_location;
 str fp = 'Is [blank] a good investment?';
 // lu: Sep-10-2026
 str question = 'Is ' + @get_sj + ' a good investment?';
 @set_clipboard(question);
 @search_google_main(0, 1, question);
-//@search_google_main(0, 1, 'Is ' + @get_sj + ' a good investment?');
+@restore_location;
+@footer;
 }
 
 

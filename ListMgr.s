@@ -4922,20 +4922,17 @@ str fp = "Replace http references.";
 str rs;
 str sc;
 
-@header;
-sc = '  \(http';
+//qq
+sc = '\(http';
 @eol;
 
-@seek(sc);
+if(@seek(sc) == 0) return();
 left;
-left;
-text('.');
 cr;
 block_begin;
 @eof;
 @delete_block;
 
-@footer;
 @say(found_str);
 @say(fp);
 }
@@ -5062,6 +5059,9 @@ rs = "";
 @replace_string_in_file_int("Dictionary result for", rs);
 
 @replace_http_references;
+
+//qq
+//return();
 
 // Select all.
 rm('Block^SelectAll');
