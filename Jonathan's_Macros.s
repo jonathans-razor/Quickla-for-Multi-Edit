@@ -5066,27 +5066,39 @@ url = @get_remote_oj_using_klc('rfhoyt', is_found);
 @surf(url, 2);
 
 //2
-url = @get_remote_oj_using_klc('rformy', is_found);
+url = @get_remote_oj_using_klc('rfsubs', is_found);
 @surf(url, 2);
 
 //3
-url = @get_remote_oj_using_klc('rfjr', is_found);
+url = @get_remote_oj_using_klc('rftuca', is_found);
+@surf(url, 2);
+
+//3b
+url = @get_remote_oj_using_klc('rftuca', is_found);
 @surf(url, 2);
 
 //4
-url = @get_remote_oj_using_klc('rfsubs', is_found);
-@surf(url, 2);
-
-//4
-url = @get_remote_oj_using_klc('rfsubs', is_found);
+url = @get_remote_oj_using_klc('rfjoro', is_found);
 @surf(url, 2);
 
 //5
-url = @get_remote_oj_using_klc('rftc', is_found);
+url = @get_remote_oj_using_klc('rformy', is_found);
 @surf(url, 2);
 
 //6
-url = @get_remote_oj_using_klc('rftheo', is_found);
+url = @get_remote_oj_using_klc('rfbapr', is_found);
+@surf(url, 2);
+
+//7
+url = @get_remote_oj_using_klc('rflasc', is_found);
+@surf(url, 2);
+
+//7b
+url = @get_remote_oj_using_klc('rflasc', is_found);
+@surf(url, 2);
+
+//8
+url = @get_remote_oj_using_klc('rffiio', is_found);
 @surf(url, 2);
 
 @footer;
@@ -5111,46 +5123,108 @@ str fp = "View YouTube favorite channels, biweekly checker.";
 int is_found = 0;
 str url;
 
-url = @get_remote_oj_using_klc('rfaz', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfafwn', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfbapr', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfdaga', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfbima', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfclra', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfefp', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rffi', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfpide', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rflasc', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rflefr', is_found);
-@surf(url, 2);
-
-url = @get_remote_oj_using_klc('rfstek', is_found);
+//1
+url = @get_remote_oj_using_klc('rfspra', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rftele', is_found);
 @surf(url, 2);
 
+//3
+url = @get_remote_oj_using_klc('rfstek', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfpide', is_found);
+@surf(url, 2);
+
+//5
+url = @get_remote_oj_using_klc('rfclra', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfbima', is_found);
+@surf(url, 2);
+
+//7
+url = @get_remote_oj_using_klc('rfdaga', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfaz', is_found);
+@surf(url, 2);
+
+//9
+url = @get_remote_oj_using_klc('rftheo', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfitp', is_found);
+@surf(url, 2);
+
+//11
+url = @get_remote_oj_using_klc('rfafwn', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfefp', is_found);
+@surf(url, 2);
+
+@footer;
+@say(fp);
+
+// lu: Sep-14-2026
+// fcd: Jan-23-2024
+}
+
+
+
+//;;
+
+void
+@view_youtube_favorite_channels3
+{
+str fp = "View YouTube favorite channels, biweekly checker.";
+
+// (!-fv3)
+
+@header;
+
+int is_found = 0;
+str url;
+
+//1
+url = @get_remote_oj_using_klc('rfreen', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfhidad', is_found);
+@surf(url, 2);
+
+//3
+url = @get_remote_oj_using_klc('rfcudr', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rftws', is_found);
+@surf(url, 2);
+
+//5
+url = @get_remote_oj_using_klc('rffcm', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rfrist', is_found);
+@surf(url, 2);
+
+//7
+url = @get_remote_oj_using_klc('rflefr', is_found);
+@surf(url, 2);
+
 url = @get_remote_oj_using_klc('rfvery', is_found);
+@surf(url, 2);
+
+//9
+url = @get_remote_oj_using_klc('rfdobr', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rftrav', is_found);
+@surf(url, 2);
+
+//11
+url = @get_remote_oj_using_klc('rfmark', is_found);
 @surf(url, 2);
 
 @footer;
@@ -5164,7 +5238,7 @@ url = @get_remote_oj_using_klc('rfvery', is_found);
 //;;
 
 void
-@view_youtube_favorite_channels3
+@view_youtube_favorite_channels4
 {
 str fp = "View thought leaders. These generally refer to individuals or ideas that don't have a traditional channel.";
 
