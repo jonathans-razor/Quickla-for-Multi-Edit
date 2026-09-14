@@ -4913,6 +4913,38 @@ str fp = 'Copy and paste rubric.';
 //;;
 
 void
+@replace_http_references()
+{
+str fp = "Replace http references.";
+
+// lu: Sep-14-2026
+
+str rs;
+str sc;
+
+@header;
+sc = '  \(http';
+@eol;
+
+@seek(sc);
+left;
+left;
+text('.');
+cr;
+block_begin;
+@eof;
+@delete_block;
+
+@footer;
+@say(found_str);
+@say(fp);
+}
+
+
+
+//;;
+
+void
 @paste_with_wikipedia_format()
 {
 str fp = 'Paste with Wikipedia.com formatting.';
@@ -5028,6 +5060,8 @@ str replacement_description, rs;
 
 rs = "";
 @replace_string_in_file_int("Dictionary result for", rs);
+
+@replace_http_references;
 
 // Select all.
 rm('Block^SelectAll');
