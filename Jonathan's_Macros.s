@@ -5443,6 +5443,7 @@ void
 @add_stub_bare_bones(str lc = parse_str('/1=', mparm_str))
 {
 str fp = "Add stub router.";
+// lu: Sep-15-2026
 // lu: Jan-4-2024
 // lu: Nov-2-2018
 @header;
@@ -5489,15 +5490,9 @@ text('call n >nul');
 cr;
 text('set cbf-pt=%cbf-pt%\');
 cr;
-text('set cbf-lh=');
-cr;
-text('set cbf-srv=');
+text('set cbf-gs=');
 cr;
 text('set cbf-=');
-cr;
-text('set cbf-=');
-cr;
-text('set cbf-url=');
 cr;
 text('exit/b');
 cr;

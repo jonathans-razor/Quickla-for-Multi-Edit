@@ -3843,7 +3843,7 @@ if(browser_number == 0)
   browser_number = default_browser;
 }
 
-switch(browser_number) // This list is ordered by how much i like them.
+switch(browser_number) // This list is ordered by how much i like them. (!brow)
 {
   case 1: // Chrome (Opens in a new tab.)
     command_line = @get_chrome_path;

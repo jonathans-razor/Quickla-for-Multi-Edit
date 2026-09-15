@@ -4922,9 +4922,7 @@ str fp = "Replace http references.";
 str rs;
 str sc;
 
-//qq
 sc = '\(http';
-@eol;
 
 if(@seek(sc) == 0) return();
 left;
@@ -5006,10 +5004,12 @@ if(add_space)
 @create_timestamped_file;
 @paste;
 
-
 str description;
 str rs;
 str sc;
+
+tof;
+@replace_http_references;
 
 tof;
 @replace_next_occurrence_only('search results', rs);
@@ -5058,12 +5058,6 @@ str replacement_description, rs;
 rs = "";
 @replace_string_in_file_int("Dictionary result for", rs);
 
-@replace_http_references;
-
-//qq
-//return();
-
-// Select all.
 rm('Block^SelectAll');
 @copy;
 

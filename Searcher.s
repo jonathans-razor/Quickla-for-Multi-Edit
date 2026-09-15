@@ -2571,6 +2571,23 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_21(str sc = parse_str('/1=', mparm_str))
+{
+str fp = '[blank] highlights.';
+// lu: Sep-15-2026
+@header;
+@bol;
+@hc_word_uc;
+str question = @hc_word_uc + ' highlights on YouTube';
+@search_google_main(0, 2, question);
+@footer;
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_20(str sc = parse_str('/1=', mparm_str))
 {
 @header;
