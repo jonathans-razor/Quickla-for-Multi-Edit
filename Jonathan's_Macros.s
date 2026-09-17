@@ -8453,21 +8453,4 @@ str sc = @get_subject_or_selected_text;
 
 
 
-//;
-
-void
-@rtm
-{
-str fp = "x";
-
-// lu: Sep-17-2026.3
-
-
-//qq-1
-
-@say(fp);
-}
-
-
-
 //; (!efjm)
