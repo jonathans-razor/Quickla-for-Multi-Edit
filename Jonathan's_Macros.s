@@ -5073,10 +5073,6 @@ url = @get_remote_oj_using_klc('rfsubs', is_found);
 url = @get_remote_oj_using_klc('rftuca', is_found);
 @surf(url, 2);
 
-//3b
-url = @get_remote_oj_using_klc('rftuca', is_found);
-@surf(url, 2);
-
 //4
 url = @get_remote_oj_using_klc('rfjoro', is_found);
 @surf(url, 2);
@@ -5086,6 +5082,10 @@ url = @get_remote_oj_using_klc('rformy', is_found);
 @surf(url, 2);
 
 //6
+url = @get_remote_oj_using_klc('rfbapr', is_found);
+@surf(url, 2);
+
+//6b
 url = @get_remote_oj_using_klc('rfbapr', is_found);
 @surf(url, 2);
 
