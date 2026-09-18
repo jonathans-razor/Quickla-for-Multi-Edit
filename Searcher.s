@@ -997,6 +997,20 @@ sc = @commute_character(sc, ' ', '+');
 //;;
 
 void
+@search_youtube_with_hotkey
+{
+str fp = 'Search YouTube with hotkey.';
+str URL = 'http://www.youtube.com';
+@surf(url, 2);
+// lu: Sep-18-2026
+@say(fp);
+}
+
+
+
+//;;
+
+void
 @search_google_main(int search_type, int browser_number, str search_criterion)
 {
 str fp = 'Search Google.';
@@ -2514,32 +2528,6 @@ str sc = 'head coach for ';
 str fp = sc;
 // lu: Dec-19-2025
 @search_google_main(0, 0, sc + @get_sj);
-}
-
-
-
-//;
-
-void
-@search_youtube_with_can_2
-{
-str sc = 'nfl highlights';
-str fp = sc;
-// lu: Dec-16-2025
-@search_youtube_main(sc);
-}
-
-
-
-//;
-
-void
-@search_youtube_with_can_1
-{
-str sc = 'nfl highlights 2026 ';
-str fp = sc + ' [blank]';
-// lu: Dec-16-2025
-@search_youtube_main(sc + @get_sj);
 }
 
 
