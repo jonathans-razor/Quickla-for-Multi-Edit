@@ -1824,13 +1824,14 @@ void
 @directions_from_blank_to_blank
 {
 str fp = "Directions from home to [blank].";
-
 // lu: Aug-6-2026
-
-str sc = @get_subject;
-
-@search_google_maps(sc = 'directions from ' + sc);
-
+int current_column_number = @current_column;
+@bol;
+str word_1 = @hc_word_uc;
+right;
+str word_2 = @hc_word_uc;
+goto_col(current_column_number);
+@search_google_maps('directions from ' + word_1 + ' to ' + word_2);
 @say(fp);
 }
 
