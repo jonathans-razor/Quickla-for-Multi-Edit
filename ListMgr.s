@@ -5058,6 +5058,9 @@ str replacement_description, rs;
 rs = "";
 @replace_string_in_file_int("Dictionary result for", rs);
 
+rs = "";
+@replace_string_in_file_int("ai overview", rs);
+
 rm('Block^SelectAll');
 @copy;
 
