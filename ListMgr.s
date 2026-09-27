@@ -5061,6 +5061,9 @@ rs = "";
 rs = "";
 @replace_string_in_file_int("ai overview", rs);
 
+rs = "";
+@replace_string_in_file_int("$$", rs);
+
 rm('Block^SelectAll');
 @copy;
 
