@@ -2533,7 +2533,31 @@ str fp = sc;
 
 
 
-//;
+//;+ Canned Searches 3
+
+
+
+//;;
+
+void
+@search_youtube_with_app_2
+{
+str fp = '[blank] trailer.';
+@header;
+// lu: Sep-28-2026
+str URL = 'http://www.youtube.com/results?search_query=';
+str left_string = @hc_subject;
+str sc = left_string + ' trailer';
+URL += sc;
+URL += '&search_type=&aq=f';
+@surf(url, 2);
+@footer;
+@say(fp + ' (' + sc + ')');
+}
+
+
+
+//;;
 
 void
 @search_youtube_with_app_1
@@ -2560,13 +2584,28 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_app_22(str sc = parse_str('/1=', mparm_str))
+{
+str fp = '[blank] IMDB rating.';
+// lu: Sep-28-2026
+@header;
+@bol;
+str question = @hc_subject + ' IMDB rating';
+@search_google_main(0, 2, question);
+@footer;
+}
+
+
+
+//;;
+
+void
 @search_google_with_app_21(str sc = parse_str('/1=', mparm_str))
 {
 str fp = '[blank] highlights.';
 // lu: Sep-15-2026
 @header;
 @bol;
-@hc_word_uc;
 str question = @hc_word_uc + ' highlights on YouTube';
 @search_google_main(0, 2, question);
 @footer;

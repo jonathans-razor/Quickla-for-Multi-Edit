@@ -7809,18 +7809,12 @@ void
 {
 str fp = "Search YouTube exactly using Firefox with wost.";
 // lu: Oct-16-2023
-
 str URL = 'http://www.youtube.com/results?search_query=';
-
 str right_sc = @get_wost;
-
 fp = @trim_period(fp);
-
 sc = '%22' + char(34) + @lower(sc) + '+' + right_sc + char(34) + '%22';
-
 URL += sc;
 URL += '&search_type=&aq=f';
-
 @surf(url, 2);
 @say(fp + ' (' + sc + ')');
 }
