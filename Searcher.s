@@ -2540,7 +2540,7 @@ str fp = sc;
 //;;
 
 void
-@search_youtube_with_app_2
+@search_youtube_with_suffix_2
 {
 str fp = '[blank] trailer.';
 @header;
@@ -2560,7 +2560,7 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
-@search_youtube_with_app_1
+@search_youtube_with_suffix_1
 {
 str fp = ' official music video';
 @header;
@@ -2584,7 +2584,7 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
-@search_google_with_app_22(str sc = parse_str('/1=', mparm_str))
+@search_google_with_suffix_22(str sc = parse_str('/1=', mparm_str))
 {
 str fp = '[blank] IMDB rating.';
 // lu: Sep-28-2026
