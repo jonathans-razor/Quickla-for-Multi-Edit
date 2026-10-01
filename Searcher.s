@@ -1823,16 +1823,14 @@ str sc = @get_subject;
 void
 @directions_from_blank_to_blank
 {
-str fp = "Directions from home to [blank].";
-// lu: Aug-6-2026
-int current_column_number = @current_column;
-@bol;
-str word_1 = @hc_word_uc;
-right;
-str word_2 = @hc_word_uc;
-goto_col(current_column_number);
-@search_google_maps('directions from ' + word_1 + ' to ' + word_2);
-@say(fp);
+str fp = "Directions from [blank] to [blank].";
+// lu: Oct-1-2026
+str left_word = @trim_after_character(@hc_object, ' to ');
+str right_word = @trim_before_character(@hc_object, ' to ');
+str URL = 'https://www.google.com/maps/dir/';
+url += left_word + '/' + right_word;
+@surf(url, 0);
+@say(fp + '(' + url + ')');
 }
 
 
@@ -2803,7 +2801,7 @@ if(sc == '')
 {
   sc = @get_sj;
 }
-sc = @replace(sc, ' versus ', ' and ');
+sc = @replace(sc, ' vs ', ' and ');
 @search_google_main(0, 0, 'What is the difference between ' + sc + '?');
 }
 

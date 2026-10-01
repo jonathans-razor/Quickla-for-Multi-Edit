@@ -1,5 +1,6 @@
 prototype Searcher
 {
+  void @directions_from_blank_to_blank();
   void @search_google_liberally(str sc);
   void @search_google_main(int search_type, int browser_number, str search_criterion);
   void @search_google_with_app_6(str sc);

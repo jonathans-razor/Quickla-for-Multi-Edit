@@ -3399,6 +3399,7 @@ void
 @execute_code_word_line()
 {
 str fp = 'Execute cwl.';
+@save_column;
 
 if(@is_batch_file)
 {
@@ -3454,9 +3455,17 @@ if(@current_line_contains_regex(@comma_lc))
 
 str sc = @get_subject_or_selected_text;
 
-if(@contains(sc, ' versus '))
+if(@contains(sc, ' vs '))
 {
+  @save_column;
   @search_google_with_app_6(sc);
+  @restore_column;
+  return();
+}
+else if(@contains(sc, ' to '))
+{
+  @directions_from_blank_to_blank;
+  @restore_column;
   return();
 }
 else if(@contains(sc, 'rzr'))
