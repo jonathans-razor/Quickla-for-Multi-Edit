@@ -5077,10 +5077,6 @@ url = @get_remote_oj_using_klc('rftuca', is_found);
 url = @get_remote_oj_using_klc('rfjoro', is_found);
 @surf(url, 2);
 
-//5
-url = @get_remote_oj_using_klc('rformy', is_found);
-@surf(url, 2);
-
 //6
 url = @get_remote_oj_using_klc('rfbapr', is_found);
 @surf(url, 2);
@@ -5126,37 +5122,33 @@ url = @get_remote_oj_using_klc('rfspra', is_found);
 url = @get_remote_oj_using_klc('rftele', is_found);
 @surf(url, 2);
 
-//3
 url = @get_remote_oj_using_klc('rfstek', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfpide', is_found);
 @surf(url, 2);
 
-//5
+url = @get_remote_oj_using_klc('rformy', is_found);
+@surf(url, 2);
+
 url = @get_remote_oj_using_klc('rfclra', is_found);
 @surf(url, 2);
 
-//6
 url = @get_remote_oj_using_klc('rfbima', is_found);
 @surf(url, 2);
 
-//6b
 url = @get_remote_oj_using_klc('rfbima', is_found);
 @surf(url, 2);
 
-//7
 url = @get_remote_oj_using_klc('rfdaga', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rfaz', is_found);
 @surf(url, 2);
 
-//9
 url = @get_remote_oj_using_klc('rftheo', is_found);
 @surf(url, 2);
 
-//11
 url = @get_remote_oj_using_klc('rfafwn', is_found);
 @surf(url, 2);
 
