@@ -8433,8 +8433,6 @@ str fp = "x";
 @find_batch_label;
 @run_razor(@hc_subject);
 
-//qq-1
-
 @say(fp);
 }
 

@@ -3,7 +3,7 @@ prototype Finder
   void @bobs();
   void @determine_if_lc_is_unique();
   void @find_again();
-  int  @find_batch_label();
+  int  @find_batch_file_label(str sc);
   void @find_batch_file_label_uc();
   int  @find_cmac_definition(str macro_Name, int is_exact_search);
   int  @find_continuum(int search_precision, str starting_position);

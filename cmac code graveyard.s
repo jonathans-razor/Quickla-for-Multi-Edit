@@ -1,6 +1,44 @@
 //;;
 
 void
+@find_batch_file_label()
+{
+//qq
+str fp = "Find batch file label.";
+@header;
+
+// lu: Mar-22-2020
+
+str sc = @get_user_input_nonspace(fp);
+
+@bof;
+
+sc = make_literal_x(sc);
+
+str first_sc = sc;
+
+if(@first_character(sc) != ':')
+{
+  sc = '^:' + sc + '$^.*$^set fp'; // works
+}
+
+if(!@seek_in_all_files_2_arguments(sc, fp)){
+  first_sc = '^:' + first_sc + '$';
+  @next_window;
+  @seek_in_all_files_2_arguments(first_sc, fp);
+}
+
+@footer;
+
+@say('Oct-3-2026-5-53-PM first_sc: ' + first_sc);
+//@say(fp);
+}
+
+
+
+//;;
+
+void
 @delete_colon()
 {
 str fp = "Subtract colon.";

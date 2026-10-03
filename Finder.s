@@ -338,7 +338,6 @@ else
   goto_mark;
 }
 
-//qq
 so = 'Search criterion NOT found. - Oct-3-2026-3-44 (' + sc + ')';
 
 @say(so);
@@ -682,43 +681,6 @@ int search_criterion_was_found = @find_lc(lc);
 //;;
 
 void
-@find_batch_file_label()
-{
-str fp = "Find batch file label.";
-@header;
-
-// lu: Mar-22-2020
-
-str sc = @get_user_input_nonspace(fp);
-
-@bof;
-
-sc = make_literal_x(sc);
-
-str first_sc = sc;
-
-if(@first_character(sc) != ':')
-{
-  sc = '^:' + sc + '$^.*$^set fp'; // works
-}
-
-if(!@seek_in_all_files_2_arguments(sc, fp)){
-  first_sc = '^:' + first_sc + '$';
-  @next_window;
-  @seek_in_all_files_2_arguments(first_sc, fp);
-}
-
-@footer;
-//qq p1 
-@say('Oct-3-2026-5-53-PM first_sc: ' + first_sc);
-//@say(fp);
-}
-
-
-
-//;;
-
-void
 @find_batch_file_label_uc()
 {
 str fp = "Find batch file label under cursor.";
@@ -758,25 +720,23 @@ if(!@seek_in_all_files_2_arguments(sc, fp)){
 //;;
 
 int
-@find_batch_label()
+@find_batch_file_label(str sc = parse_str('/1=', mparm_str))
 {
-str fp = "Find batch label.";
+str fp = "Find batch file label.";
 
-  //qq
 // lu: Oct-3-2026
 // lu: Apr-30-2019
 
 @header;
 
 str found_string;
-str sc = @get_user_input_raw(fp);;
 sc = make_literal_x(sc);
 sc = '^:' + sc + '$';
 @bof;
 int return_value = @seek_in_all_files_batch_files_o(sc, fp, found_string);
 
-@footer;
 @say(fp);
+@footer;
 return(return_value);
 }
 
@@ -798,9 +758,9 @@ if(search_criterion_was_found)
   return(search_criterion_was_found);
 }
 
-//qq
 //introduction += ' ' + so;
-if(@find_batch_label)
+//qq
+if(@find_batch_file_label(lc))
 {
   return(1);
 }

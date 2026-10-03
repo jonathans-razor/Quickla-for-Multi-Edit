@@ -3171,6 +3171,13 @@ if(@contains(@get_subject_or_selected_text, 'rzr'))
   return(0);
 }
 
+if(@is_batch_file)
+{
+  //qq
+  @run_razor(@hc_subject);
+  return(1);
+}
+
 rv = @anatomize_clif(0, fp);
 
 operation_Outcome = fp;
@@ -3850,7 +3857,6 @@ int
 {
 str fp = "Run remote Clif using user inputted launch code.";
 
-//qq
 if(!@find_lc_known(sm, lc))
 {
   return(0);
