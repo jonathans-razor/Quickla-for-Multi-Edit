@@ -3173,7 +3173,6 @@ if(@contains(@get_subject_or_selected_text, 'rzr'))
 
 if(@is_batch_file)
 {
-  //qq
   @run_razor(@hc_subject);
   return(1);
 }

@@ -759,7 +759,6 @@ if(search_criterion_was_found)
 }
 
 //introduction += ' ' + so;
-//qq
 if(@find_batch_file_label(lc))
 {
   return(1);
