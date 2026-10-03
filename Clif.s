@@ -3462,7 +3462,7 @@ if(@contains(sc, ' vs '))
   @restore_column;
   return();
 }
-else if(@contains(sc, ' to '))
+else if(@contains(sc, ' ht '))
 {
   @directions_from_blank_to_blank;
   @restore_column;

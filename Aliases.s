@@ -417,7 +417,17 @@ return(str_del(parameter, 1, 1));
 str
 @trim_left(str string, int number_of_characters_to_trim)
 {
-return(str_del(string, 1, number_of_Characters_To_Trim));
+return(str_del(string, 1, number_of_characters_to_trim));
+}
+
+
+
+//;;
+
+str
+@trim_right(str string, int number_of_characters_to_trim)
+{
+return(str_del(string, length(string) - number_of_characters_to_trim + 1, number_of_characters_to_trim));
 }
 
 

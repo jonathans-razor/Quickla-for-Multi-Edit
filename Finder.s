@@ -338,7 +338,11 @@ else
   goto_mark;
 }
 
-so = 'Search criterion NOT found.';
+//qq
+// Perform batch power line execution. Oct-3-2026
+sc = @trim_left(sc, 1);
+sc = @trim_right(sc, 4);
+so = 'Search criterion NOT found. - Oct-3-2026-3-44 (' + sc + ')';
 
 @say(so);
 return(0);
@@ -429,7 +433,7 @@ else
   goto_mark;
 }
 
-so = 'Search criterion NOT found.';
+so = 'Search criterion NOT found. - Oct-3-2026';
 
 @say(so);
 return(0);
@@ -781,6 +785,7 @@ the code graveyard.
 (skw prime time)
 
 To find launch codes beginning with a particular sequence of characters, just use Ctrl+F + 
+
 "!fv" for example. I removed the macros that specifically do this because they are overkill 
 when such and easy and straightfoward method exists.
 

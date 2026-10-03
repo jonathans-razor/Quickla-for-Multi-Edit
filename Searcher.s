@@ -1825,12 +1825,13 @@ void
 {
 str fp = "Directions from [blank] to [blank].";
 // lu: Oct-1-2026
-str left_word = @trim_after_character(@hc_object, ' to ');
-str right_word = @trim_before_character(@hc_object, ' to ');
+str left_word = @trim_after_character(@hc_object, ' ht ');
+str right_word = @trim_before_character(@hc_object, ' ht ');
+right_word = @trim_left(right_word, 3);
 str URL = 'https://www.google.com/maps/dir/';
 url += left_word + '/' + right_word;
 @surf(url, 0);
-@say(fp + '(' + url + ')');
+@say(fp + '(' + left_word + ', ' + right_word + ')');
 }
 
 

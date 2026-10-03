@@ -382,8 +382,8 @@ str so;
 
 if(sc == '')
 {
-  rm("@open_file_with_writability /FN=" + Get_Environment('dropbox') +
-    "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
+  rm("@open_file_with_writability /fn=" + get_environment('savannah') +
+    "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
   eof;
 }
 else
@@ -5061,37 +5061,36 @@ str fp = "View YouTube favorite channels, daily checker.";
 int is_found = 0;
 str url = '';
 
-//1
+//1              x3   t2-4
 url = @get_remote_oj_using_klc('rfhoyt', is_found);
 @surf(url, 2);
 
-//2
+//2              x7   t2-6
 url = @get_remote_oj_using_klc('rfsubs', is_found);
 @surf(url, 2);
 
-//3
+//3              x4   t2-5
 url = @get_remote_oj_using_klc('rftuca', is_found);
 @surf(url, 2);
 
-//4
+//4              x1   t2-1
 url = @get_remote_oj_using_klc('rfjoro', is_found);
 @surf(url, 2);
 
-//6
+//5              x2   t2-2
 url = @get_remote_oj_using_klc('rfbapr', is_found);
 @surf(url, 2);
 
-//6b
-url = @get_remote_oj_using_klc('rfbapr', is_found);
-@surf(url, 2);
-
-//7
-url = @get_remote_oj_using_klc('rflasc', is_found);
-@surf(url, 2);
-
-//8
+//6              x6
 url = @get_remote_oj_using_klc('rffiio', is_found);
 @surf(url, 2);
+
+//6              x6
+url = @get_remote_oj_using_klc('rffiio', is_found);
+@surf(url, 2);
+
+@find_lc('thleelmu');
+@execute_code_word_line;
 
 @footer;
 @say(fp);
@@ -5117,6 +5116,9 @@ str url;
 
 //1
 url = @get_remote_oj_using_klc('rfspra', is_found);
+@surf(url, 2);
+
+url = @get_remote_oj_using_klc('rflasc', is_found);
 @surf(url, 2);
 
 url = @get_remote_oj_using_klc('rftele', is_found);

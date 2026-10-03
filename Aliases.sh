@@ -62,7 +62,8 @@ prototype Aliases
   str  @trim_last_character(str parameter);
   str  @trim_leading_colons_et_al(str string);
   str  @trim_leading_spaces(str string);
-  str  @trim_left(str string, int number_of_Characters_to_Trim);
+  str  @trim_left(str string, int number_of_characters_to_trim);
+  str  @trim_right(str string, int number_of_characters_to_trim);
   str  @trim_period(str string);
   str  @trim_string_after_open_paren(str string);
   str  @trim_trailing_spaces(str string);
