@@ -7554,30 +7554,6 @@ str fp = "x";
 //;
 
 void
-@find_batch_label
-{
-str fp = "Find batch label.";
-
-// lu: Apr-30-2019
-
-@header;
-
-str found_string;
-str sc = @get_user_input_raw(fp);;
-sc = make_literal_x(sc);
-sc = '^:' + sc + '$';
-@bof;
-@seek_in_all_files_batch_files_o(sc, fp, found_string);
-
-@footer;
-@say(fp);
-}
-
-
-
-//;
-
-void
 @copy_bullet_to_bullet_buffer_he
 {
 str fp = "Copy bullet to bullet buffer helper.";
@@ -8440,6 +8416,25 @@ str fp = "Analysze individual stock.";
 // lu: Sep-11-2026
 str sc = @get_subject_or_selected_text;
 @search_yahoo_finance(sc);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@rtm
+{
+str fp = "x";
+
+// lu: Oct-3-2026
+
+@find_batch_label;
+@run_razor(@hc_subject);
+
+//qq-1
+
 @say(fp);
 }
 

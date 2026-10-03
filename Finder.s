@@ -339,9 +339,6 @@ else
 }
 
 //qq
-// Perform batch power line execution. Oct-3-2026
-sc = @trim_left(sc, 1);
-sc = @trim_right(sc, 4);
 so = 'Search criterion NOT found. - Oct-3-2026-3-44 (' + sc + ')';
 
 @say(so);
@@ -682,6 +679,109 @@ int search_criterion_was_found = @find_lc(lc);
 
 
 
+//;;
+
+void
+@find_batch_file_label()
+{
+str fp = "Find batch file label.";
+@header;
+
+// lu: Mar-22-2020
+
+str sc = @get_user_input_nonspace(fp);
+
+@bof;
+
+sc = make_literal_x(sc);
+
+str first_sc = sc;
+
+if(@first_character(sc) != ':')
+{
+  sc = '^:' + sc + '$^.*$^set fp'; // works
+}
+
+if(!@seek_in_all_files_2_arguments(sc, fp)){
+  first_sc = '^:' + first_sc + '$';
+  @next_window;
+  @seek_in_all_files_2_arguments(first_sc, fp);
+}
+
+@footer;
+//qq p1 
+@say('Oct-3-2026-5-53-PM first_sc: ' + first_sc);
+//@say(fp);
+}
+
+
+
+//;;
+
+void
+@find_batch_file_label_uc()
+{
+str fp = "Find batch file label under cursor.";
+@header;
+
+// fcd: Nov-28-2016
+
+str sc = @hc_word_uc();
+
+@bof;
+
+sc = make_literal_x(sc);
+
+str first_sc = sc;
+
+if(@first_character(sc) != ':')
+{
+  //sc = '^:' + sc + '$';
+  //sc = '^:cart$^.#$'; // definition
+  //sc = '$$:' + sc + '$'; // definition only!
+  sc = '^:' + sc + '$^.*$^set fp'; // works
+}
+
+if(!@seek_in_all_files_2_arguments(sc, fp)){
+  first_sc = '^:' + first_sc + '$';
+  @next_window;
+  @seek_in_all_files_2_arguments(first_sc, fp);
+}
+
+@footer;
+@say('sc: ' + sc);
+@say(fp);
+}
+
+
+
+//;;
+
+int
+@find_batch_label()
+{
+str fp = "Find batch label.";
+
+  //qq
+// lu: Oct-3-2026
+// lu: Apr-30-2019
+
+@header;
+
+str found_string;
+str sc = @get_user_input_raw(fp);;
+sc = make_literal_x(sc);
+sc = '^:' + sc + '$';
+@bof;
+int return_value = @seek_in_all_files_batch_files_o(sc, fp, found_string);
+
+@footer;
+@say(fp);
+return(return_value);
+}
+
+
+
 //;; (skw lc_known, known_launch_code, launch_code_known)
 
 int
@@ -698,9 +798,17 @@ if(search_criterion_was_found)
   return(search_criterion_was_found);
 }
 
-introduction += ' ' + so;
+//qq
+//introduction += ' ' + so;
+if(@find_batch_label)
+{
+  return(1);
+}
+else
+{
+  return(0);
+}  
 
-return(0);
 }
 
 
@@ -3844,42 +3952,6 @@ void
 //;
 
 void
-@find_batch_file_label()
-{
-str fp = "Find batch file label.";
-@header;
-
-// lu: Mar-22-2020
-
-str sc = @get_user_input_nonspace(fp);
-
-@bof;
-
-sc = make_literal_x(sc);
-
-str first_sc = sc;
-
-if(@first_character(sc) != ':')
-{
-  sc = '^:' + sc + '$^.*$^set fp'; // works
-}
-
-if(!@seek_in_all_files_2_arguments(sc, fp)){
-  first_sc = '^:' + first_sc + '$';
-  @next_window;
-  @seek_in_all_files_2_arguments(first_sc, fp);
-}
-
-@footer;
-@say('sc: ' + sc);
-@say(fp);
-}
-
-
-
-//;
-
-void
 @find_jenkinsfile_function()
 {
 str fp = "Find Jenkinsfile function.";
@@ -3988,45 +4060,6 @@ if(find_text(sc, 1, _regexp | _backward))
 {
 }
 
-@say(fp);
-}
-
-
-
-//;
-
-void
-@find_batch_file_label_uc()
-{
-str fp = "Find batch file label under cursor.";
-@header;
-
-// fcd: Nov-28-2016
-
-str sc = @hc_word_uc();
-
-@bof;
-
-sc = make_literal_x(sc);
-
-str first_sc = sc;
-
-if(@first_character(sc) != ':')
-{
-  //sc = '^:' + sc + '$';
-  //sc = '^:cart$^.#$'; // definition
-  //sc = '$$:' + sc + '$'; // definition only!
-  sc = '^:' + sc + '$^.*$^set fp'; // works
-}
-
-if(!@seek_in_all_files_2_arguments(sc, fp)){
-  first_sc = '^:' + first_sc + '$';
-  @next_window;
-  @seek_in_all_files_2_arguments(first_sc, fp);
-}
-
-@footer;
-@say('sc: ' + sc);
 @say(fp);
 }
 

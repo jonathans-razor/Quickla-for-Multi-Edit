@@ -3850,6 +3850,7 @@ int
 {
 str fp = "Run remote Clif using user inputted launch code.";
 
+//qq
 if(!@find_lc_known(sm, lc))
 {
   return(0);

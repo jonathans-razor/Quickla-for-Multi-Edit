@@ -18,6 +18,7 @@ prototype Clif
   int  @open_folder(str path);
   void @open_folder_remotely();
   void @repeat_command();
+  void @run_razor(str sc);
   void @run_rzr_line(str sc);
   int  @rubric_contains_1way_string();
   int  @run_clif_under_cursor(str &operation_outcome);
