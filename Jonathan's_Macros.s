@@ -583,8 +583,8 @@ str fp = 'Add CMAC stub for searching.';
 str so;
 @header;
 
-rm("@open_file_with_writability /FN=" + Get_Environment('dropbox') +
-  "\\savannah\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
+rm("@open_file_with_writability /FN=" + Get_Environment('savannah') +
+  "\\cmac\\Quickla-for-Multi-Edit\\\Jonathan's_Macros.s");
 
 @eof;
 @bol;
@@ -8416,23 +8416,6 @@ str fp = "Analysze individual stock.";
 // lu: Sep-11-2026
 str sc = @get_subject_or_selected_text;
 @search_yahoo_finance(sc);
-@say(fp);
-}
-
-
-
-//;
-
-void
-@rtm
-{
-str fp = "x";
-
-// lu: Oct-3-2026
-
-@find_batch_label;
-@run_razor(@hc_subject);
-
 @say(fp);
 }
 
