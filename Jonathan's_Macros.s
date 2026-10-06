@@ -510,6 +510,7 @@ void
 @add_cmac_stub_1_l1
 {
 @header;
+@find_lc('efjm');
 @add_cmac_stub_1('');
 @footer;
 }
@@ -5015,9 +5016,6 @@ url = @get_remote_oj_using_klc('rffox', is_found);
 url = @get_remote_oj_using_klc('rfnyt', is_found);
 @surf(url, 0);
 
-url = @get_remote_oj_using_klc('rfquil', is_found);
-@surf(url, 0);
-
 url = @get_remote_oj_using_klc('reut', is_found);
 @surf(url, 0);
 
@@ -5077,10 +5075,10 @@ url = @get_remote_oj_using_klc('rftuca', is_found);
 url = @get_remote_oj_using_klc('rfjoro', is_found);
 @surf(url, 2);
 
-//5              x2   t2-2
 url = @get_remote_oj_using_klc('rfbapr', is_found);
 @surf(url, 2);
 
+//5              x2   t2-2
 //6              x6
 url = @get_remote_oj_using_klc('rffiio', is_found);
 @surf(url, 2);
@@ -8416,6 +8414,27 @@ str fp = "Analysze individual stock.";
 // lu: Sep-11-2026
 str sc = @get_subject_or_selected_text;
 @search_yahoo_finance(sc);
+@say(fp);
+}
+
+
+
+//;
+
+void
+@what_is_the_opposite_of_blank
+{
+str fp = "What is the opposite of [blank]?";
+
+// lu: Oct-5-2026
+
+@copy_and_paste_sj;
+@eoc;
+text('What is the opposite of ');
+@eol;
+text('?');
+@execute_code_word_line;
+
 @say(fp);
 }
 

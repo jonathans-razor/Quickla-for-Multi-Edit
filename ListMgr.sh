@@ -32,6 +32,7 @@ prototype ListMgr
   void @copy_and_paste_bullet();
   void @copy_and_paste_pb();
   void @copy_and_paste_rubric();
+  void @copy_and_paste_sj();
   void @copy_and_paste_subbullet();
   int  @count_bullets();
   str  @count_bullets_string();
