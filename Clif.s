@@ -3413,6 +3413,10 @@ if(@is_batch_file)
   {
     down;
   }
+  while(@first_character(get_line) != ':')
+  {
+    up;
+  }
   @run_razor(@hc_subject);
   return();
 }
