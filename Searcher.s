@@ -2638,7 +2638,7 @@ void
 str fp = 'Is [blank] a good investment?';
 // lu: Sep-10-2026
 str question = 'Is ' + @get_sj + ' a good investment?';
-@set_clipboard(question);
+//@set_clipboard(question);
 @search_google_main(0, 1, question);
 @restore_location;
 @footer;

@@ -5217,7 +5217,7 @@ url = @get_remote_oj_using_klc('rftrav', is_found);
 @surf(url, 2);
 
 //11
-url = @get_remote_oj_using_klc('rfmark', is_found);
+url = @get_remote_oj_using_klc('rfmaka', is_found);
 @surf(url, 2);
 
 //12
