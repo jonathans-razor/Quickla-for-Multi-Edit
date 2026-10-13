@@ -5073,10 +5073,15 @@ sc = 'Key Differences';
 rs = '$$Key Differences$$';
 @replace_all_occurrs_inf_one_tof(sc, rs);
 
+
 @tof;
 sc = '([a-z]\.)([a-z])';
 rs = '\0$$\1';
-@replace_all_occurrs_inf_one_tof(sc, rs);
+
+if(!@seek('https'))
+{
+  @replace_all_occurrs_inf_one_tof(sc, rs);
+}
 
 @tof;
 sc = '([a-z]\:)([a-z])';

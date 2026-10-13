@@ -2539,6 +2539,26 @@ str fp = sc;
 //;;
 
 void
+@search_youtube_with_suffix_3
+{
+str fp = '[blank] highlights.';
+@header;
+// lu: Oct-12-2026
+str URL = 'http://www.youtube.com/results?search_query=';
+str left_string = @hc_subject;
+str sc = left_string + ' highlights';
+URL += sc;
+URL += '&search_type=&aq=f';
+@surf(url, 2);
+@footer;
+@say(fp + ' (' + sc + ')');
+}
+
+
+
+//;;
+
+void
 @search_youtube_with_suffix_2
 {
 str fp = '[blank] trailer.';
