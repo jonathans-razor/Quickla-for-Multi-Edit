@@ -5061,18 +5061,10 @@ rs = "";
 rs = "";
 @replace_string_in_file_int("ai overview", rs);
 
-// This block causes Multi-Edit to crash.
-/*
-sc = 'Key Differences';
-rs = '$Key Differences$$';
-@replace_string_in_file_int(sc, rs);
-*/
-
 @tof;
 sc = 'Key Differences';
 rs = '$$Key Differences$$';
 @replace_all_occurrs_inf_one_tof(sc, rs);
-
 
 @tof;
 sc = '([a-z]\.)([a-z])';
@@ -5084,10 +5076,23 @@ if(!@seek('https'))
 }
 
 @tof;
-sc = '([a-z]\:)([a-z])';
-rs = '\0$$\1';
-@replace_all_occurrs_inf_one_tof(sc, rs);
+if(@is_blank_line)
+{
+  @delete_line;
+} 
+if(@is_blank_line)
+{
+  @delete_line;
+} 
+if(@is_blank_line)
+{
+  @delete_line;
+} 
+//sc = '([a-z]\:)([a-z])';
+//rs = '\0$$\1';
+//@replace_all_occurrs_inf_one_tof(sc, rs);
 
+//return();
 rm('Block^SelectAll');
 @copy;
 
