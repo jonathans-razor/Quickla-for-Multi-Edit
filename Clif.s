@@ -3102,6 +3102,41 @@ str fp = 'Run razor 2 - batch file version.';
 
 
 
+//;;
+
+void
+@run_razor_3(str razor_string = parse_str('/1=', mparm_str))
+{
+str fp = 'Run razor 3 - batch file version with parameter.';
+// Code sample: Type 'e.fv', would edit the file fv.bat'.
+// Code sample: Type 'e.g', would edit the file g.bat'.
+
+//Is leading period.
+str batch_file = razor_string;
+if(@left(razor_string, 1) == '.')
+{
+  batch_file = @trim_left(razor_string, 1);
+}
+batch_file = @trim_after_character(batch_file, '.');
+
+//qq
+// Is leading period.
+str parameter = razor_string;
+if(@left(parameter, 1) == '.')
+{
+  parameter = @trim_left(parameter, 1);
+}
+parameter = @trim_before_character(parameter, '.');
+
+@run_application_2p(batch_file, parameter);
+
+//@say(fp + batch_file);
+//@say(fp + parameter);
+//@say(fp + batch_file + parameter);
+}
+
+
+
 //;+ Run Clifs
 
 
