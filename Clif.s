@@ -3119,7 +3119,6 @@ if(@left(razor_string, 1) == '.')
 }
 batch_file = @trim_after_character(batch_file, '.');
 
-//qq
 // Is leading period.
 str parameter = razor_string;
 if(@left(parameter, 1) == '.')
@@ -3128,11 +3127,9 @@ if(@left(parameter, 1) == '.')
 }
 parameter = @trim_before_character(parameter, '.');
 
-@run_application_2p(batch_file, parameter);
+@run_rzr_line('rzr ' + batch_file + ' ' + parameter);
 
-//@say(fp + batch_file);
-//@say(fp + parameter);
-//@say(fp + batch_file + parameter);
+@say(fp);
 }
 
 
