@@ -3175,7 +3175,7 @@ str fp = "Open myfile.txt and paste its contents to Now Playing Task List (nptl)
 
 @header;
 
-str filename[128] = Get_Environment('dropbox') + '\savannah\reach out\myfile.txt';
+str filename[128] = Get_Environment('dropbox') + '\myfile.txt';
 
 @open_file(filename);
 
@@ -10411,7 +10411,7 @@ rs = ' -- help$';
 //;;
 
 void
-@add_text_workday_itinerary
+@add_text_daily_itinerary
 {
 str fp = 'Paste your workady itinerary to bol.';
 
