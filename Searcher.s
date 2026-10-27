@@ -2603,6 +2603,22 @@ URL += '&search_type=&aq=f';
 //;;
 
 void
+@search_google_with_suffix_25(str sc = parse_str('/1=', mparm_str))
+{
+str fp = 'Why is [blank] called that?';
+// lu: Oct-27-2026
+@header;
+@bol;
+str question = 'Why is "' + @hc_subject + '" called that?';
+@search_google_main(0, 2, question);
+@footer;
+}
+
+
+
+//;;
+
+void
 @search_google_with_suffix_24(str sc = parse_str('/1=', mparm_str))
 {
 str fp = 'Is there a word for [blank].';
