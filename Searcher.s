@@ -2779,9 +2779,22 @@ void
 {
 str fp = 'What is the opposite of [blank]?';
 // lu: May-26-2026
+@eol;
+left;
+if(cur_char == 'o')
+{
+  @delete_character;
+  @backspace;
+  @backspace;
+  @backspace;
+  @backspace;
+}
+@eoc;
+text("What's the opposite of ");
+@eol;
+text("?");
 @search_google_main(0, 0, 'What is the opposite of ' + @get_sj + '?');
 @eol;
-text(' opposite');
 }
 
 
